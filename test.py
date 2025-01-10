@@ -5,7 +5,7 @@ from datetime import datetime   #时间
 
 
 def getContent(url):#获取网站的内容，将获取的内容返回
-    headers={"user-agent": "curl/7.68.0", "accept": "application/json"}
+    headers={"user-agent": "Mozilla/5.0 (Linux; U; Android 7.0; zh-CN; MZ-MEIZU M6 Build/MRA58K) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/73.0.3683.121 MZBrowser/9.12.1 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","content-type":"text/html; charset=utf-8"}
     try:
         r=requests.get(url,headers=headers)
         print(r)
