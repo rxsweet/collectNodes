@@ -41,16 +41,16 @@ jobs:
           ./metaST --config ./subs/trial.yaml --proxy http://127.0.0.1:7890 --output ./subs/merged/tested_within.yaml --du http://www.gstatic.com/generate_204 --dt 800 --dr 5 --df 800 --top 500 --dn 32 --ff 0.5
       - name: 结果统计
         run: |
-          cp -f ./subs/merged/tested_within.csv ./subs/statistics/tested_within.csv
-          cp -f ./subs/merged/tested_within.md ./subs/statistics/tested_within.md
+          #cp -f ./subs/merged/tested_within.csv ./subs/statistics/tested_within.csv
+          #cp -f ./subs/merged/tested_within.md ./subs/statistics/tested_within.md
 
       - name: 上传测试结果
         uses: EndBug/add-and-commit@v9
         with:
           add: |
             - subs/merged/tested_within.yaml
-            - subs/tested_within.csv
-            - subs/tested_within.md
+            - subs/merged/tested_within.csv
+            - subs/merged/tested_within.md
           author_name: metaST
           author_email: "metaST@github.com"
           message: Tested by metaST
