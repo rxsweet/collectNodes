@@ -17,7 +17,8 @@ concurrency:
 
 jobs:
   test-proxies-within:
-    runs-on: [self-hosted, linux, x64]
+    #runs-on: [self-hosted, linux, x64]
+    runs-on: ubuntu-latest
     steps:
       # 配置Git代理，防止国内服务器拉取Github代码失败
       - name: Git代理
