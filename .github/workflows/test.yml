@@ -1,34 +1,54 @@
-name: test
+name: Daily Update
+
 on:
   workflow_dispatch:
-permissions: write-all
-jobs:
-  main:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 设置时区
-        run: sudo timedatectl set-timezone 'Asia/Shanghai' 
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref }}
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-      - name: Prepare
-        run: pip install requests
+  #schedule:
+    #- cron: "0 2-5 * * *" # 每天, 时区+8
 
-      - name: 执行任务 -1.Run get_trial.py
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
         run: |
-          python test.py
-      - name: Commit
-        id: commit
-        continue-on-error: true
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git add ./
-          git commit -m "$(date '+%Y-%m-%d %H:%M:%S')update done"
-          #git commit -m "${{ github.workflow }} https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          git pull --rebase
-      - uses: ad-m/github-push-action@master
-        if: ${{ steps.commit.outcome == 'success' }}
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Python
+        run: python main.py
+
+      - name: Git Commit Push Action
+        uses: GuillaumeFalourd/git-commit-push@v1.3
+        with:
+          # Committer's email address
+          email: ${{ github.actor }}@users.noreply.github.com
+          # Committer's username
+          name: ${{ github.actor }}
+          # Commit message
+          commit_message: "Daliy Update by Bot"
+          # Branch to push the changes back to
+          target_branch: ${{ github.ref }}
+          # Files to add separated by space
+          files: .
+          # Repository url to push the code to
+          remote_repository: origin
+          # Token used to push the code
+          access_token: ${{ github.token }}
+          # Whether to perform force push
+          force: 0
+          # Whether to allow empty commit
+          empty: 1
+          # Whether to use --tags
+          tags: 0
+
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2.0.5
