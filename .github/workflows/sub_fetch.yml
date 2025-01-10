@@ -1,11 +1,11 @@
-name: subcribe_fetch
+name: sub_fetch
 
 on:
   push:
     paths:
       - ".github/workflows/subcribe_files_fetch.yml"
-  schedule:
-    - cron: "0 */6 * * *"
+  #schedule:
+    #- cron: "0 */6 * * *"
   workflow_dispatch:
 
 permissions: write-all
