@@ -22,5 +22,5 @@ jobs:
         uses: dongchengjie/subs-puller@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          config: _config.yaml
+          config: https://raw.githubusercontent.com/rxsweet/test/refs/heads/main/_config.yaml
           merged: subs/merged/merged.yaml
