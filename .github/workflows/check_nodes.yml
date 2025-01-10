@@ -49,8 +49,8 @@ jobs:
         with:
           add: |
             - subs/merged/tested_within.yaml
-            #- subs/tested_within.csv
-            #- subs/tested_within.md
+            - subs/tested_within.csv
+            - subs/tested_within.md
           author_name: metaST
           author_email: "metaST@github.com"
           message: Tested by metaST
