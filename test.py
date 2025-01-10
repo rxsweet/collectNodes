@@ -5,7 +5,7 @@ from datetime import datetime   #时间
 
 
 def getContent(url):#获取网站的内容，将获取的内容返回
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+    headers = {'User-Agent': 'Opera/9.25 (Windows NT 5.1; U; en)'}
 
     try:
         r=requests.get(url,headers=headers)
