@@ -21,10 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 配置Git代理，防止国内服务器拉取Github代码失败
-      #- name: Git代理
-        #run: |
-          #git config --global http.proxy  http://127.0.0.1:7890
-          #git config --global https.proxy http://127.0.0.1:7890
+      - name: Git代理
+        run: |
+          git config --global http.proxy  http://127.0.0.1:7890
+          git config --global https.proxy http://127.0.0.1:7890
 
       - name: 拉取代码
         uses: actions/checkout@v4
@@ -49,8 +49,8 @@ jobs:
         with:
           add: |
             - subs/merged/tested_within.yaml
-            - subs/statistics/tested_within.csv
-            - subs/statistics/tested_within.md
+            - subs/tested_within.csv
+            - subs/tested_within.md
           author_name: metaST
           author_email: "metaST@github.com"
           message: Tested by metaST
