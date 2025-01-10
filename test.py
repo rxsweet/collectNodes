@@ -25,4 +25,5 @@ def getContent(url):#获取网站的内容，将获取的内容返回
 
 
 if "__name__==__main__":#主程序开始的地方
-    getContent("https://www.85la.com/internet-access/free-network-nodes")
+    #getContent("https://www.85la.com/internet-access/free-network-nodes")
+    getContent("https://www.85la.com")
