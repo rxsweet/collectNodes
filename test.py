@@ -5,12 +5,8 @@ from datetime import datetime   #时间
 
 
 def getContent(url):#获取网站的内容，将获取的内容返回
-    headers={
-    "User-Agent":"okhttp/3.15",
-    "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-    }
     try:
-        r=requests.get(url,headers=headers, timeout=5.0)
+        r=requests.get(url)
         print(r)
         if r.status_code==200:
             r.encoding='utf-8'    #编码方式
