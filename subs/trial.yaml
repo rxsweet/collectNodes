@@ -1,447 +1,1097 @@
-mixed-port: 7890
+port: 7890
+socks-port: 7891
 allow-lan: true
-mode: rule
+mode: Rule
 log-level: info
-external-controller: 0.0.0.0:9090
-tcp-concurrent: true
-dns:
-  enable: true
-  listen: 0.0.0.0:1053
-  ipv6: true
-  use-system-hosts: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-    - "+.lan"
-    - "+.local"
-    - "+.msftconnecttest.com"
-    - "+.msftncsi.com"
-    - "localhost.ptlogin2.qq.com"
-    - "localhost.sec.qq.com"
-    - "localhost.work.weixin.qq.com"
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-    - 1.1.1.1
-    - 8.8.8.8
-  nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - https://doh.360.cn/dns-query
-    - https://1.1.1.1/dns-query
-    - https://1.0.0.1/dns-query
-    - https://208.67.222.222/dns-query
-    - https://208.67.220.220/dns-query
-    - https://194.242.2.2/dns-query
-    - https://194.242.2.3/dns-query
-  proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - https://doh.360.cn/dns-query
-    - https://1.1.1.1/dns-query
-    - https://1.0.0.1/dns-query
-    - https://208.67.222.222/dns-query
-    - https://208.67.220.220/dns-query
-    - https://194.242.2.2/dns-query
-    - https://194.242.2.3/dns-query
-  nameserver-policy:
-    "geosite:private,cn,geolocation-cn":
-      - https://dns.alidns.com/dns-query
-      - https://doh.pub/dns-query
-      - https://doh.360.cn/dns-query
-    "geosite:google,youtube,telegram,gfw,geolocation-!cn":
-      - https://1.1.1.1/dns-query
-      - https://1.0.0.1/dns-query
-      - https://208.67.222.222/dns-query
-      - https://208.67.220.220/dns-query
-      - https://194.242.2.2/dns-query
-      - https://194.242.2.3/dns-query
-geox-url:
-  geoip: https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat
-  geosite: https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
-  mmdb: https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
-
-# 代理
-proxies: 
-- {'name': '剩余流量：5 GB', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36141, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇭🇰 香港 02 | 1x HK', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36143, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇭🇰 香港住宅IP 03 | 1x HK', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36145, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇹🇼 台湾 01 | 1x TW', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36241, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇹🇼 台湾 02 | 1x TW', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36243, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇹🇼 台湾 03 | 1x TW', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36245, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇯🇵 日本 01 | 1x JP', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36111, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇯🇵 日本 02 | 1x JP', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36113, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇯🇵 日本 03 | 1x JP', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36115, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇸🇬 新加坡 01 | 1x SG', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36171, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇸🇬 新加坡 02 | 1x SG', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36173, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇸🇬 新加坡 03 | 1x SG', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36175, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇰🇷 韩国 01 | 1x KR', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36311, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇰🇷 韩国 02 | 1x KR', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36313, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇰🇷 韩国 03 | 1x KR', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36315, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇵🇭 菲律宾 01 | 1x PH', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36341, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇺🇸 美国 01 | 1x US Los Angeles', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36211, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇺🇸 美国住宅IP 02 | 1x US Los Angeles', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36213, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇺🇸 美国 03 | 1x US Washington', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36215, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇬🇧 英国住宅IP 01 | 1x UK', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36271, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇲🇾马来西亚 01 | 1x MY', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36721, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇮🇳西班牙 01 | 1x ES', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36741, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇹🇭泰国 01 | 1x TH', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36731, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇮🇳 印度 01 | 1x IN', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36371, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇦🇺 澳大利亚 01 | 1x AU', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36411, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇨🇦 加拿大 01 | 1x CA', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36441, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇩🇪 德国 01 | 1x DE', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36471, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇷🇺 俄罗斯 01 | 1x RU', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36511, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇹🇷 土耳其 01 | 1x TR', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36571, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇺🇦 乌克兰 01 | 1x UA', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36611, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇻🇳 越南 01 | 1x VN', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36641, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '🇧🇷 巴西 01 | 1x BR', 'type': 'ss', 'server': 'free.2weradf.xyz', 'port': 36671, 'cipher': 'chacha20-ietf-poly1305', 'password': 'c5ebef88-e827-47df-8bc1-84ca6f29dfc6', 'udp': true}
-- {'name': '剩余流量：2.56 GB', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41141, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇭🇰香港02 | 1x HK', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41143, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇭🇰香港03 | 家宽 | 1x HK', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41145, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇹🇼台湾01 | 1x TW', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41241, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇹🇼台湾02 | 1x TW', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41243, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇹🇼台湾03 | 1x TW', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41245, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇯🇵日本01 | 1x JP', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41111, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇯🇵日本02 | 1x JP', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41113, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇯🇵日本03 | 1x JP', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41115, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇸🇬新加坡01 | 1x SG', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41171, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇸🇬新加坡02 | 1x SG', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41173, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇸🇬新加坡03 | 1x SG', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41175, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇰🇷韩国01 | 1x KR', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41311, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇰🇷韩国02 | 1x KR', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41313, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇰🇷韩国03 | 1x KR', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41315, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇵🇭菲律宾01 | 1x PH', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41341, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇺🇸美国01 | 1x US Los Angeles', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41211, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇺🇸美国02 | 家宽 | 1x US Los Angeles', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41213, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇺🇸美国03 | 1x US Washington', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41215, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇺🇸美国04 | 1x US Honolulu', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41217, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇺🇸美国05 | 1x US New Jersey', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41219, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇺🇸美国06 | 1x US ChatGPT专用', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41221, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇬🇧英国01 | 家宽 | 1x UK', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41271, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇪🇸西班牙01 | 1x ES', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41741, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇲🇾马来西亚01 | 1x MY', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41721, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇹🇭泰国01 | 1x IN', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41731, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇮🇳印度01 | 1x IN', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41371, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇦🇺澳大利亚01 | 1x AU', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41411, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇨🇦加拿大01 | 1x CA', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41441, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇩🇪德国01 | 1x DE', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41471, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇷🇺俄罗斯01 | 1x RU', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41511, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇹🇷土耳其01 | 1x TR', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41571, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇺🇦乌克兰01 | 1x UA', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41611, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇻🇳越南01 | 1x VN', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41641, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '🇧🇷巴西01 | 1x BR', 'type': 'ss', 'server': 'free.6vczxw.xyz', 'port': 41671, 'cipher': 'chacha20-ietf-poly1305', 'password': '3af8dc48-0d7c-4c61-a4f0-132eac20856b', 'udp': true}
-- {'name': '剩余流量：453.4 MB', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31141, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇭🇰香港 02 | 1x HK', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31143, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇭🇰香港家宽 03 | 1x HK', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31145, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇹🇼台湾 01 | 1x TW', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31241, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇹🇼台湾 02 | 1x TW', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31243, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇹🇼台湾 03 | 1x TW', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31245, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇯🇵日本 01 | 1x JP', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31111, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇯🇵日本 02 | 1x JP', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31113, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇯🇵日本 03 | 1x JP', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31115, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇸🇬新加坡 01 | 1x SG', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31171, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇸🇬新加坡 02 | 1x SG', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31173, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇸🇬新加坡 03 | 1x SG', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31175, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇰🇷韩国 01 | 1x KR', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31311, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇰🇷韩国 02 | 1x KR', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31313, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇰🇷韩国 03 | 1x KR', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31315, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇵🇭菲律宾 01 | 1x PH', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31341, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇺🇸美国 01 | 1x US Los Angeles', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31211, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇺🇸美国家宽 02 | 1x US Los Angeles', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31213, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇺🇸美国 03 | 1x US Washington', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31215, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇺🇸美国 04 | 1x US Honolulu', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31217, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇺🇸美国 05 | 1x US New Jersey', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31219, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇬🇧英国家宽 01 | 1x UK', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31271, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇪🇸西班牙01 | 1x ES_1', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31741, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇲🇾马来西亚01 | 1x MY_1', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31721, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇮🇳印度 01 | 1x IN', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31371, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇦🇺澳大利亚 01 | 1x AU', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31411, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇨🇦加拿大 01 | 1x CA', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31441, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇩🇪德国 01 | 1x DE', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31471, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇷🇺俄罗斯 01 | 1x RU', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31511, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇹🇷土耳其 01 | 1x TR', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31571, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇺🇦乌克兰 01 | 1x UA', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31611, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇻🇳越南 01 | 1x VN', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31641, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-- {'name': '🇧🇷巴西 01 | 1x BR', 'type': 'ss', 'server': 'free.2apzhfa.xyz', 'port': 31671, 'cipher': 'chacha20-ietf-poly1305', 'password': 'ecdf17cd-50a4-4a42-96bf-ee5c787a51ea', 'udp': true}
-
-
-# 代理组
+external-controller: :9090
+proxies:
+  - {name: 自改域名, server: rxrx.cf.090227.xyz, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名, server: bestcf.030101.xyz, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: Mingyu官方优选域名, server: bestcf.onecf.eu.org, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 10min_网络收集域名, server: cdn.2020111.xyz, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 三网自适域名, server: cf.090227.xyz, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: cmliussss域名, server: cf.0sm.com, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 网络收集域名, server: cf.zerone-cdn.pp.ua, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: cmliussss域名 2, server: cfip.1323123.xyz, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: day_网络收集域名, server: cfip.cfcdn.vip, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: OTC域名, server: cfip.xxxxxxxx.tk, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 2, server: cloudflare.9jy.cc, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 移动域名, server: cmcc.090227.xyz, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 3, server: cnamefuckxxs.yuchen.icu, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 电信域名, server: ct.090227.xyz, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 4, server: icook.hk, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 5, server: icook.tw, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 6, server: ip.sb, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 7, server: iplocation.io, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 8, server: japan.com, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 9, server: malaysia.com, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 10, server: russia.com, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 自改域名 2, server: rx.cf.090227.xyz, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 15min_泛解析到任意前缀域名, server: rx.cloudflare.182682.xyz, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 11, server: singapore.com, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 12, server: skk.moe, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 13, server: time.is, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 14, server: www.csgo.com, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 15, server: www.hugedomains.com, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 16, server: www.ipchicken.com, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 17, server: www.iplocation.net, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 18, server: www.visa.com.sg, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 域名 19, server: www.whoer.net, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_130, server: 94.177.8.26, port: 130, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443, server: 104.22.56.177, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 2, server: 104.254.140.111, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 3, server: 108.165.216.221, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 4, server: 129.146.168.102, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 5, server: 132.145.94.80, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 6, server: 132.226.31.178, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 7, server: 141.105.70.114, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 8, server: 141.148.227.19, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 9, server: 147.78.140.131, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 10, server: 147.78.140.5, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 11, server: 150.230.122.76, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 12, server: 155.46.213.166, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 13, server: 158.180.231.216, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 14, server: 167.68.11.100, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 15, server: 167.68.11.247, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 16, server: 168.100.6.127, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 17, server: 168.100.6.53, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 18, server: 170.114.45.190, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 19, server: 185.148.106.124, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 20, server: 185.148.106.193, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 21, server: 185.148.106.253, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 22, server: 185.151.243.200, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 23, server: 185.174.138.220, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 24, server: 185.176.24.4, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 25, server: 185.176.24.64, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 26, server: 185.238.228.222, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 27, server: 185.59.218.0, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 28, server: 188.244.122.210, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 29, server: 188.244.122.64, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 30, server: 188.42.88.3, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 31, server: 188.42.88.91, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 32, server: 192.65.217.41, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 33, server: 192.65.217.57, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 34, server: 194.36.55.180, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 35, server: 198.41.201.154, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 36, server: 31.129.48.139, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 37, server: 31.22.116.155, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 38, server: 31.22.116.186, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 39, server: 31.43.179.20, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 40, server: 31.43.179.80, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 41, server: 31.43.179.98, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 42, server: 45.159.216.57, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 43, server: 45.80.111.8, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 44, server: 94.140.0.157, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 45, server: 94.140.0.99, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 46, server: 94.247.142.245, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_587, server: 152.32.255.24, port: 587, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_587 2, server: 185.22.155.139, port: 587, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_587 3, server: 188.165.24.25, port: 587, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_587 4, server: 8.208.94.35, port: 587, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_587 5, server: 103.214.68.133, port: 587, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_587 6, server: 8.222.129.84, port: 587, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_1001, server: 45.94.31.75, port: 1001, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_2003, server: 45.94.31.75, port: 2003, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_2003 2, server: 95.164.22.239, port: 2003, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053, server: 130.61.203.115, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 2, server: 143.47.243.144, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 3, server: 150.230.20.156, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 4, server: 129.151.198.3, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_2051, server: 45.138.74.56, port: 2051, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_2051 2, server: 95.164.51.24, port: 2051, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_2051 3, server: 95.164.22.239, port: 2051, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_6060, server: 195.200.19.139, port: 6060, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_7000, server: 5.2.73.137, port: 7000, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_8000, server: 146.56.179.20, port: 8000, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_8000 2, server: 194.87.11.56, port: 8000, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_8000 3, server: 179.43.144.10, port: 8000, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_8080, server: 94.250.246.200, port: 8080, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_8080 2, server: 37.230.62.172, port: 8080, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443, server: 132.145.54.84, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 2, server: 143.47.243.144, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_8889, server: 160.16.242.208, port: 8889, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 其它_10001, server: 212.13.236.132, port: 10001, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 47, server: 8.222.252.28, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 48, server: 8.222.228.243, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 49, server: 8.222.185.14, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 50, server: 8.219.208.40, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 51, server: 8.219.1.169, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 52, server: 8.222.133.161, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 53, server: 130.162.221.159, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 54, server: 130.162.220.138, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 55, server: 130.162.224.29, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 56, server: 143.47.254.173, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 57, server: 132.145.13.128, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 58, server: 143.47.254.118, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 59, server: 130.162.247.228, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 60, server: 130.162.225.230, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 61, server: 130.162.188.182, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 62, server: 130.61.39.13, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 63, server: 130.162.228.90, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: port443 64, server: 141.147.56.31, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 5, server: 140.238.173.181, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 6, server: 150.230.146.170, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 7, server: 158.180.230.4, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 8, server: 140.238.218.65, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 9, server: 141.147.61.116, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 10, server: 141.147.47.32, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 11, server: 144.24.169.81, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 12, server: 132.145.54.84, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 13, server: 132.145.53.55, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2053 14, server: 204.216.216.148, port: 2053, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2096, server: 131.186.27.112, port: 2096, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 2096 2, server: 152.70.155.147, port: 2096, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 3, server: 140.238.173.181, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 4, server: 141.147.16.152, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 5, server: 132.145.53.55, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 6, server: 129.151.225.228, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 7, server: 144.24.169.81, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 8, server: 158.180.230.4, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 9, server: 158.101.199.249, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 10, server: 140.238.218.65, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 11, server: 8.210.65.243, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 12, server: 141.145.205.115, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 13, server: 204.216.216.148, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 8443 14, server: 150.230.20.156, port: 8443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA, server: 104.17.149.44, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 2, server: 104.17.166.244, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 3, server: 104.17.178.212, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 4, server: 104.17.162.62, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 5, server: 104.17.113.75, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 6, server: 198.41.221.137, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 7, server: 104.17.127.250, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 8, server: 104.17.167.205, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 9, server: 104.17.165.170, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 10, server: 104.17.121.67, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 11, server: 104.17.104.132, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 12, server: 104.17.186.234, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 13, server: 104.17.158.16, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 14, server: 104.17.169.200, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇨🇦 CA 15, server: 104.17.110.194, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇺🇸 US, server: 199.59.243.227, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇰🇷 KR, server: 146.56.41.69, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CT, server: 162.159.153.71, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CT 2, server: 162.159.153.43, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CT 3, server: 162.159.152.246, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CT 4, server: 162.159.153.228, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CT 5, server: 162.159.153.104, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CT 6, server: 162.159.153.222, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CMCC, server: 104.19.36.35, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CMCC 2, server: 104.19.36.18, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CMCC 3, server: 104.19.38.32, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CMCC 4, server: 104.19.34.128, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CMCC 5, server: 104.19.44.92, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CMCC 6, server: 104.19.39.82, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CM-Default, server: 172.64.82.237, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CM-Default 2, server: 172.67.144.209, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CM-Default 3, server: 172.67.247.30, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CM-Default 4, server: 162.159.241.96, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CM-Default 5, server: 172.64.83.159, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CU-NRT, server: 172.64.109.235, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CU-NRT 2, server: 172.67.46.154, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CU-NRT 3, server: 172.67.73.17, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CU-NRT 4, server: 172.64.207.165, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CU-NRT 5, server: 172.67.30.85, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CT-LHR, server: 172.67.179.223, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 🇭🇰 CT-HKG, server: 172.67.43.75, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CT-IAD, server: 172.67.48.144, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CT-LHR 2, server: 172.67.172.204, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CT-LHR 3, server: 172.67.146.31, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CF-534.38MB/s, server: 104.16.99.132, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CF-326.45MB/s, server: 104.19.213.118, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CF-35.77MB/s, server: 172.64.103.7, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CF-35.19MB/s, server: 104.18.197.209, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CF-34.73MB/s, server: 104.18.140.146, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CF-34.18MB/s, server: 172.66.47.96, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CF-33.43MB/s, server: 104.17.211.77, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CF-33.18MB/s, server: 104.16.131.37, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CF-31.95MB/s, server: 162.159.14.237, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: CF-31.85MB/s, server: 104.18.182.110, port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: 502, server: 502, port: 0, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
+  - {name: The deployment failed while serving the request., server: The deployment failed while serving the request., port: 443, type: vmess, uuid: 6d0b24b6-6622-44b2-8da0-ef1e67651325, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: serv00_vmess.sweetrx.eu.org, network: ws, ws-opts: {path: "/vmess?ed=2048", headers: {Host: serv00_vmess.sweetrx.eu.org}}}
 proxy-groups:
-  - name: 🚀 节点选择
+  - name: 优选域名
     type: select
     proxies:
-      - ♻️ 自动选择
-      - 🚑 故障转移
-      - ⚖️ 负载均衡-轮询
-      - ⚖️ 负载均衡-散列
+      - 自改域名
+      - 域名
+      - Mingyu官方优选域名
+      - 10min_网络收集域名
+      - 三网自适域名
+      - cmliussss域名
+      - 网络收集域名
+      - cmliussss域名 2
+      - day_网络收集域名
+      - OTC域名
+      - 域名 2
+      - 移动域名
+      - 域名 3
+      - 电信域名
+      - 域名 4
+      - 域名 5
+      - 域名 6
+      - 域名 7
+      - 域名 8
+      - 域名 9
+      - 域名 10
+      - 自改域名 2
+      - 15min_泛解析到任意前缀域名
+      - 域名 11
+      - 域名 12
+      - 域名 13
+      - 域名 14
+      - 域名 15
+      - 域名 16
+      - 域名 17
+      - 域名 18
+      - 域名 19
+  - name: 大佬更新
+    type: select
+    proxies:
+      - 10min_网络收集域名
+      - day_网络收集域名
+      - 15min_泛解析到任意前缀域名
+      - 其它_130
+      - 其它_587
+      - 其它_587 2
+      - 其它_587 3
+      - 其它_587 4
+      - 其它_587 5
+      - 其它_587 6
+      - 其它_1001
+      - 其它_2003
+      - 其它_2003 2
+      - 其它_2051
+      - 其它_2051 2
+      - 其它_2051 3
+      - 其它_6060
+      - 其它_7000
+      - 其它_8000
+      - 其它_8000 2
+      - 其它_8000 3
+      - 其它_8080
+      - 其它_8080 2
+      - 其它_8889
+      - 其它_10001
+      - 🇨🇦 CA
+      - 🇨🇦 CA 2
+      - 🇨🇦 CA 3
+      - 🇨🇦 CA 4
+      - 🇨🇦 CA 5
+      - 🇨🇦 CA 6
+      - 🇨🇦 CA 7
+      - 🇨🇦 CA 8
+      - 🇨🇦 CA 9
+      - 🇨🇦 CA 10
+      - 🇨🇦 CA 11
+      - 🇨🇦 CA 12
+      - 🇨🇦 CA 13
+      - 🇨🇦 CA 14
+      - 🇨🇦 CA 15
+      - 🇺🇸 US
+      - CT
+      - CT 2
+      - CT 3
+      - CT 4
+      - CT 5
+      - CT 6
+      - CMCC
+      - CMCC 2
+      - CMCC 3
+      - CMCC 4
+      - CMCC 5
+      - CMCC 6
+      - CM-Default
+      - CM-Default 2
+      - CM-Default 3
+      - CM-Default 4
+      - CM-Default 5
+      - CU-NRT
+      - CU-NRT 2
+      - CU-NRT 3
+      - CU-NRT 4
+      - CU-NRT 5
+      - CT-LHR
+      - 🇭🇰 CT-HKG
+      - CT-IAD
+      - CT-LHR 2
+      - CT-LHR 3
+      - CF-534.38MB/s
+      - CF-326.45MB/s
+      - CF-35.77MB/s
+      - CF-35.19MB/s
+      - CF-34.73MB/s
+      - CF-34.18MB/s
+      - CF-33.43MB/s
+      - CF-33.18MB/s
+      - CF-31.95MB/s
+      - CF-31.85MB/s
+  - name: 端口443
+    type: select
+    proxies:
+      - port443
+      - port443 2
+      - port443 3
+      - port443 4
+      - port443 5
+      - port443 6
+      - port443 7
+      - port443 8
+      - port443 9
+      - port443 10
+      - port443 11
+      - port443 12
+      - port443 13
+      - port443 14
+      - port443 15
+      - port443 16
+      - port443 17
+      - port443 18
+      - port443 19
+      - port443 20
+      - port443 21
+      - port443 22
+      - port443 23
+      - port443 24
+      - port443 25
+      - port443 26
+      - port443 27
+      - port443 28
+      - port443 29
+      - port443 30
+      - port443 31
+      - port443 32
+      - port443 33
+      - port443 34
+      - port443 35
+      - port443 36
+      - port443 37
+      - port443 38
+      - port443 39
+      - port443 40
+      - port443 41
+      - port443 42
+      - port443 43
+      - port443 44
+      - port443 45
+      - port443 46
+      - port443 47
+      - port443 48
+      - port443 49
+      - port443 50
+      - port443 51
+      - port443 52
+      - port443 53
+      - port443 54
+      - port443 55
+      - port443 56
+      - port443 57
+      - port443 58
+      - port443 59
+      - port443 60
+      - port443 61
+      - port443 62
+      - port443 63
+      - port443 64
+  - name: 端口2053
+    type: select
+    proxies:
+      - 2053
+      - 2053 2
+      - 2053 3
+      - 2053 4
+      - 2053 5
+      - 2053 6
+      - 2053 7
+      - 2053 8
+      - 2053 9
+      - 2053 10
+      - 2053 11
+      - 2053 12
+      - 2053 13
+      - 2053 14
+  - name: 端口2083
+    type: select
+    proxies:
       - DIRECT
-    include-all: true
-
-  - name: ♻️ 自动选择
+  - name: 端口2087
+    type: select
+    proxies:
+      - DIRECT
+  - name: 端口2096
+    type: select
+    proxies:
+      - 2096
+      - 2096 2
+  - name: 端口8443
+    type: select
+    proxies:
+      - 8443
+      - 8443 2
+      - 8443 3
+      - 8443 4
+      - 8443 5
+      - 8443 6
+      - 8443 7
+      - 8443 8
+      - 8443 9
+      - 8443 10
+      - 8443 11
+      - 8443 12
+      - 8443 13
+      - 8443 14
+  - name: 其它端口
+    type: select
+    proxies:
+      - 其它_130
+      - 其它_587
+      - 其它_587 2
+      - 其它_587 3
+      - 其它_587 4
+      - 其它_587 5
+      - 其它_587 6
+      - 其它_1001
+      - 其它_2003
+      - 其它_2003 2
+      - 其它_2051
+      - 其它_2051 2
+      - 其它_2051 3
+      - 其它_6060
+      - 其它_7000
+      - 其它_8000
+      - 其它_8000 2
+      - 其它_8000 3
+      - 其它_8080
+      - 其它_8080 2
+      - 其它_8889
+      - 其它_10001
+  - name: 节点选择
+    type: select
+    proxies:
+      - 自改域名
+      - 域名
+      - Mingyu官方优选域名
+      - 10min_网络收集域名
+      - 三网自适域名
+      - cmliussss域名
+      - 网络收集域名
+      - cmliussss域名 2
+      - day_网络收集域名
+      - OTC域名
+      - 域名 2
+      - 移动域名
+      - 域名 3
+      - 电信域名
+      - 域名 4
+      - 域名 5
+      - 域名 6
+      - 域名 7
+      - 域名 8
+      - 域名 9
+      - 域名 10
+      - 自改域名 2
+      - 15min_泛解析到任意前缀域名
+      - 域名 11
+      - 域名 12
+      - 域名 13
+      - 域名 14
+      - 域名 15
+      - 域名 16
+      - 域名 17
+      - 域名 18
+      - 域名 19
+      - 其它_130
+      - port443
+      - port443 2
+      - port443 3
+      - port443 4
+      - port443 5
+      - port443 6
+      - port443 7
+      - port443 8
+      - port443 9
+      - port443 10
+      - port443 11
+      - port443 12
+      - port443 13
+      - port443 14
+      - port443 15
+      - port443 16
+      - port443 17
+      - port443 18
+      - port443 19
+      - port443 20
+      - port443 21
+      - port443 22
+      - port443 23
+      - port443 24
+      - port443 25
+      - port443 26
+      - port443 27
+      - port443 28
+      - port443 29
+      - port443 30
+      - port443 31
+      - port443 32
+      - port443 33
+      - port443 34
+      - port443 35
+      - port443 36
+      - port443 37
+      - port443 38
+      - port443 39
+      - port443 40
+      - port443 41
+      - port443 42
+      - port443 43
+      - port443 44
+      - port443 45
+      - port443 46
+      - 其它_587
+      - 其它_587 2
+      - 其它_587 3
+      - 其它_587 4
+      - 其它_587 5
+      - 其它_587 6
+      - 其它_1001
+      - 其它_2003
+      - 其它_2003 2
+      - 2053
+      - 2053 2
+      - 2053 3
+      - 2053 4
+      - 其它_2051
+      - 其它_2051 2
+      - 其它_2051 3
+      - 其它_6060
+      - 其它_7000
+      - 其它_8000
+      - 其它_8000 2
+      - 其它_8000 3
+      - 其它_8080
+      - 其它_8080 2
+      - 8443
+      - 8443 2
+      - 其它_8889
+      - 其它_10001
+      - port443 47
+      - port443 48
+      - port443 49
+      - port443 50
+      - port443 51
+      - port443 52
+      - port443 53
+      - port443 54
+      - port443 55
+      - port443 56
+      - port443 57
+      - port443 58
+      - port443 59
+      - port443 60
+      - port443 61
+      - port443 62
+      - port443 63
+      - port443 64
+      - 2053 5
+      - 2053 6
+      - 2053 7
+      - 2053 8
+      - 2053 9
+      - 2053 10
+      - 2053 11
+      - 2053 12
+      - 2053 13
+      - 2053 14
+      - 2096
+      - 2096 2
+      - 8443 3
+      - 8443 4
+      - 8443 5
+      - 8443 6
+      - 8443 7
+      - 8443 8
+      - 8443 9
+      - 8443 10
+      - 8443 11
+      - 8443 12
+      - 8443 13
+      - 8443 14
+      - 🇨🇦 CA
+      - 🇨🇦 CA 2
+      - 🇨🇦 CA 3
+      - 🇨🇦 CA 4
+      - 🇨🇦 CA 5
+      - 🇨🇦 CA 6
+      - 🇨🇦 CA 7
+      - 🇨🇦 CA 8
+      - 🇨🇦 CA 9
+      - 🇨🇦 CA 10
+      - 🇨🇦 CA 11
+      - 🇨🇦 CA 12
+      - 🇨🇦 CA 13
+      - 🇨🇦 CA 14
+      - 🇨🇦 CA 15
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - CT
+      - CT 2
+      - CT 3
+      - CT 4
+      - CT 5
+      - CT 6
+      - CMCC
+      - CMCC 2
+      - CMCC 3
+      - CMCC 4
+      - CMCC 5
+      - CMCC 6
+      - CM-Default
+      - CM-Default 2
+      - CM-Default 3
+      - CM-Default 4
+      - CM-Default 5
+      - CU-NRT
+      - CU-NRT 2
+      - CU-NRT 3
+      - CU-NRT 4
+      - CU-NRT 5
+      - CT-LHR
+      - 🇭🇰 CT-HKG
+      - CT-IAD
+      - CT-LHR 2
+      - CT-LHR 3
+      - CF-534.38MB/s
+      - CF-326.45MB/s
+      - CF-35.77MB/s
+      - CF-35.19MB/s
+      - CF-34.73MB/s
+      - CF-34.18MB/s
+      - CF-33.43MB/s
+      - CF-33.18MB/s
+      - CF-31.95MB/s
+      - CF-31.85MB/s
+      - 502
+      - The deployment failed while serving the request.
+  - name: 自动选择
     type: url-test
-    lazy: false
+    url: http://www.gstatic.com/generate_204
     interval: 300
-    timeout: 5000
-    tolerance: 100
-    url: https://www.google.com/gen_204
-    include-all: true
-
-  - name: 🚑 故障转移
-    type: fallback
-    lazy: false
-    interval: 300
-    timeout: 5000
-    tolerance: 100
-    url: https://www.google.com/gen_204
-    include-all: true
-
-  - name: ⚖️ 负载均衡-轮询
-    type: load-balance
-    strategy: round-robin
-    lazy: false
-    interval: 300
-    timeout: 5000
-    tolerance: 100
-    url: https://www.google.com/gen_204
-    include-all: true
-
-  - name: ⚖️ 负载均衡-散列
+    tolerance: 50
+    proxies:
+      - 自改域名
+      - 域名
+      - Mingyu官方优选域名
+      - 10min_网络收集域名
+      - 三网自适域名
+      - cmliussss域名
+      - 网络收集域名
+      - cmliussss域名 2
+      - day_网络收集域名
+      - OTC域名
+      - 域名 2
+      - 移动域名
+      - 域名 3
+      - 电信域名
+      - 域名 4
+      - 域名 5
+      - 域名 6
+      - 域名 7
+      - 域名 8
+      - 域名 9
+      - 域名 10
+      - 自改域名 2
+      - 15min_泛解析到任意前缀域名
+      - 域名 11
+      - 域名 12
+      - 域名 13
+      - 域名 14
+      - 域名 15
+      - 域名 16
+      - 域名 17
+      - 域名 18
+      - 域名 19
+      - 其它_130
+      - port443
+      - port443 2
+      - port443 3
+      - port443 4
+      - port443 5
+      - port443 6
+      - port443 7
+      - port443 8
+      - port443 9
+      - port443 10
+      - port443 11
+      - port443 12
+      - port443 13
+      - port443 14
+      - port443 15
+      - port443 16
+      - port443 17
+      - port443 18
+      - port443 19
+      - port443 20
+      - port443 21
+      - port443 22
+      - port443 23
+      - port443 24
+      - port443 25
+      - port443 26
+      - port443 27
+      - port443 28
+      - port443 29
+      - port443 30
+      - port443 31
+      - port443 32
+      - port443 33
+      - port443 34
+      - port443 35
+      - port443 36
+      - port443 37
+      - port443 38
+      - port443 39
+      - port443 40
+      - port443 41
+      - port443 42
+      - port443 43
+      - port443 44
+      - port443 45
+      - port443 46
+      - 其它_587
+      - 其它_587 2
+      - 其它_587 3
+      - 其它_587 4
+      - 其它_587 5
+      - 其它_587 6
+      - 其它_1001
+      - 其它_2003
+      - 其它_2003 2
+      - 2053
+      - 2053 2
+      - 2053 3
+      - 2053 4
+      - 其它_2051
+      - 其它_2051 2
+      - 其它_2051 3
+      - 其它_6060
+      - 其它_7000
+      - 其它_8000
+      - 其它_8000 2
+      - 其它_8000 3
+      - 其它_8080
+      - 其它_8080 2
+      - 8443
+      - 8443 2
+      - 其它_8889
+      - 其它_10001
+      - port443 47
+      - port443 48
+      - port443 49
+      - port443 50
+      - port443 51
+      - port443 52
+      - port443 53
+      - port443 54
+      - port443 55
+      - port443 56
+      - port443 57
+      - port443 58
+      - port443 59
+      - port443 60
+      - port443 61
+      - port443 62
+      - port443 63
+      - port443 64
+      - 2053 5
+      - 2053 6
+      - 2053 7
+      - 2053 8
+      - 2053 9
+      - 2053 10
+      - 2053 11
+      - 2053 12
+      - 2053 13
+      - 2053 14
+      - 2096
+      - 2096 2
+      - 8443 3
+      - 8443 4
+      - 8443 5
+      - 8443 6
+      - 8443 7
+      - 8443 8
+      - 8443 9
+      - 8443 10
+      - 8443 11
+      - 8443 12
+      - 8443 13
+      - 8443 14
+      - 🇨🇦 CA
+      - 🇨🇦 CA 2
+      - 🇨🇦 CA 3
+      - 🇨🇦 CA 4
+      - 🇨🇦 CA 5
+      - 🇨🇦 CA 6
+      - 🇨🇦 CA 7
+      - 🇨🇦 CA 8
+      - 🇨🇦 CA 9
+      - 🇨🇦 CA 10
+      - 🇨🇦 CA 11
+      - 🇨🇦 CA 12
+      - 🇨🇦 CA 13
+      - 🇨🇦 CA 14
+      - 🇨🇦 CA 15
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - CT
+      - CT 2
+      - CT 3
+      - CT 4
+      - CT 5
+      - CT 6
+      - CMCC
+      - CMCC 2
+      - CMCC 3
+      - CMCC 4
+      - CMCC 5
+      - CMCC 6
+      - CM-Default
+      - CM-Default 2
+      - CM-Default 3
+      - CM-Default 4
+      - CM-Default 5
+      - CU-NRT
+      - CU-NRT 2
+      - CU-NRT 3
+      - CU-NRT 4
+      - CU-NRT 5
+      - CT-LHR
+      - 🇭🇰 CT-HKG
+      - CT-IAD
+      - CT-LHR 2
+      - CT-LHR 3
+      - CF-534.38MB/s
+      - CF-326.45MB/s
+      - CF-35.77MB/s
+      - CF-35.19MB/s
+      - CF-34.73MB/s
+      - CF-34.18MB/s
+      - CF-33.43MB/s
+      - CF-33.18MB/s
+      - CF-31.95MB/s
+      - CF-31.85MB/s
+      - 502
+      - The deployment failed while serving the request.
+  - name: 负载均衡
     type: load-balance
     strategy: consistent-hashing
-    lazy: false
+    url: https://www.google.com/favicon.ico
     interval: 300
-    timeout: 5000
-    tolerance: 100
-    url: https://www.google.com/gen_204
-    include-all: true
-
-  - name: 🌍 国外媒体
-    type: select
+    tolerance: 50
     proxies:
-      [
-        "🚀 节点选择",
-        "♻️ 自动选择",
-        "🚑 故障转移",
-        "⚖️ 负载均衡-轮询",
-        "⚖️ 负载均衡-散列",
-        "🎯 全球直连",
-      ]
-
-  - name: 📲 电报信息
-    type: select
-    proxies:
-      [
-        "🚀 节点选择",
-        "♻️ 自动选择",
-        "🚑 故障转移",
-        "⚖️ 负载均衡-轮询",
-        "⚖️ 负载均衡-散列",
-        "🎯 全球直连",
-      ]
-
-  - name: Ⓜ️ 微软服务
-    type: select
-    proxies:
-      [
-        "🎯 全球直连",
-        "🚀 节点选择",
-        "♻️ 自动选择",
-        "🚑 故障转移",
-        "⚖️ 负载均衡-轮询",
-        "⚖️ 负载均衡-散列",
-      ]
-
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      [
-        "🚀 节点选择",
-        "♻️ 自动选择",
-        "🚑 故障转移",
-        "⚖️ 负载均衡-轮询",
-        "⚖️ 负载均衡-散列",
-        "🎯 全球直连",
-      ]
-
-  - name: 📢 谷歌FCM
-    type: select
-    proxies:
-      [
-        "🚀 节点选择",
-        "♻️ 自动选择",
-        "🚑 故障转移",
-        "⚖️ 负载均衡-轮询",
-        "⚖️ 负载均衡-散列",
-        "🎯 全球直连",
-      ]
-
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      [
-        "DIRECT",
-        "🚀 节点选择",
-        "♻️ 自动选择",
-        "🚑 故障转移",
-        "⚖️ 负载均衡-轮询",
-        "⚖️ 负载均衡-散列",
-      ]
-
-  - name: 🛑 全球拦截
-    type: select
-    proxies: ["REJECT", "DIRECT"]
-
-  - name: 🍃 应用净化
-    type: select
-    proxies: ["REJECT", "DIRECT"]
-
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      [
-        "🚀 节点选择",
-        "♻️ 自动选择",
-        "🚑 故障转移",
-        "⚖️ 负载均衡-轮询",
-        "⚖️ 负载均衡-散列",
-        "🎯 全球直连",
-      ]
-
-# 规则集
-rule-providers:
-  LocalAreaNetwork:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-    path: ./rulesets/acl4ssr/LocalAreaNetwork.list
-    interval: 86400
-  UnBan:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
-    path: ./rulesets/acl4ssr/UnBan.list
-    interval: 86400
-  BanAD:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
-    path: ./rulesets/acl4ssr/BanAD.list
-    interval: 86400
-  BanProgramAD:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
-    path: ./rulesets/acl4ssr/BanProgramAD.list
-    interval: 86400
-  GoogleFCM:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
-    path: ./rulesets/acl4ssr/GoogleFCM.list
-    interval: 86400
-  GoogleCN:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
-    path: ./rulesets/acl4ssr/GoogleCN.list
-    interval: 86400
-  SteamCN:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
-    path: ./rulesets/acl4ssr/SteamCN.list
-    interval: 86400
-  Microsoft:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
-    path: ./rulesets/acl4ssr/Microsoft.list
-    interval: 86400
-  Apple:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
-    path: ./rulesets/acl4ssr/Apple.list
-    interval: 86400
-  Telegram:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
-    path: ./rulesets/acl4ssr/Telegram.list
-    interval: 86400
-  ProxyMedia:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
-    path: ./rulesets/acl4ssr/ProxyMedia.list
-    interval: 86400
-  ProxyGFWlist:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
-    path: ./rulesets/acl4ssr/ProxyGFWlist.list
-    interval: 86400
-  ChinaIp:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
-    path: ./rulesets/acl4ssr/ChinaIp.list
-    interval: 86400
-  ChinaDomain:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-    path: ./rulesets/acl4ssr/ChinaDomain.list
-    interval: 86400
-  ChinaCompanyIp:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-    path: ./rulesets/acl4ssr/ChinaCompanyIp.list
-    interval: 86400
-  Download:
-    type: http
-    behavior: classical
-    format: text
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
-    path: ./rulesets/acl4ssr/Download.list
-    interval: 86400
-
-# 规则
+      - 自改域名
+      - 域名
+      - Mingyu官方优选域名
+      - 10min_网络收集域名
+      - 三网自适域名
+      - cmliussss域名
+      - 网络收集域名
+      - cmliussss域名 2
+      - day_网络收集域名
+      - OTC域名
+      - 域名 2
+      - 移动域名
+      - 域名 3
+      - 电信域名
+      - 域名 4
+      - 域名 5
+      - 域名 6
+      - 域名 7
+      - 域名 8
+      - 域名 9
+      - 域名 10
+      - 自改域名 2
+      - 15min_泛解析到任意前缀域名
+      - 域名 11
+      - 域名 12
+      - 域名 13
+      - 域名 14
+      - 域名 15
+      - 域名 16
+      - 域名 17
+      - 域名 18
+      - 域名 19
+      - 其它_130
+      - port443
+      - port443 2
+      - port443 3
+      - port443 4
+      - port443 5
+      - port443 6
+      - port443 7
+      - port443 8
+      - port443 9
+      - port443 10
+      - port443 11
+      - port443 12
+      - port443 13
+      - port443 14
+      - port443 15
+      - port443 16
+      - port443 17
+      - port443 18
+      - port443 19
+      - port443 20
+      - port443 21
+      - port443 22
+      - port443 23
+      - port443 24
+      - port443 25
+      - port443 26
+      - port443 27
+      - port443 28
+      - port443 29
+      - port443 30
+      - port443 31
+      - port443 32
+      - port443 33
+      - port443 34
+      - port443 35
+      - port443 36
+      - port443 37
+      - port443 38
+      - port443 39
+      - port443 40
+      - port443 41
+      - port443 42
+      - port443 43
+      - port443 44
+      - port443 45
+      - port443 46
+      - 其它_587
+      - 其它_587 2
+      - 其它_587 3
+      - 其它_587 4
+      - 其它_587 5
+      - 其它_587 6
+      - 其它_1001
+      - 其它_2003
+      - 其它_2003 2
+      - 2053
+      - 2053 2
+      - 2053 3
+      - 2053 4
+      - 其它_2051
+      - 其它_2051 2
+      - 其它_2051 3
+      - 其它_6060
+      - 其它_7000
+      - 其它_8000
+      - 其它_8000 2
+      - 其它_8000 3
+      - 其它_8080
+      - 其它_8080 2
+      - 8443
+      - 8443 2
+      - 其它_8889
+      - 其它_10001
+      - port443 47
+      - port443 48
+      - port443 49
+      - port443 50
+      - port443 51
+      - port443 52
+      - port443 53
+      - port443 54
+      - port443 55
+      - port443 56
+      - port443 57
+      - port443 58
+      - port443 59
+      - port443 60
+      - port443 61
+      - port443 62
+      - port443 63
+      - port443 64
+      - 2053 5
+      - 2053 6
+      - 2053 7
+      - 2053 8
+      - 2053 9
+      - 2053 10
+      - 2053 11
+      - 2053 12
+      - 2053 13
+      - 2053 14
+      - 2096
+      - 2096 2
+      - 8443 3
+      - 8443 4
+      - 8443 5
+      - 8443 6
+      - 8443 7
+      - 8443 8
+      - 8443 9
+      - 8443 10
+      - 8443 11
+      - 8443 12
+      - 8443 13
+      - 8443 14
+      - 🇨🇦 CA
+      - 🇨🇦 CA 2
+      - 🇨🇦 CA 3
+      - 🇨🇦 CA 4
+      - 🇨🇦 CA 5
+      - 🇨🇦 CA 6
+      - 🇨🇦 CA 7
+      - 🇨🇦 CA 8
+      - 🇨🇦 CA 9
+      - 🇨🇦 CA 10
+      - 🇨🇦 CA 11
+      - 🇨🇦 CA 12
+      - 🇨🇦 CA 13
+      - 🇨🇦 CA 14
+      - 🇨🇦 CA 15
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - CT
+      - CT 2
+      - CT 3
+      - CT 4
+      - CT 5
+      - CT 6
+      - CMCC
+      - CMCC 2
+      - CMCC 3
+      - CMCC 4
+      - CMCC 5
+      - CMCC 6
+      - CM-Default
+      - CM-Default 2
+      - CM-Default 3
+      - CM-Default 4
+      - CM-Default 5
+      - CU-NRT
+      - CU-NRT 2
+      - CU-NRT 3
+      - CU-NRT 4
+      - CU-NRT 5
+      - CT-LHR
+      - 🇭🇰 CT-HKG
+      - CT-IAD
+      - CT-LHR 2
+      - CT-LHR 3
+      - CF-534.38MB/s
+      - CF-326.45MB/s
+      - CF-35.77MB/s
+      - CF-35.19MB/s
+      - CF-34.73MB/s
+      - CF-34.18MB/s
+      - CF-33.43MB/s
+      - CF-33.18MB/s
+      - CF-31.95MB/s
+      - CF-31.85MB/s
+      - 502
+      - The deployment failed while serving the request.
 rules:
-  # acl4ssr
-  - RULE-SET,LocalAreaNetwork,🎯 全球直连
-  - RULE-SET,UnBan,🎯 全球直连
-  - RULE-SET,BanAD,🛑 全球拦截
-  - RULE-SET,BanProgramAD,🍃 应用净化
-  - RULE-SET,GoogleFCM,📢 谷歌FCM
-  - RULE-SET,GoogleCN,🎯 全球直连
-  - RULE-SET,SteamCN,🎯 全球直连
-  - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,Telegram,📲 电报信息
-  - RULE-SET,ProxyMedia,🌍 国外媒体
-  - RULE-SET,ProxyGFWlist,🚀 节点选择
-  - RULE-SET,ChinaIp,🎯 全球直连
-  - RULE-SET,ChinaDomain,🎯 全球直连
-  - RULE-SET,ChinaCompanyIp,🎯 全球直连
-  - RULE-SET,Download,🎯 全球直连
-  # 其他
-  - GEOIP,LAN,🎯 全球直连
-  - GEOIP,CN,🎯 全球直连
-  - MATCH,🐟 漏网之鱼
+  - MATCH,端口443
