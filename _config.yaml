@@ -1,22 +1,14 @@
 data:
-  - id: snakem982
-    type: http
-    source: clash
-    target: clash
-    urls:
-      - https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
-      - https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
-    output: subs/snakem982.yaml
-  - id: clashfree
-    type: github
-    source: clash
-    target: clash
-    urls:
-      - https://github.com/clashfree/clashfree.github.io
-    output: subs/clashfree.yaml
-    options:
-      span: 1209600000
-      exts: .yaml
+#  - id: clashfree
+#    type: github
+#    source: clash
+#    target: clash
+#    urls:
+#      - https://github.com/clashfree/clashfree.github.io
+#    output: subs/clashfree.yaml
+#    options:
+#      span: 1209600000
+#      exts: .yaml
   - id: trial
     type: post-http
     source: clash
