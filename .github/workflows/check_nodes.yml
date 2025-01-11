@@ -56,7 +56,7 @@ jobs:
           message: Tested by metaST
 
       # 部署测试过的节点到本地，细水长流
-      - name: 更新self-host主机代理
-        run: |
-          cp -f ./subs/merged/tested_within.yaml ~/mihomo/config.yaml
-          curl -X POST http://127.0.0.1:9090/restart
+      #- name: 更新self-host主机代理
+        #run: |
+          #cp -f ./subs/merged/tested_within.yaml ~/mihomo/config.yaml
+          #curl -X POST http://127.0.0.1:9090/restart
