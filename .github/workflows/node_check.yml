@@ -1,8 +1,8 @@
-name: nodes_check
+name: node_check
 on:
 #  # fetch执行后触发
 #  workflow_run:
-#    workflows: ["nodes_fetch"]
+#    workflows: ["node_fetch"]
 #    types:
 #      - completed
   # 手动触发
