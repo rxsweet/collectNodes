@@ -1,4 +1,4 @@
-name: sub_fetch
+name: nodes_fetch
 
 on:
   push:
