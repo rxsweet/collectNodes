@@ -78,14 +78,22 @@ proxy_group_common_config: &proxy_group_common_config
 
 # 订阅地址
 proxy-providers: 
+  snakem982:
+    type: http
+    url: 'https://raw.githubusercontent.com/rxsweet/collectNodes/main/subs/snakem982.yaml'
+    path: ./providers/snakem982.yaml
+  clashfree:
+    type: http
+    url: 'https://raw.githubusercontent.com/rxsweet/collectNodes/main/subs/clashfree.yaml'
+    path: ./providers/clashfree.yaml
   trial:
     type: http
-    url: 'https://raw.githubusercontent.com/rxsweet/collectNodes/main/subs/trial1.yaml'
-    path: ./providers/trial.yaml
-  mibei77:
-    type: http
     url: 'https://raw.githubusercontent.com/rxsweet/collectNodes/main/subs/trial.yaml'
-    path: ./providers/mibei77.yaml
+    path: ./providers/trial.yaml
+  hkaa0:
+    type: http
+    url: 'https://raw.githubusercontent.com/rxsweet/collectNodes/main/subs/hkaa0.yaml'
+    path: ./providers/hkaa0.yaml
 
 # 代理组
 proxy-groups:
