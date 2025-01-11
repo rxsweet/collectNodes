@@ -24,10 +24,10 @@ jobs:
       - name: 拉取代码
         uses: actions/checkout@v4
       # 配置Git代理，防止国内服务器拉取Github代码失败
-      - name: Git代理
-        run: |
-          git config --global http.proxy  http://127.0.0.1:7890
-          git config --global https.proxy http://127.0.0.1:7890
+      #- name: Git代理
+        #run: |
+          #git config --global http.proxy  http://127.0.0.1:7890
+          #git config --global https.proxy http://127.0.0.1:7890
 
       - name: 下载解压metaST
         run: |
