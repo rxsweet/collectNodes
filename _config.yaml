@@ -10,6 +10,13 @@ data:
       - https://raw.githubusercontent.com/toshare5/toshare5.github.io/refs/heads/main/README.md
       - https://raw.githubusercontent.com/mkshare3/mkshare3.github.io/refs/heads/main/README.md
       - https://raw.githubusercontent.com/mksshare/mksshare.github.io/refs/heads/main/README.md
-    output: subs/trial.yaml
+    output: subs/trial1.yaml
     options:
       func: (str)=>[str.replaceAll("\n","").replaceAll("\r","").split("Clash订阅链接")[1].split("```").filter(Boolean)[0].concat("?flag=clash")]
+  - id: mibei77
+    type: http
+    source: clash
+    target: clash
+    urls:
+      - http://mm.mibei77.com/202501/01.11Clashopl.yaml
+    output: subs/trial.yaml
