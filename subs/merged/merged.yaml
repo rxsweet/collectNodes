@@ -80,8 +80,12 @@ proxy_group_common_config: &proxy_group_common_config
 proxy-providers: 
   trial:
     type: http
-    url: 'https://raw.githubusercontent.com/rxsweet/test/main/subs/trial.yaml'
+    url: 'https://raw.githubusercontent.com/rxsweet/collectNodes/main/subs/trial1.yaml'
     path: ./providers/trial.yaml
+  mibei77:
+    type: http
+    url: 'https://raw.githubusercontent.com/rxsweet/collectNodes/main/subs/trial.yaml'
+    path: ./providers/mibei77.yaml
 
 # 代理组
 proxy-groups:
