@@ -32,8 +32,8 @@ jobs:
         with:
           add: |
             - subs/merged/tested_within.yaml
-            - subs/merged/tested_within.csv
-            - subs/merged/tested_within.md
+            #- subs/merged/tested_within.csv
+            #- subs/merged/tested_within.md
           author_name: GitHub Actions
           author_email: "actions@github.com"
           message: check node done
