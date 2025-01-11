@@ -15,8 +15,8 @@ data:
       func: (str)=>[str.replaceAll("\n","").replaceAll("\r","").split("Clash订阅链接")[1].split("```").filter(Boolean)[0].concat("?flag=clash")]
   - id: mibei77
     type: http
-    source: clash
+    source: v2ray
     target: clash
     urls:
-      - http://mm.mibei77.com/202501/01.11Clashopl.yaml
+      - http://mm.mibei77.com/202501/01.1164baghk.txt
     output: subs/trial.yaml
