@@ -1,37 +1,4 @@
 data:
-#  - id: clashfree
-#    type: github
-#    source: clash
-#    target: clash
-#    urls:
-#      - https://github.com/clashfree/clashfree.github.io
-#    output: subs/clashfree.yaml
-#    options:
-#      span: 1209600000
-#      exts: .yaml
-  - id: trial
-    type: post-http
-    source: clash
-    target: clash
-    urls:
-      - https://raw.githubusercontent.com/abshare/abshare.github.io/refs/heads/main/README.md
-      - https://raw.githubusercontent.com/abshare3/abshare3.github.io/refs/heads/main/README.md
-      - https://raw.githubusercontent.com/tolinkshare2/tolinkshare2.github.io/refs/heads/main/README.md
-      - https://raw.githubusercontent.com/toshare5/toshare5.github.io/refs/heads/main/README.md
-      - https://raw.githubusercontent.com/mkshare3/mkshare3.github.io/refs/heads/main/README.md
-      - https://raw.githubusercontent.com/mksshare/mksshare.github.io/refs/heads/main/README.md
-    output: subs/trial.yaml
-    options:
-      func: (str)=>[str.replaceAll("\n","").replaceAll("\r","").split("Clash订阅链接")[1].split("```").filter(Boolean)[0].concat("?flag=clash")]
-  - id: hkaa0
-    type: post-http
-    source: v2ray
-    target: clash
-    urls:
-      - https://tgstat.com/channel/@hkaa0
-    output: subs/hkaa0.yaml
-    options:
-      func: (str)=>str.match(/https?:\/\/[^\s"<']+/mg)
 - id: subs
   output: subs.yaml
   source: v2ray
