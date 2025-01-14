@@ -6,6 +6,8 @@ PATH = os.path.abspath(os.path.dirname(__file__))  # 1.os.path.dirname(_file_) �
 print(PATH)
 #http://localhost:25500/sub
 res=requests.get('http://localhost:25500/',timeout=5)#设置5秒超时防止卡死
+print(res)
+print(res.text)
 if res.status_code == 200:
     res.encoding='utf-8'
     print(res.text)
