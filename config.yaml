@@ -4,4 +4,4 @@ sources:
   options:
     urls: 
         - https://raw.githubusercontent.com/dongchengjie/proxy-crawler/main/subscriptions/SFZY666.yaml
-  output: sub/mining.yaml
+  output: subs/mining.yaml
