@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Fetch subscription files
-        uses: dongchengjie/subscription-fetcher@main
+        uses: rxsweet/subs-fetcher@main
         with:
           config: https://raw.githubusercontent.com/rxsweet/test/refs/heads/main/config.yaml
           token: ${{ secrets.GITHUB_TOKEN }}
