@@ -2,12 +2,5 @@ sources:
 - fetcher: url
   name: subs
   options:
-    urls:
-    - https://console.veseai.com/api/v1/client/subscribe?token=9d02e42249045d30ba33c76acacc9c72
-    - http://8.129.23.122/api/v1/client/subscribe?token=96556fe7ba7610d569561c9fda6ec8f8
-    - http://subssr.xfxvpn.me/api/v1/client/subscribe?token=50f009536bcdd37e1564526ef8afa491
-    - http://hk.kjdjakskl.cyou/api/v1/client/subscribe?token=a0f0cd9d5983d338c4fe6f88a441acef
-    - https://dj.taipeicity.news/api/v1/client/subscribe?token=0d1d83e345e7201d4c04e586f4fefcad
-    - https://ch.cukug.website/api/v1/client/subscribe?token=6346d5fe8cfc7d0b7e2ec650d364e67f
-    - https://aa.needss.link/api/v1/client/subscribe?token=e2925b4a32a361966daa81412da71d65
-  output: subs/subs.yaml
+    urls: []
+  output: sub/mining.yaml
