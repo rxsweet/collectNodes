@@ -79,6 +79,7 @@ proxies:
   - {"name":"永久官网：needss.link(需挂梯子访问）","type":"vmess","server":"i.needss.top","port":20013,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 香港 IEPL专线NO1","type":"vmess","server":"i.needss.top","port":20013,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 香港 IEPL专线NO2","type":"vmess","server":"i.needss.top","port":20013,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[3x] 香港 IEPL专线NO3","type":"vmess","server":"i.needss.top","port":65533,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 台湾 IEPL专线NO1","type":"vmess","server":"i.needss.top","port":52103,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 台湾 IEPL专线NO2","type":"vmess","server":"i.needss.top","port":52103,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 日本 IEPL专线NO1","type":"vmess","server":"i.needss.top","port":20017,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
