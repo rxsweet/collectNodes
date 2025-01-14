@@ -14,13 +14,36 @@ proxies:
   - {"name":"套餐到期：长期有效","type":"ss","server":"jehw72eh.97kb.com","port":49709,"cipher":"aes-256-gcm","password":"6a1e6191-0028-466a-913d-60f8f38ed1d3","udp":true}
   - {"name":"公益路线-香港HK 限速50Mbps","type":"ss","server":"jehw72eh.97kb.com","port":49709,"cipher":"aes-256-gcm","password":"6a1e6191-0028-466a-913d-60f8f38ed1d3","udp":true}
   - {"name":"香港-LELE测试-1.5x-HY","type":"ss","server":"wjb5ekt8wf.fcbjw.com","port":50673,"cipher":"chacha20-ietf-poly1305","password":"6a1e6191-0028-466a-913d-60f8f38ed1d3","udp":true}
+  - {"name":"最新官网：www.xfxssr.me","type":"ss","server":"最新官网：www.xfxssr","port":1080,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"x 代表使用倍率","type":"ss","server":"x 代表使用倍率","port":1080,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"用不了，请更新订阅","type":"ss","server":"用不了，请更新订阅","port":1080,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"永久地址请查看活动公告","type":"ss","server":"https://sulinkcloud.github.io/","port":55626,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"新加坡03","type":"ss","server":"jsyd.tangu.win","port":15627,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"美国02","type":"ss","server":"jsyd.tangu.win","port":15628,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"香港01-1","type":"ss","server":"jsyd.tangu.win","port":19630,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"香港02-1","type":"ss","server":"jsyd.tangu.win","port":15931,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"美国01","type":"ss","server":"jsyd.tangu.win","port":15532,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"台湾01-1","type":"ss","server":"jsyd.tangu.win","port":15632,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"英国01","type":"ss","server":"jsyd.tangu.win","port":15634,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"香港04","type":"ss","server":"jsyd.tangu.win","port":15635,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"新加坡01","type":"ss","server":"jsyd.tangu.win","port":15636,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"新加坡02","type":"ss","server":"jsyd.tangu.win","port":15637,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"香港04-备用","type":"ss","server":"jsyd.yeahfast.com","port":26642,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"香港05-备用","type":"ss","server":"jsyd.yeahfast.com","port":26643,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"香港06-备用","type":"ss","server":"jsyd.yeahfast.com","port":25360,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"越南01","type":"ss","server":"jsyd.tangu.win","port":15642,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"美国04","type":"ss","server":"jsyd.tangu.win","port":15728,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"日本01-1","type":"ss","server":"jsyd.tangu.win","port":15736,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"菲律宾01","type":"ss","server":"jsyd.tangu.win","port":15737,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"印尼01","type":"ss","server":"jsyd.tangu.win","port":15739,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
+  - {"name":"柬埔寨01","type":"ss","server":"jsyd.tangu.win","port":19741,"cipher":"chacha20-ietf-poly1305","password":"9725d5a1-492b-4177-928d-fc36095b1db0","udp":true}
   - {"name":"xueyejiasu.xyz发布地址不迷路","type":"ss","server":"hk.kfsldflk.xyz","port":1200,"cipher":"aes-256-gcm","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
   - {"name":"台湾 1","type":"ss","server":"gy.666666222.shop","port":20032,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
-  - {"name":"台湾01","type":"ss","server":"gy.666666222.shop","port":47564,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
-  - {"name":"香港01","type":"ss","server":"gy.666666222.shop","port":34338,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
-  - {"name":"香港02","type":"ss","server":"gy.666666222.shop","port":20035,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
+  - {"name":"台湾01-2","type":"ss","server":"gy.666666222.shop","port":47564,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
+  - {"name":"香港01-2","type":"ss","server":"gy.666666222.shop","port":34338,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
+  - {"name":"香港02-2","type":"ss","server":"gy.666666222.shop","port":20035,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
   - {"name":"香港03","type":"ss","server":"gy.666666222.shop","port":20052,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
-  - {"name":"日本01","type":"ss","server":"gy.666666222.shop","port":20002,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
+  - {"name":"日本01-2","type":"ss","server":"gy.666666222.shop","port":20002,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
   - {"name":"日本02","type":"ss","server":"gy.666666222.shop","port":20004,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
   - {"name":"日本03","type":"ss","server":"gy.666666222.shop","port":20006,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
   - {"name":"日本04","type":"ss","server":"gy.666666222.shop","port":20008,"cipher":"chacha20-ietf-poly1305","password":"59f8ad43-1bf2-43e9-89d8-8623a7c06d69","udp":true}
@@ -80,6 +103,7 @@ proxies:
   - {"name":"[3x] 香港 IEPL专线NO1","type":"vmess","server":"i.needss.top","port":20013,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 香港 IEPL专线NO2","type":"vmess","server":"i.needss.top","port":20013,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 香港 IEPL专线NO3","type":"vmess","server":"i.needss.top","port":65533,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[3x] 香港 IEPL专线NO4","type":"vmess","server":"i.needss.top","port":65533,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 台湾 IEPL专线NO1","type":"vmess","server":"i.needss.top","port":52103,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 台湾 IEPL专线NO2","type":"vmess","server":"i.needss.top","port":52103,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 日本 IEPL专线NO1","type":"vmess","server":"i.needss.top","port":20017,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
@@ -106,12 +130,10 @@ proxies:
   - {"name":"[3x] 俄罗斯 IEPL专线NO2","type":"vmess","server":"i.needss.top","port":21111,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 德国 IEPL专线NO1","type":"vmess","server":"i.needss.top","port":54787,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[3x] 德国 IEPL专线NO2","type":"vmess","server":"i.needss.top","port":54787,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[3x] 葡萄牙 IEPL专线NO1","type":"vmess","server":"i.needss.top","port":31001,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[3x] 葡萄牙 IEPL专线NO2","type":"vmess","server":"i.needss.top","port":31001,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[2x] 加拿大 IEPL专线 NO1","type":"vmess","server":"i.needss.top","port":45112,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[2x] 加拿大 IEPL专线 NO2","type":"vmess","server":"i.needss.top","port":45112,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[2x] 英国 IEPL专线NO1","type":"vmess","server":"qd.needss.top","port":54774,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[2x] 英国 IEPL专线NO2","type":"vmess","server":"qd.needss.top","port":54774,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[3x] 加拿大 IEPL专线 NO1","type":"vmess","server":"i.needss.top","port":45112,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[3x] 加拿大 IEPL专线 NO2","type":"vmess","server":"i.needss.top","port":45112,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[2x] 葡萄牙 IEPL专线NO1","type":"vmess","server":"qd.needss.top","port":31001,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[2x] 葡萄牙 IEPL专线NO2","type":"vmess","server":"qd.needss.top","port":31001,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[1x] 荷兰 IEPL专线NO1","type":"vmess","server":"qd.needss.top","port":20014,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[1x] 荷兰 IEPL专线NO2","type":"vmess","server":"qd.needss.top","port":20014,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
   - {"name":"[1x] 法国 CM 隧道NO1","type":"vmess","server":"qd.needss.top","port":52108,"uuid":"740495dc-26ba-4515-a883-02aec52438ff","alterId":0,"cipher":"auto","udp":true}
