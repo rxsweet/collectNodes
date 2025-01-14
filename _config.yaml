@@ -32,7 +32,6 @@ data:
     output: subs/hkaa0.yaml
     options:
       func: (str)=>str.match(/https?:\/\/[^\s"<']+/mg)
-data:
 - id: subs
   output: subs.yaml
   source: v2ray
