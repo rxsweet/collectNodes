@@ -32,3 +32,17 @@ data:
     output: subs/hkaa0.yaml
     options:
       func: (str)=>str.match(/https?:\/\/[^\s"<']+/mg)
+data:
+- id: subs
+  output: subs.yaml
+  source: v2ray
+  target: clash
+  type: post-http
+  urls:
+  - https://console.veseai.com/api/v1/client/subscribe?token=9d02e42249045d30ba33c76acacc9c72
+  - http://8.129.23.122/api/v1/client/subscribe?token=96556fe7ba7610d569561c9fda6ec8f8
+  - http://hk.kjdjakskl.cyou/api/v1/client/subscribe?token=a0f0cd9d5983d338c4fe6f88a441acef
+  - https://dj.taipeicity.news/api/v1/client/subscribe?token=0d1d83e345e7201d4c04e586f4fefcad
+  - https://ch.cukug.website/api/v1/client/subscribe?token=6346d5fe8cfc7d0b7e2ec650d364e67f
+  - https://aicaicai.dashuai.us/api/v1/client/subscribe?token=2f482539f675f25228b3f726ca6eafae
+  - https://aa.needss.link/api/v1/client/subscribe?token=e2925b4a32a361966daa81412da71d65
