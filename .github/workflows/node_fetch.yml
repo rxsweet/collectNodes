@@ -25,7 +25,7 @@ jobs:
         uses: rxsweet/subs-fetcher@main
         with:
           #config: https://raw.githubusercontent.com/rxsweet/test/refs/heads/main/config.yaml
-          config: file:///home/runner/work/collectNodes/collectNodes/config.yaml
+          config: /home/runner/work/collectNodes/collectNodes/config.yaml
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update subscription files
