@@ -2,5 +2,6 @@ sources:
 - fetcher: url
   name: subs
   options:
-    urls: []
+    urls: 
+        - https://raw.githubusercontent.com/dongchengjie/proxy-crawler/main/subscriptions/SFZY666.yaml
   output: sub/mining.yaml
