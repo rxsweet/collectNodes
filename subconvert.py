@@ -86,10 +86,11 @@ if __name__=='__main__':
     args = sys.argv
     print(args)
     if args:
-        source = args[0]
-        output_type = args[1]
-        output = args[2]
-        print('\n 0 = ' + source)
-        print('\n 1 = ' + output_type)
-        print('\n 2 = ' + output)
+        #args[0]是py文件名
+        source = args[1]
+        output_type = args[2]
+        output = args[3]
+        print('\n 1 = ' + source)
+        print('\n 2 = ' + output_type)
+        print('\n 3 = ' + output)
         #fileToFile(source,output_type,output)
