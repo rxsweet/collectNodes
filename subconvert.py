@@ -84,13 +84,10 @@ if __name__=='__main__':
     #获取参数携带的参数
     import sys
     args = sys.argv
-    print(args)
+    #print(args)
     if args:
         #args[0]是py文件名
         source = args[1]
         output_type = args[2]
         output = args[3]
-        print('\n 1 = ' + source)
-        print('\n 2 = ' + output_type)
-        print('\n 3 = ' + output)
-        #fileToFile(source,output_type,output)
+        fileToFile(source,output_type,output)
