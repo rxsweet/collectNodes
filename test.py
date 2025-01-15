@@ -1,6 +1,5 @@
 import os
 import requests
-import yaml
 import urllib.parse
 
 #clash文件地址
@@ -56,6 +55,10 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
         else:
             sub_content = resp.text
     return sub_content
+
+
+
+
 
 if __name__=='__main__':
     #获取allyaml_path文件路径
