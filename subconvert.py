@@ -78,13 +78,34 @@ def fileToFile(source,output_type,output):
     with open(output, 'w') as f:
         f.write(temp)
 
-
+#下载subconverter
+def subconverter_install():    
+    try:
+        #os.system()
+        if not os.path.exists('./subconverter.tar.gz'):
+            os.system("wget -O subconverter.tar.gz https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.tar.gz")
+            #os.system("wget -O subconverter.tar.gz https://github.com/lonelam/subconverter/releases/latest/download/subconverter_linux64.tar.gz")
+        #if config_url and (config_cover or not os.path.exists(config_path)):
+            #download(config_url, config_path)#下载config.yaml（实际就是节点文件）
+        #os.system("docker run -d --restart always -p 25500:25500 tindy2013/subconverter")
+            print('======subconverter 下载安装结束！======')
+        else:
+            print('======subconverter已经下载过了，不用重复下载！======')
+        os.system("tar -zxvf subconverter.tar.gz -C ./")
+        os.system("chmod +x ./subconverter/subconverter && nohup ./subconverter/subconverter >./subconverter.log 2>&1 &")
+        print('=subconverter已经启动=')
+    except Exception as err:
+        print(err)
+        print('subconverter安装失败')
+        
 
 if __name__=='__main__':
     #获取参数携带的参数
     import sys
     args = sys.argv
     #print(args)
+    #下载安装subconverter
+    subconverter_install()
     if args:
         #args[0]是py文件名
         source = args[1]
