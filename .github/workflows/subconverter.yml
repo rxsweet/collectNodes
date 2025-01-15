@@ -21,9 +21,6 @@ jobs:
       run: |
         #subconvert type: clash base64 url YAML
         python subconvert.py './subs/mining.yaml' 'clash' './subs/11.yaml'
-        python subconvert.py './subs/mining.yaml' 'base64' './subs/22.txt'
-        python subconvert.py './subs/mining.yaml' 'url' './subs/33.txt'
-        python subconvert.py './subs/mining.yaml' 'YAML' './subs/44.txt'
 # 提交           
     - name: 提交更改
       run: |                 
