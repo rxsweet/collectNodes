@@ -1,3 +1,6 @@
+#使用方法：python subconvert.py './subs/11.yaml' 'clash' './subs/22.yaml'
+#转换 type: clash base64 url YAML
+#
 import os
 import requests
 import urllib.parse
