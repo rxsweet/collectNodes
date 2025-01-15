@@ -17,7 +17,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
     sever_host = 'http://127.0.0.1:25500'
     url = urllib.parse.quote(url, safe='') # https://docs.python.org/zh-cn/3/library/urllib.parse.html
     if output_type == 'clash':
-        converted_url = sever_host+'/sub?target=clash&url='+url+'&insert=false&config='+configUrl+'&emoji=false&append_info=true'
+        converted_url = sever_host+'/sub?target=clash&url='+url+'&insert=false&config='+configUrl+'&emoji=false'
         try:
             resp = requests.get(converted_url)
             print(resp)
@@ -54,7 +54,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
         else:
             sub_content = resp.text
     elif output_type == 'YAML':
-        converted_url = sever_host+'/sub?&target=clash&url='+url+'&emoji=false&append_type=false&append_info=true&scv=false&udp=false&list=true&sort=false&fdn=true&insert=false'
+        converted_url = sever_host+'/sub?target=clash&url='+url+'&insert=false&emoji=false&list=true'
         try:
             resp = requests.get(converted_url)
         except Exception as err:
