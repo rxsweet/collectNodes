@@ -1,9 +1,10 @@
 import os
 import requests
 import urllib.parse
+from datetime import datetime
 
 #clash文件地址
-FILE_PATH = './subs/mining.yaml'
+
 #默认转clash配置文件.ini地址
 INI_CONFIG = 'https://raw.githubusercontent.com/rxsweet/all/main/githubTools/clashConfig.ini'
 
@@ -55,7 +56,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
         else:
             sub_content = resp.text
     elif output_type == 'YAML':
-        converted_url = sever_host+'/sub?target=clash&url='+url+'&insert=false&emoji=false&list=true'
+        converted_url = sever_host+'/sub?&target=clash&url='+url+'&emoji=false&append_type=false&append_info=true&scv=false&udp=false&list=true&sort=false&fdn=true&insert=false'
         try:
             resp = requests.get(converted_url)
         except Exception as err:
@@ -68,22 +69,24 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             sub_content = resp.text
     return sub_content
 
+#源文件转到目标文件，类型为output_type，共4个类型：clash,base64,url,YAML
+def fileToFile(source,output_type,output):
 
+    time = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+    print(f'[{time}]: subconvert [{output_type}]- [{source}] to [{output}]')
+    #获取文件绝对路径
+    source_path = os.path.abspath(source)
+    temp = convert_remote(source_path,'clash')
+    with open(output, 'w') as f:
+        f.write(temp)
 
 
 
 if __name__=='__main__':
-    #获取allyaml_path文件路径
-    f_path = os.path.abspath(FILE_PATH)
-    clash = convert_remote(f_path,'clash')
-    with open('./subs/1.yaml', 'w') as f:
-        f.write(clash)
-    v2ray = convert_remote(f_path,'base64')
-    with open('./subs/1.txt', 'w') as f:
-        f.write(v2ray)
-    url = convert_remote(f_path,'url')
-    with open('./subs/2.txt', 'w') as f:
-        f.write(url)
-    yaml = convert_remote(f_path,'YAML')
-    with open('./subs/3.txt', 'w') as f:
-        f.write(yaml)
+    #获取参数携带的参数
+    args = sys.argv
+    if args:
+        source = args[0]
+        output_type = args[1]
+        output = args[2]
+        fileToFile(source,output_type,output)
