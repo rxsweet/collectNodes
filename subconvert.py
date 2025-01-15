@@ -8,12 +8,10 @@ from datetime import datetime
 #默认转clash配置文件.ini地址
 INI_CONFIG = 'https://raw.githubusercontent.com/rxsweet/all/main/githubTools/clashConfig.ini'
 
-# 使用远程订阅转换服务，输出相应配置,默认输出clash订阅格式
 # 注意 订阅地址必须是base64,或者yaml，(直接是url节点内容的话，会解析错误)
 def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
-    #url='订阅链接', 
+    #url='源', 
     #output_type={'clash': 输出可以订阅的Clash配置, 'base64': 输出 Base64 配置, 'url': 输出 url 配置, 'YAML': 输出 YAML 配置}, 
-    #host='远程订阅转化服务地址',configUrl转clash订阅时用
     #host='http://127.0.0.1:25500'
     #sever_host = host
     sever_host = 'http://127.0.0.1:25500'
@@ -84,6 +82,7 @@ def fileToFile(source,output_type,output):
 
 if __name__=='__main__':
     #获取参数携带的参数
+    import sys
     args = sys.argv
     if args:
         source = args[0]
