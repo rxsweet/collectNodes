@@ -81,9 +81,9 @@ if __name__=='__main__':
     v2ray = convert_remote(f_path,'base64')
     with open('./subs/1.txt', 'w') as f:
         f.write(v2ray)
-    url = convert_remote(f_path,'base64')
+    url = convert_remote(f_path,'url')
     with open('./subs/2.txt', 'w') as f:
         f.write(url)
-    yaml = convert_remote(f_path,'base64')
+    yaml = convert_remote(f_path,'YAML')
     with open('./subs/3.txt', 'w') as f:
         f.write(yaml)
