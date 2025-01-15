@@ -2,7 +2,7 @@ import os
 import requests
 import urllib.parse
 from datetime import datetime
-
+from logger import logger
 #clash文件地址
 
 #默认转clash配置文件.ini地址
@@ -91,7 +91,8 @@ def subconverter_install():
             print('======subconverter 下载安装结束！======')
         else:
             print('======subconverter已经下载过了，不用重复下载！======')
-        os.system("tar -zxvf subconverter.tar.gz -C ./")
+        #os.system("tar -zxvf subconverter.tar.gz -C ./")
+        os.system("tar -zxf subconverter.tar.gz -C ./")
         os.system("chmod +x ./subconverter/subconverter && nohup ./subconverter/subconverter >./subconverter.log 2>&1 &")
         print('=subconverter已经启动=')
     except Exception as err:
@@ -106,6 +107,7 @@ if __name__=='__main__':
     #print(args)
     #下载安装subconverter
     subconverter_install()
+    logger.info(f"subconverter启动成功,开始转换")
     if args:
         #args[0]是py文件名
         source = args[1]
