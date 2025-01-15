@@ -2,7 +2,7 @@ import os
 import requests
 import urllib.parse
 from datetime import datetime
-from logger import logger
+import time
 #clash文件地址
 
 #默认转clash配置文件.ini地址
@@ -107,7 +107,7 @@ if __name__=='__main__':
     #print(args)
     #下载安装subconverter
     subconverter_install()
-    logger.info(f"subconverter启动成功,开始转换")
+    time.sleep(3)
     if args:
         #args[0]是py文件名
         source = args[1]
