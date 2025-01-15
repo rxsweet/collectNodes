@@ -21,7 +21,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
         converted_url = sever_host+'/sub?target=clash&url='+url+'&insert=false&config='+configUrl+'&emoji=false'
         try:
             resp = requests.get(converted_url)
-            print(resp)
+            #print(resp)
         except Exception as err:
             print(err)
             return 'Url 解析错误'
@@ -42,7 +42,6 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             print('Url 解析错误: No nodes were found! -->' + url + '\n')
         else:
             sub_content = resp.text
-            print('base64 = \n' + resp.text)
     elif output_type == 'url':
         converted_url = sever_host+'/sub?target=mixed&url='+url+'&insert=false&emoji=false&list=true'
         try:
@@ -69,4 +68,4 @@ if __name__=='__main__':
         f.write(clash)
     v2ray = convert_remote(f_path,'base64')
     with open('./subs/1.txt', 'w') as f:
-        f.write(clash)
+        f.write(v2ray)
