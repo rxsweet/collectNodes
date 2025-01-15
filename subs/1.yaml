@@ -1,1 +1,447 @@
-Url 解析错误
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - {name: Youtube顺丰资源  香港 2, server: 219.135.231.205, port: 21042, type: trojan, password: 0bc68743-cff8-4730-9818-9d8192ee335c, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  香港 7, server: 171.111.216.155, port: 30002, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
+  - {name: Youtube顺丰资源  香港 11, server: 223.113.54.145, port: 36442, type: trojan, password: phXKwfrd, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源香港12, server: sd3.jiehuaa.xyz, port: 19700, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
+  - {name: Youtube顺丰资源  香港 14, server: 171.111.216.155, port: 30001, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
+  - {name: Youtube顺丰资源香港15, server: sd3.jiehuaa.xyz, port: 15757, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
+  - {name: Youtube顺丰资源  香港 16, server: 36.150.215.196, port: 34188, type: trojan, password: phXKwfrd, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  香港 17, server: 171.111.216.155, port: 30002, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
+  - {name: Youtube顺丰资源  香港 18, server: 171.111.216.155, port: 30001, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
+  - {name: Youtube顺丰资源  日本 21, server: 18.182.63.216, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  日本 22, server: 18.183.233.62, port: 80, type: ss, cipher: aes-256-gcm, password: amazonskr05}
+  - {name: Youtube顺丰资源香港23, server: sd1.jiehuaa.xyz, port: 19446, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
+  - {name: Youtube顺丰资源  韩国 25, server: 3.35.20.163, port: 80, type: ss, cipher: aes-256-gcm, password: amazonskr05}
+  - {name: Youtube顺丰资源  香港 27, server: 223.113.53.141, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
+  - {name: Youtube顺丰资源美国28, server: kr4g.jeiaz.ink, port: 80, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
+  - {name: Youtube顺丰资源  香港 29, server: 223.113.53.141, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: 2ea079e3-26fc-42ab-97e3-b8e7e11097ec}
+  - {name: Youtube顺丰资源香港30, server: sd1.jiehuaa.xyz, port: 32460, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
+  - {name: Youtube顺丰资源  香港 31, server: 223.113.53.141, port: 30001, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
+  - {name: Youtube顺丰资源  香港 32, server: 223.113.53.141, port: 30001, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
+  - {name: Youtube顺丰资源香港33, server: sd3.jiehuaa.xyz, port: 39963, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
+  - {name: Youtube顺丰资源  韩国 37, server: 52.231.97.210, port: 2053, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  香港 38, server: 120.232.217.96, port: 21332, type: trojan, password: 7daf833c-37b9-4afc-8495-96590f03f781, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  香港 39, server: 120.232.217.96, port: 21332, type: trojan, password: 7daf833c-37b9-4afc-8495-96590f03f781, sni: 120.232.217.96, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  香港 46, server: 154.197.64.67, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  美国 50, server: 108.165.152.80, port: 2083, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  日本 52, server: 103.116.7.103, port: 2083, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  亚美尼亚 53, server: 188.164.159.91, port: 2083, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  斯洛文尼亚 56, server: 92.53.190.161, port: 2087, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  香港 61, server: hzhz1.sssyun.xyz, port: 39206, type: ss, cipher: chacha20-ietf-poly1305, password: d4eeaa7b-43c6-49dc-8020-7389bba4d033}
+  - {name: Youtube顺丰资源  韩国 64, server: 106.240.1.52, port: 20443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  美国 66, server: 198.62.62.192, port: 2083, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  香港 67, server: 154.197.64.166, port: 2053, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  新加坡 69, server: 27.50.48.189, port: 2083, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  新加坡 70, server: 27.50.49.207, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  美国 88, server: 206.238.236.134, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  美国 97, server: 209.94.90.87, port: 2087, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  爱尔兰 131, server: 63.35.150.236, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  爱尔兰 133, server: 52.49.63.178, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  爱尔兰 138, server: 63.34.150.70, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  法国 140, server: 35.181.14.160, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源香港156, server: sd1.jiehuaa.xyz, port: 43731, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
+  - {name: Youtube顺丰资源  越南 158, server: 103.152.164.39, port: 443, type: trojan, password: 34ec6bdf-602c-4bbe-933a-5c0823524201, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  香港 165, server: cu1.guguyun.xyz, port: 23733, type: ss, cipher: aes-128-gcm, password: e2c62a73-3132-48a6-a020-25c3ae0d8af2}
+  - {name: Youtube顺丰资源  爱沙尼亚 166, server: 45.136.199.132, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  越南 169, server: cmc6.5gsieuvip.vn, port: 443, type: trojan, password: 34ec6bdf-602c-4bbe-933a-5c0823524201, sni: cmc6.5gsieuvip.vn, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  俄罗斯 170, server: 212.41.15.119, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
+  - {name: Youtube顺丰资源  香港 173, server: mmt-shyd.iwe.la, port: 46461, type: ss, cipher: aes-128-gcm, password: e2c62a73-3132-48a6-a020-25c3ae0d8af2}
+  - {name: Youtube顺丰资源  香港 174, server: 171.111.216.155, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
+  - {name: Youtube顺丰资源  香港 175, server: 223.113.53.141, port: 30002, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
+  - {name: Youtube顺丰资源  香港 177, server: bj.xissyun.com, port: 46595, type: ss, cipher: aes-128-gcm, password: e2c62a73-3132-48a6-a020-25c3ae0d8af2}
+  - {name: Youtube顺丰资源  香港 178, server: 171.111.216.155, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: 2ea079e3-26fc-42ab-97e3-b8e7e11097ec}
+  - {name: Youtube顺丰资源  香港 181, server: 171.111.216.155, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
+  - {name: Youtube顺丰资源  香港 182, server: ctmm.gscloud.bond, port: 31620, type: ss, cipher: chacha20-ietf-poly1305, password: f16d3752-7bae-474e-87dc-f892df2caeaf}
+  - {name: Youtube顺丰资源  香港 184, server: ru0195.alibabaokz.com, port: 60194, type: trojan, password: 38571ca6-6692-4559-b901-0bc5826b7661, sni: ru0195.alibabaokz.com, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  香港 185, server: ru0195.alibabaokz.com, port: 60194, type: trojan, password: 38571ca6-6692-4559-b901-0bc5826b7661, sni: ru0195.alibabaokz.com, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源美国189, server: yaml777.133010.xyz, port: 80, type: vmess, uuid: 4a1cb611-381c-4fff-ca35-99be316eee17, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /yaml777, headers: {Host: yaml777.133010.xyz}}}
+  - {name: Youtube顺丰资源  香港 190, server: 223.113.53.141, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
+  - {name: Youtube顺丰资源  香港 195, server: ti3hyra4.slashdevslashnetslashtun.net, port: 15010, type: ss, cipher: aes-256-gcm, password: YPNNBXGRNCAXB9N7}
+  - {name: Youtube顺丰资源  香港 197, server: 8tv68qhq.slashdevslashnetslashtun.net, port: 15005, type: ss, cipher: aes-256-gcm, password: NFYDVXE3DMWI2M3W}
+  - {name: Youtube顺丰资源  香港 198, server: 223.113.53.141, port: 30002, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
+  - {name: Youtube顺丰资源  香港 200, server: 8tv68qhq.slashdevslashnetslashtun.net, port: 18001, type: ss, cipher: aes-256-gcm, password: MMRTIYVECN33018T}
+  - {name: Youtube顺丰资源  香港 201, server: 8tv68qhq.slashdevslashnetslashtun.net, port: 17001, type: ss, cipher: aes-256-gcm, password: QBNVUDH1J62ZEVWK}
+  - {name: Youtube顺丰资源  香港 218, server: 221.131.165.206, port: 60194, type: trojan, password: 38571ca6-6692-4559-b901-0bc5826b7661, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源  香港 219, server: 221.131.165.207, port: 60194, type: trojan, password: 38571ca6-6692-4559-b901-0bc5826b7661, skip-cert-verify: true, udp: true}
+  - {name: Youtube顺丰资源美国232, server: 151.101.2.216, port: 80, type: vmess, uuid: c69f3029-ae1e-45ca-aa08-70970f14dfd2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: telegram-ISVvpn.ir, network: ws, ws-opts: {path: "/racevpn?telegram@ISVvpn-telegram@ISVvpn-telegram@ISVvpn", headers: {Host: telegram-ISVvpn.ir}}}
+  - {name: Youtube顺丰资源美国239, server: s1.db-link02.top, port: 2082, type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: 100-6-81-226.s1.db-link02.top, network: ws, ws-opts: {path: /dabai.in104.20.8.162, headers: {Host: 100-6-81-226.s1.db-link02.top}}}
+  - {name: Youtube顺丰资源美国240, server: s1.db-link02.top, port: 80, type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: 100-49-141-209.s1.db-link02.top, network: ws, ws-opts: {path: /dabai.in104.17.169.115, headers: {Host: 100-49-141-209.s1.db-link02.top}}}
+  - {name: Youtube顺丰资源  香港 242, server: 223.113.53.141, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: a2c25d38-44dc-4b53-9377-9f98bd8d7e2b}
+  - {name: Youtube顺丰资源  香港 243, server: 223.113.53.141, port: 30001, type: ss, cipher: chacha20-ietf-poly1305, password: a2c25d38-44dc-4b53-9377-9f98bd8d7e2b}
+  - {name: Youtube顺丰资源伊朗244, server: 92.242.220.22, port: 37885, type: vmess, uuid: 8dee19ab-50ce-4d06-be42-5e53c8989ccc, alterId: 0, cipher: chacha20-poly1305, tls: false, skip-cert-verify: true}
+proxy-groups:
+  - name: 手动切换
+    type: select
+    proxies:
+      - Youtube顺丰资源  香港 2
+      - Youtube顺丰资源  香港 7
+      - Youtube顺丰资源  香港 11
+      - Youtube顺丰资源香港12
+      - Youtube顺丰资源  香港 14
+      - Youtube顺丰资源香港15
+      - Youtube顺丰资源  香港 16
+      - Youtube顺丰资源  香港 17
+      - Youtube顺丰资源  香港 18
+      - Youtube顺丰资源  日本 21
+      - Youtube顺丰资源  日本 22
+      - Youtube顺丰资源香港23
+      - Youtube顺丰资源  韩国 25
+      - Youtube顺丰资源  香港 27
+      - Youtube顺丰资源美国28
+      - Youtube顺丰资源  香港 29
+      - Youtube顺丰资源香港30
+      - Youtube顺丰资源  香港 31
+      - Youtube顺丰资源  香港 32
+      - Youtube顺丰资源香港33
+      - Youtube顺丰资源  韩国 37
+      - Youtube顺丰资源  香港 38
+      - Youtube顺丰资源  香港 39
+      - Youtube顺丰资源  香港 46
+      - Youtube顺丰资源  美国 50
+      - Youtube顺丰资源  日本 52
+      - Youtube顺丰资源  亚美尼亚 53
+      - Youtube顺丰资源  斯洛文尼亚 56
+      - Youtube顺丰资源  香港 61
+      - Youtube顺丰资源  韩国 64
+      - Youtube顺丰资源  美国 66
+      - Youtube顺丰资源  香港 67
+      - Youtube顺丰资源  新加坡 69
+      - Youtube顺丰资源  新加坡 70
+      - Youtube顺丰资源  美国 88
+      - Youtube顺丰资源  美国 97
+      - Youtube顺丰资源  爱尔兰 131
+      - Youtube顺丰资源  爱尔兰 133
+      - Youtube顺丰资源  爱尔兰 138
+      - Youtube顺丰资源  法国 140
+      - Youtube顺丰资源香港156
+      - Youtube顺丰资源  越南 158
+      - Youtube顺丰资源  香港 165
+      - Youtube顺丰资源  爱沙尼亚 166
+      - Youtube顺丰资源  越南 169
+      - Youtube顺丰资源  俄罗斯 170
+      - Youtube顺丰资源  香港 173
+      - Youtube顺丰资源  香港 174
+      - Youtube顺丰资源  香港 175
+      - Youtube顺丰资源  香港 177
+      - Youtube顺丰资源  香港 178
+      - Youtube顺丰资源  香港 181
+      - Youtube顺丰资源  香港 182
+      - Youtube顺丰资源  香港 184
+      - Youtube顺丰资源  香港 185
+      - Youtube顺丰资源美国189
+      - Youtube顺丰资源  香港 190
+      - Youtube顺丰资源  香港 195
+      - Youtube顺丰资源  香港 197
+      - Youtube顺丰资源  香港 198
+      - Youtube顺丰资源  香港 200
+      - Youtube顺丰资源  香港 201
+      - Youtube顺丰资源  香港 218
+      - Youtube顺丰资源  香港 219
+      - Youtube顺丰资源美国232
+      - Youtube顺丰资源美国239
+      - Youtube顺丰资源美国240
+      - Youtube顺丰资源  香港 242
+      - Youtube顺丰资源  香港 243
+      - Youtube顺丰资源伊朗244
+  - name: 自动选择
+    type: url-test
+    url: https://www.google.com/favicon.ico
+    interval: 300
+    tolerance: 50
+    proxies:
+      - Youtube顺丰资源  香港 2
+      - Youtube顺丰资源  香港 7
+      - Youtube顺丰资源  香港 11
+      - Youtube顺丰资源香港12
+      - Youtube顺丰资源  香港 14
+      - Youtube顺丰资源香港15
+      - Youtube顺丰资源  香港 16
+      - Youtube顺丰资源  香港 17
+      - Youtube顺丰资源  香港 18
+      - Youtube顺丰资源  日本 21
+      - Youtube顺丰资源  日本 22
+      - Youtube顺丰资源香港23
+      - Youtube顺丰资源  韩国 25
+      - Youtube顺丰资源  香港 27
+      - Youtube顺丰资源美国28
+      - Youtube顺丰资源  香港 29
+      - Youtube顺丰资源香港30
+      - Youtube顺丰资源  香港 31
+      - Youtube顺丰资源  香港 32
+      - Youtube顺丰资源香港33
+      - Youtube顺丰资源  韩国 37
+      - Youtube顺丰资源  香港 38
+      - Youtube顺丰资源  香港 39
+      - Youtube顺丰资源  香港 46
+      - Youtube顺丰资源  美国 50
+      - Youtube顺丰资源  日本 52
+      - Youtube顺丰资源  亚美尼亚 53
+      - Youtube顺丰资源  斯洛文尼亚 56
+      - Youtube顺丰资源  香港 61
+      - Youtube顺丰资源  韩国 64
+      - Youtube顺丰资源  美国 66
+      - Youtube顺丰资源  香港 67
+      - Youtube顺丰资源  新加坡 69
+      - Youtube顺丰资源  新加坡 70
+      - Youtube顺丰资源  美国 88
+      - Youtube顺丰资源  美国 97
+      - Youtube顺丰资源  爱尔兰 131
+      - Youtube顺丰资源  爱尔兰 133
+      - Youtube顺丰资源  爱尔兰 138
+      - Youtube顺丰资源  法国 140
+      - Youtube顺丰资源香港156
+      - Youtube顺丰资源  越南 158
+      - Youtube顺丰资源  香港 165
+      - Youtube顺丰资源  爱沙尼亚 166
+      - Youtube顺丰资源  越南 169
+      - Youtube顺丰资源  俄罗斯 170
+      - Youtube顺丰资源  香港 173
+      - Youtube顺丰资源  香港 174
+      - Youtube顺丰资源  香港 175
+      - Youtube顺丰资源  香港 177
+      - Youtube顺丰资源  香港 178
+      - Youtube顺丰资源  香港 181
+      - Youtube顺丰资源  香港 182
+      - Youtube顺丰资源  香港 184
+      - Youtube顺丰资源  香港 185
+      - Youtube顺丰资源美国189
+      - Youtube顺丰资源  香港 190
+      - Youtube顺丰资源  香港 195
+      - Youtube顺丰资源  香港 197
+      - Youtube顺丰资源  香港 198
+      - Youtube顺丰资源  香港 200
+      - Youtube顺丰资源  香港 201
+      - Youtube顺丰资源  香港 218
+      - Youtube顺丰资源  香港 219
+      - Youtube顺丰资源美国232
+      - Youtube顺丰资源美国239
+      - Youtube顺丰资源美国240
+      - Youtube顺丰资源  香港 242
+      - Youtube顺丰资源  香港 243
+      - Youtube顺丰资源伊朗244
+  - name: 负载均衡
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://www.google.com/favicon.ico
+    interval: 300
+    tolerance: 50
+    proxies:
+      - Youtube顺丰资源  香港 2
+      - Youtube顺丰资源  香港 7
+      - Youtube顺丰资源  香港 11
+      - Youtube顺丰资源香港12
+      - Youtube顺丰资源  香港 14
+      - Youtube顺丰资源香港15
+      - Youtube顺丰资源  香港 16
+      - Youtube顺丰资源  香港 17
+      - Youtube顺丰资源  香港 18
+      - Youtube顺丰资源  日本 21
+      - Youtube顺丰资源  日本 22
+      - Youtube顺丰资源香港23
+      - Youtube顺丰资源  韩国 25
+      - Youtube顺丰资源  香港 27
+      - Youtube顺丰资源美国28
+      - Youtube顺丰资源  香港 29
+      - Youtube顺丰资源香港30
+      - Youtube顺丰资源  香港 31
+      - Youtube顺丰资源  香港 32
+      - Youtube顺丰资源香港33
+      - Youtube顺丰资源  韩国 37
+      - Youtube顺丰资源  香港 38
+      - Youtube顺丰资源  香港 39
+      - Youtube顺丰资源  香港 46
+      - Youtube顺丰资源  美国 50
+      - Youtube顺丰资源  日本 52
+      - Youtube顺丰资源  亚美尼亚 53
+      - Youtube顺丰资源  斯洛文尼亚 56
+      - Youtube顺丰资源  香港 61
+      - Youtube顺丰资源  韩国 64
+      - Youtube顺丰资源  美国 66
+      - Youtube顺丰资源  香港 67
+      - Youtube顺丰资源  新加坡 69
+      - Youtube顺丰资源  新加坡 70
+      - Youtube顺丰资源  美国 88
+      - Youtube顺丰资源  美国 97
+      - Youtube顺丰资源  爱尔兰 131
+      - Youtube顺丰资源  爱尔兰 133
+      - Youtube顺丰资源  爱尔兰 138
+      - Youtube顺丰资源  法国 140
+      - Youtube顺丰资源香港156
+      - Youtube顺丰资源  越南 158
+      - Youtube顺丰资源  香港 165
+      - Youtube顺丰资源  爱沙尼亚 166
+      - Youtube顺丰资源  越南 169
+      - Youtube顺丰资源  俄罗斯 170
+      - Youtube顺丰资源  香港 173
+      - Youtube顺丰资源  香港 174
+      - Youtube顺丰资源  香港 175
+      - Youtube顺丰资源  香港 177
+      - Youtube顺丰资源  香港 178
+      - Youtube顺丰资源  香港 181
+      - Youtube顺丰资源  香港 182
+      - Youtube顺丰资源  香港 184
+      - Youtube顺丰资源  香港 185
+      - Youtube顺丰资源美国189
+      - Youtube顺丰资源  香港 190
+      - Youtube顺丰资源  香港 195
+      - Youtube顺丰资源  香港 197
+      - Youtube顺丰资源  香港 198
+      - Youtube顺丰资源  香港 200
+      - Youtube顺丰资源  香港 201
+      - Youtube顺丰资源  香港 218
+      - Youtube顺丰资源  香港 219
+      - Youtube顺丰资源美国232
+      - Youtube顺丰资源美国239
+      - Youtube顺丰资源美国240
+      - Youtube顺丰资源  香港 242
+      - Youtube顺丰资源  香港 243
+      - Youtube顺丰资源伊朗244
+  - name: 中国节点
+    type: select
+    proxies:
+      - Youtube顺丰资源  香港 2
+      - Youtube顺丰资源  香港 7
+      - Youtube顺丰资源  香港 11
+      - Youtube顺丰资源香港12
+      - Youtube顺丰资源  香港 14
+      - Youtube顺丰资源香港15
+      - Youtube顺丰资源  香港 16
+      - Youtube顺丰资源  香港 17
+      - Youtube顺丰资源  香港 18
+      - Youtube顺丰资源香港23
+      - Youtube顺丰资源  香港 27
+      - Youtube顺丰资源  香港 29
+      - Youtube顺丰资源香港30
+      - Youtube顺丰资源  香港 31
+      - Youtube顺丰资源  香港 32
+      - Youtube顺丰资源香港33
+      - Youtube顺丰资源  香港 38
+      - Youtube顺丰资源  香港 39
+      - Youtube顺丰资源  香港 46
+      - Youtube顺丰资源  香港 61
+      - Youtube顺丰资源  香港 67
+      - Youtube顺丰资源香港156
+      - Youtube顺丰资源  香港 165
+      - Youtube顺丰资源  香港 173
+      - Youtube顺丰资源  香港 174
+      - Youtube顺丰资源  香港 175
+      - Youtube顺丰资源  香港 177
+      - Youtube顺丰资源  香港 178
+      - Youtube顺丰资源  香港 181
+      - Youtube顺丰资源  香港 182
+      - Youtube顺丰资源  香港 184
+      - Youtube顺丰资源  香港 185
+      - Youtube顺丰资源  香港 190
+      - Youtube顺丰资源  香港 195
+      - Youtube顺丰资源  香港 197
+      - Youtube顺丰资源  香港 198
+      - Youtube顺丰资源  香港 200
+      - Youtube顺丰资源  香港 201
+      - Youtube顺丰资源  香港 218
+      - Youtube顺丰资源  香港 219
+      - Youtube顺丰资源  香港 242
+      - Youtube顺丰资源  香港 243
+  - name: 日本节点
+    type: select
+    proxies:
+      - Youtube顺丰资源  日本 21
+      - Youtube顺丰资源  日本 22
+      - Youtube顺丰资源  日本 52
+  - name: 新加坡节点
+    type: select
+    proxies:
+      - Youtube顺丰资源  新加坡 69
+      - Youtube顺丰资源  新加坡 70
+  - name: 美国节点
+    type: url-test
+    url: https://www.google.com/favicon.ico
+    interval: 300
+    tolerance: 150
+    proxies:
+      - Youtube顺丰资源美国28
+      - Youtube顺丰资源  美国 50
+      - Youtube顺丰资源  美国 66
+      - Youtube顺丰资源  美国 88
+      - Youtube顺丰资源  美国 97
+      - Youtube顺丰资源美国189
+      - Youtube顺丰资源美国232
+      - Youtube顺丰资源美国239
+      - Youtube顺丰资源美国240
+rules:
+  - IP-CIDR,219.135.231.205/32,DIRECT,no-resolve
+  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
+  - IP-CIDR,223.113.54.145/32,DIRECT,no-resolve
+  - DOMAIN,sd3.jiehuaa.xyz,DIRECT
+  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
+  - DOMAIN,sd3.jiehuaa.xyz,DIRECT
+  - IP-CIDR,36.150.215.196/32,DIRECT,no-resolve
+  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
+  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
+  - IP-CIDR,18.182.63.216/32,DIRECT,no-resolve
+  - IP-CIDR,18.183.233.62/32,DIRECT,no-resolve
+  - DOMAIN,sd1.jiehuaa.xyz,DIRECT
+  - IP-CIDR,3.35.20.163/32,DIRECT,no-resolve
+  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
+  - DOMAIN,kr4g.jeiaz.ink,DIRECT
+  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
+  - DOMAIN,sd1.jiehuaa.xyz,DIRECT
+  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
+  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
+  - DOMAIN,sd3.jiehuaa.xyz,DIRECT
+  - IP-CIDR,52.231.97.210/32,DIRECT,no-resolve
+  - IP-CIDR,120.232.217.96/32,DIRECT,no-resolve
+  - IP-CIDR,120.232.217.96/32,DIRECT,no-resolve
+  - IP-CIDR,154.197.64.67/32,DIRECT,no-resolve
+  - IP-CIDR,108.165.152.80/32,DIRECT,no-resolve
+  - IP-CIDR,103.116.7.103/32,DIRECT,no-resolve
+  - IP-CIDR,188.164.159.91/32,DIRECT,no-resolve
+  - IP-CIDR,92.53.190.161/32,DIRECT,no-resolve
+  - DOMAIN,hzhz1.sssyun.xyz,DIRECT
+  - IP-CIDR,106.240.1.52/32,DIRECT,no-resolve
+  - IP-CIDR,198.62.62.192/32,DIRECT,no-resolve
+  - IP-CIDR,154.197.64.166/32,DIRECT,no-resolve
+  - IP-CIDR,27.50.48.189/32,DIRECT,no-resolve
+  - IP-CIDR,27.50.49.207/32,DIRECT,no-resolve
+  - IP-CIDR,206.238.236.134/32,DIRECT,no-resolve
+  - IP-CIDR,209.94.90.87/32,DIRECT,no-resolve
+  - IP-CIDR,63.35.150.236/32,DIRECT,no-resolve
+  - IP-CIDR,52.49.63.178/32,DIRECT,no-resolve
+  - IP-CIDR,63.34.150.70/32,DIRECT,no-resolve
+  - IP-CIDR,35.181.14.160/32,DIRECT,no-resolve
+  - DOMAIN,sd1.jiehuaa.xyz,DIRECT
+  - IP-CIDR,103.152.164.39/32,DIRECT,no-resolve
+  - DOMAIN,cu1.guguyun.xyz,DIRECT
+  - IP-CIDR,45.136.199.132/32,DIRECT,no-resolve
+  - DOMAIN,cmc6.5gsieuvip.vn,DIRECT
+  - IP-CIDR,212.41.15.119/32,DIRECT,no-resolve
+  - DOMAIN,mmt-shyd.iwe.la,DIRECT
+  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
+  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
+  - DOMAIN,bj.xissyun.com,DIRECT
+  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
+  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
+  - DOMAIN,ctmm.gscloud.bond,DIRECT
+  - DOMAIN,ru0195.alibabaokz.com,DIRECT
+  - DOMAIN,ru0195.alibabaokz.com,DIRECT
+  - DOMAIN,yaml777.133010.xyz,DIRECT
+  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
+  - DOMAIN,ti3hyra4.slashdevslashnetslashtun.net,DIRECT
+  - DOMAIN,8tv68qhq.slashdevslashnetslashtun.net,DIRECT
+  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
+  - DOMAIN,8tv68qhq.slashdevslashnetslashtun.net,DIRECT
+  - DOMAIN,8tv68qhq.slashdevslashnetslashtun.net,DIRECT
+  - IP-CIDR,221.131.165.206/32,DIRECT,no-resolve
+  - IP-CIDR,221.131.165.207/32,DIRECT,no-resolve
+  - IP-CIDR,151.101.2.216/32,DIRECT,no-resolve
+  - DOMAIN,s1.db-link02.top,DIRECT
+  - DOMAIN,s1.db-link02.top,DIRECT
+  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
+  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
+  - IP-CIDR,92.242.220.22/32,DIRECT,no-resolve
+  - MATCH,手动切换
