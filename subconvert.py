@@ -84,8 +84,12 @@ if __name__=='__main__':
     #获取参数携带的参数
     import sys
     args = sys.argv
+    print(args)
     if args:
-        source = args[0]
+         = args[0]
         output_type = args[1]
         output = args[2]
-        fileToFile(source,output_type,output)
+        print('\n 0 = ' + source)
+        print('\n 1 = ' + output_type)
+        print('\n 2 = ' + output)
+        #fileToFile(source,output_type,output)
