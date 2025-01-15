@@ -20,7 +20,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
         converted_url = sever_host+'/sub?target=clash&url='+url+'&insert=false&config='+configUrl+'&emoji=false'
         try:
             resp = requests.get(converted_url)
-            print(resp)
+            #print(resp)
         except Exception as err:
             print(err)
             return 'Url 解析错误'
