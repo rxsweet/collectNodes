@@ -86,7 +86,7 @@ if __name__=='__main__':
     args = sys.argv
     print(args)
     if args:
-         = args[0]
+        source = args[0]
         output_type = args[1]
         output = args[2]
         print('\n 0 = ' + source)
