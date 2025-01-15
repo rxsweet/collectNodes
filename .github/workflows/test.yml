@@ -21,15 +21,12 @@ jobs:
     #     tar xzf subconverter_linux64.tar.gz
     #     chmod +x subconverter/subconverter
     #     nohup subconverter/subconverter &
-
-    # 使用docker的subconverter，会保持最新版本
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
-    
-    - name: Run Docker container
+    - name: 安装订阅转换工具-subconverter
       run: |
-        docker run -d --restart=always -p 25500:25500 tindy2013/subconverter:latest
-        #docker run -d --restart=always -p 25500:25500 lonelam/subconverter:latest
+        #wget -O subconverter.tar.gz https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.tar.gz
+        wget -O subconverter.tar.gz https://github.com/lonelam/subconverter/releases/latest/download/subconverter_linux64.tar.gz
+        tar -zxvf subconverter.tar.gz -C ./
+        chmod +x ./subconverter/subconverter && nohup ./subconverter/subconverter &
 
     - name: Setup Python # 安装python环境
       uses: actions/setup-python@v5
