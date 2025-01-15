@@ -5,226 +5,1045 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: Youtube顺丰资源  香港 2, server: 219.135.231.205, port: 21042, type: trojan, password: 0bc68743-cff8-4730-9818-9d8192ee335c, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  香港 7, server: 171.111.216.155, port: 30002, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
-  - {name: Youtube顺丰资源  香港 11, server: 223.113.54.145, port: 36442, type: trojan, password: phXKwfrd, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源香港12, server: sd3.jiehuaa.xyz, port: 19700, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
-  - {name: Youtube顺丰资源  香港 14, server: 171.111.216.155, port: 30001, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
-  - {name: Youtube顺丰资源香港15, server: sd3.jiehuaa.xyz, port: 15757, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
-  - {name: Youtube顺丰资源  香港 16, server: 36.150.215.196, port: 34188, type: trojan, password: phXKwfrd, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  香港 17, server: 171.111.216.155, port: 30002, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
-  - {name: Youtube顺丰资源  香港 18, server: 171.111.216.155, port: 30001, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
-  - {name: Youtube顺丰资源  日本 21, server: 18.182.63.216, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  日本 22, server: 18.183.233.62, port: 80, type: ss, cipher: aes-256-gcm, password: amazonskr05}
-  - {name: Youtube顺丰资源香港23, server: sd1.jiehuaa.xyz, port: 19446, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
-  - {name: Youtube顺丰资源  韩国 25, server: 3.35.20.163, port: 80, type: ss, cipher: aes-256-gcm, password: amazonskr05}
-  - {name: Youtube顺丰资源  香港 27, server: 223.113.53.141, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
-  - {name: Youtube顺丰资源美国28, server: kr4g.jeiaz.ink, port: 80, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
-  - {name: Youtube顺丰资源  香港 29, server: 223.113.53.141, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: 2ea079e3-26fc-42ab-97e3-b8e7e11097ec}
-  - {name: Youtube顺丰资源香港30, server: sd1.jiehuaa.xyz, port: 32460, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
-  - {name: Youtube顺丰资源  香港 31, server: 223.113.53.141, port: 30001, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
-  - {name: Youtube顺丰资源  香港 32, server: 223.113.53.141, port: 30001, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
-  - {name: Youtube顺丰资源香港33, server: sd3.jiehuaa.xyz, port: 39963, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
-  - {name: Youtube顺丰资源  韩国 37, server: 52.231.97.210, port: 2053, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  香港 38, server: 120.232.217.96, port: 21332, type: trojan, password: 7daf833c-37b9-4afc-8495-96590f03f781, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  香港 39, server: 120.232.217.96, port: 21332, type: trojan, password: 7daf833c-37b9-4afc-8495-96590f03f781, sni: 120.232.217.96, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  香港 46, server: 154.197.64.67, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  美国 50, server: 108.165.152.80, port: 2083, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  日本 52, server: 103.116.7.103, port: 2083, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  亚美尼亚 53, server: 188.164.159.91, port: 2083, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  斯洛文尼亚 56, server: 92.53.190.161, port: 2087, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  香港 61, server: hzhz1.sssyun.xyz, port: 39206, type: ss, cipher: chacha20-ietf-poly1305, password: d4eeaa7b-43c6-49dc-8020-7389bba4d033}
-  - {name: Youtube顺丰资源  韩国 64, server: 106.240.1.52, port: 20443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  美国 66, server: 198.62.62.192, port: 2083, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  香港 67, server: 154.197.64.166, port: 2053, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  新加坡 69, server: 27.50.48.189, port: 2083, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  新加坡 70, server: 27.50.49.207, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  美国 88, server: 206.238.236.134, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  美国 97, server: 209.94.90.87, port: 2087, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  爱尔兰 131, server: 63.35.150.236, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  爱尔兰 133, server: 52.49.63.178, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  爱尔兰 138, server: 63.34.150.70, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  法国 140, server: 35.181.14.160, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源香港156, server: sd1.jiehuaa.xyz, port: 43731, type: vmess, uuid: 5f78498d-36da-4eb5-84df-054782ed8c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: tms.dingtalk.com, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}}
-  - {name: Youtube顺丰资源  越南 158, server: 103.152.164.39, port: 443, type: trojan, password: 34ec6bdf-602c-4bbe-933a-5c0823524201, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  香港 165, server: cu1.guguyun.xyz, port: 23733, type: ss, cipher: aes-128-gcm, password: e2c62a73-3132-48a6-a020-25c3ae0d8af2}
-  - {name: Youtube顺丰资源  爱沙尼亚 166, server: 45.136.199.132, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  越南 169, server: cmc6.5gsieuvip.vn, port: 443, type: trojan, password: 34ec6bdf-602c-4bbe-933a-5c0823524201, sni: cmc6.5gsieuvip.vn, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  俄罗斯 170, server: 212.41.15.119, port: 443, type: trojan, password: Aimer, sni: ameqo.esslh.filegear-sg.me, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ameqo.esslh.filegear-sg.me}}, udp: true}
-  - {name: Youtube顺丰资源  香港 173, server: mmt-shyd.iwe.la, port: 46461, type: ss, cipher: aes-128-gcm, password: e2c62a73-3132-48a6-a020-25c3ae0d8af2}
-  - {name: Youtube顺丰资源  香港 174, server: 171.111.216.155, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
-  - {name: Youtube顺丰资源  香港 175, server: 223.113.53.141, port: 30002, type: ss, cipher: chacha20-ietf-poly1305, password: cc067712-a946-4353-b761-ea70988538e4}
-  - {name: Youtube顺丰资源  香港 177, server: bj.xissyun.com, port: 46595, type: ss, cipher: aes-128-gcm, password: e2c62a73-3132-48a6-a020-25c3ae0d8af2}
-  - {name: Youtube顺丰资源  香港 178, server: 171.111.216.155, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: 2ea079e3-26fc-42ab-97e3-b8e7e11097ec}
-  - {name: Youtube顺丰资源  香港 181, server: 171.111.216.155, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
-  - {name: Youtube顺丰资源  香港 182, server: ctmm.gscloud.bond, port: 31620, type: ss, cipher: chacha20-ietf-poly1305, password: f16d3752-7bae-474e-87dc-f892df2caeaf}
-  - {name: Youtube顺丰资源  香港 184, server: ru0195.alibabaokz.com, port: 60194, type: trojan, password: 38571ca6-6692-4559-b901-0bc5826b7661, sni: ru0195.alibabaokz.com, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  香港 185, server: ru0195.alibabaokz.com, port: 60194, type: trojan, password: 38571ca6-6692-4559-b901-0bc5826b7661, sni: ru0195.alibabaokz.com, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源美国189, server: yaml777.133010.xyz, port: 80, type: vmess, uuid: 4a1cb611-381c-4fff-ca35-99be316eee17, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /yaml777, headers: {Host: yaml777.133010.xyz}}}
-  - {name: Youtube顺丰资源  香港 190, server: 223.113.53.141, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
-  - {name: Youtube顺丰资源  香港 195, server: ti3hyra4.slashdevslashnetslashtun.net, port: 15010, type: ss, cipher: aes-256-gcm, password: YPNNBXGRNCAXB9N7}
-  - {name: Youtube顺丰资源  香港 197, server: 8tv68qhq.slashdevslashnetslashtun.net, port: 15005, type: ss, cipher: aes-256-gcm, password: NFYDVXE3DMWI2M3W}
-  - {name: Youtube顺丰资源  香港 198, server: 223.113.53.141, port: 30002, type: ss, cipher: chacha20-ietf-poly1305, password: 9e07f33f-6eaf-4ad3-b2a9-8f7004a25736}
-  - {name: Youtube顺丰资源  香港 200, server: 8tv68qhq.slashdevslashnetslashtun.net, port: 18001, type: ss, cipher: aes-256-gcm, password: MMRTIYVECN33018T}
-  - {name: Youtube顺丰资源  香港 201, server: 8tv68qhq.slashdevslashnetslashtun.net, port: 17001, type: ss, cipher: aes-256-gcm, password: QBNVUDH1J62ZEVWK}
-  - {name: Youtube顺丰资源  香港 218, server: 221.131.165.206, port: 60194, type: trojan, password: 38571ca6-6692-4559-b901-0bc5826b7661, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源  香港 219, server: 221.131.165.207, port: 60194, type: trojan, password: 38571ca6-6692-4559-b901-0bc5826b7661, skip-cert-verify: true, udp: true}
-  - {name: Youtube顺丰资源美国232, server: 151.101.2.216, port: 80, type: vmess, uuid: c69f3029-ae1e-45ca-aa08-70970f14dfd2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: telegram-ISVvpn.ir, network: ws, ws-opts: {path: "/racevpn?telegram@ISVvpn-telegram@ISVvpn-telegram@ISVvpn", headers: {Host: telegram-ISVvpn.ir}}}
-  - {name: Youtube顺丰资源美国239, server: s1.db-link02.top, port: 2082, type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: 100-6-81-226.s1.db-link02.top, network: ws, ws-opts: {path: /dabai.in104.20.8.162, headers: {Host: 100-6-81-226.s1.db-link02.top}}}
-  - {name: Youtube顺丰资源美国240, server: s1.db-link02.top, port: 80, type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, servername: 100-49-141-209.s1.db-link02.top, network: ws, ws-opts: {path: /dabai.in104.17.169.115, headers: {Host: 100-49-141-209.s1.db-link02.top}}}
-  - {name: Youtube顺丰资源  香港 242, server: 223.113.53.141, port: 30003, type: ss, cipher: chacha20-ietf-poly1305, password: a2c25d38-44dc-4b53-9377-9f98bd8d7e2b}
-  - {name: Youtube顺丰资源  香港 243, server: 223.113.53.141, port: 30001, type: ss, cipher: chacha20-ietf-poly1305, password: a2c25d38-44dc-4b53-9377-9f98bd8d7e2b}
-  - {name: Youtube顺丰资源伊朗244, server: 92.242.220.22, port: 37885, type: vmess, uuid: 8dee19ab-50ce-4d06-be42-5e53c8989ccc, alterId: 0, cipher: chacha20-poly1305, tls: false, skip-cert-verify: true}
+  - {name: 香港01, server: gy.666666222.shop, port: 34338, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 台湾2全天极速优先使用|X3, server: yx.sulink.one, port: 2052, type: vmess, uuid: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: tw02.xn--io0a7iw0ab67b.xyz}}, udp: true}
+  - {name: 俄罗斯-圣彼得堡-009-1B, server: 194.87.69.56, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-015-1B, server: 195.58.49.42, port: 28153, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 香港-LELE测试-1.5x-HY-1A, server: wjb5ekt8wf.fcbjw.com, port: 50673, type: ss, cipher: chacha20-ietf-poly1305, password: 2fd9a5bc-a501-49ef-b6a6-48d3e6b6508e, udp: true}
+  - {name: 移动 凤凰城 51, server: cmcc.abyssvpn.com, port: 31151, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 电信 西雅图 25, server: bgp.abyssvpn.com, port: 31125, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 新加坡07奈非-5x, server: sg07v6.sulink.one, port: 32052, type: hysteria2, password: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, sni: www.bing.com, skip-cert-verify: true}
+  - {name: 联通 香港 13, server: cucc.abyssvpn.com, port: 31113, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 电信 香港 15, server: bgp.abyssvpn.com, port: 31115, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港-CN2-1-1A, server: hkone.z342jdahhdc.cfd, port: 6231, type: hysteria2, password: 9c7fd899-2080-47c1-911e-5b108e8fc037, obfs: salamander, obfs-password: ZDQxZDhjZDk4ZjAwYjIwNA==, skip-cert-verify: true}
+  - {name: 台湾SS中转25x, server: g2.hy2.one, port: 13108, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 电信 阿姆斯特丹 19, server: bgp.abyssvpn.com, port: 31119, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 美国中转 02, server: chiyu.myfczy169.top, port: 54501, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 联通 洛杉矶 20, server: cucc.abyssvpn.com, port: 31120, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日本SS中转25x, server: g2.hy2.one, port: 13106, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 瑞士-日内瓦-001-1B, server: 194.87.18.248, port: 55899, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 德国-法兰克福-HY-001-1B, server: 5.39.252.204, port: 3942, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: M2UyNTc5OWUwYjkyM2Q2OQ==, skip-cert-verify: true}
+  - {name: 移动 亚特兰大 22, server: cmcc.abyssvpn.com, port: 31122, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 印度 53, server: cmcc.abyssvpn.com, port: 31153, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 香港 13, server: cmcc.abyssvpn.com, port: 31113, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 台湾02-3x-流媒体, server: cf.hy2.one, port: 80, type: vmess, uuid: 6e523f90-209e-482c-b610-af8581f489fd, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /af323d, headers: {Host: tw02.hy2.one}}, udp: true}
+  - {name: 美国02, server: us02.sulink.one, port: 10522, type: hysteria2, password: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, sni: www.bing.com, skip-cert-verify: true}
+  - {name: 香港中转 05, server: chiyu.myfczy169.top, port: 20901, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 电信 香港 11, server: bgp.abyssvpn.com, port: 31111, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 台湾01, server: gy.666666222.shop, port: 47564, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 电信 华盛顿 06, server: bgp.abyssvpn.com, port: 31106, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 电信 凤凰城 51, server: bgp.abyssvpn.com, port: 31151, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 圣何塞 26, server: cmcc.abyssvpn.com, port: 31126, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 香港 100, server: cmcc.abyssvpn.com, port: 31200, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-013-1A, server: 194.87.69.52, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 澳大利亚原生1, server: haa.dashuai.cyou, port: 45062, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 联通 香港 14, server: cucc.abyssvpn.com, port: 31114, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-HY-012-1B, server: 195.58.49.86, port: 28153, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 电信 弗吉尼亚 07, server: bgp.abyssvpn.com, port: 31107, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 电信 洛杉矶 20, server: bgp.abyssvpn.com, port: 31120, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-HY-007-1A, server: 176.32.39.181, port: 13180, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-HY-008-1B, server: 194.87.69.244, port: 13180, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 日本BGP 中转 01 1.5x, server: bb6d78e050a098dda5abbb47f0cc7fcd.node.tro.node-is.green, port: 48428, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: passport.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 联通 华盛顿 06, server: cucc.abyssvpn.com, port: 31106, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 联通 达拉斯 24, server: cucc.abyssvpn.com, port: 31124, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 联通 加拿大 61, server: cucc.abyssvpn.com, port: 31161, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 新加坡 02, server: cmcc.abyssvpn.com, port: 31102, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: KR 冰摇桃桃乌龙茶, server: kr.stardad.lol, port: 23656, type: hysteria2, password: 63234556-24c8-48e8-acf0-4415bde3cbc9, sni: https://bing.com, skip-cert-verify: true}
+  - {name: 电信 日本 57, server: bgp.abyssvpn.com, port: 31157, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 香港 11, server: cmcc.abyssvpn.com, port: 31111, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 越南 03, server: cmcc.abyssvpn.com, port: 31103, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 美国5, server: yx.sulink.one, port: 80, type: vmess, uuid: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us5.sulink.one}}, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-009-1B, server: 194.87.69.56, port: 13180, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 中国-香港-HY-005-1A, server: 212.192.12.70, port: 32902, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: YzcwOTNlODc4NDIzMWMyMg==, skip-cert-verify: true}
+  - {name: 加拿大1, server: haa.dashuai.cyou, port: 45064, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国-CN2-3-1A, server: usthree.z342jdahhdc.cfd, port: 3314, type: vmess, uuid: 9c7fd899-2080-47c1-911e-5b108e8fc037, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台湾-02-奈非-3x, server: tw02v6.sulian.life, port: 30001, type: hysteria2, password: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, sni: www.bing.com, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-HY-014-1B, server: 195.58.49.50, port: 28153, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 澳门NO.2, server: xdd.dashuai.cyou, port: 45051, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 电信 芝加哥 21, server: bgp.abyssvpn.com, port: 31121, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港2SS中转, server: pro.sulink.one, port: 48876, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MGM0ZTIzY2MtZDhkNi00YjYzLTkwNzktNWFjZDNlYTc=, udp: true}
+  - {name: 联通 洛杉矶 27, server: cucc.abyssvpn.com, port: 31127, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 越南中转, server: chiyu.myfczy169.top, port: 21071, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 俄罗斯-圣彼得堡-016-1B, server: 194.87.69.50, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 印度1, server: haa.dashuai.cyou, port: 45074, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-006-1B, server: 195.58.49.152, port: 41713, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 公益路线-香港HK 限速50MBPS-1B, server: jehw72eh.97kb.com, port: 49709, type: ss, cipher: aes-256-gcm, password: 84e02ac5-61fb-47a6-91a7-bc43d00e459c, udp: true}
+  - {name: 日本-CN2-1-1B, server: jpone.z342jdahhdc.cfd, port: 6588, type: hysteria2, password: c733ef01-f9e3-4ccf-a9a3-bd6091edc3f6, obfs: salamander, obfs-password: ZDQxZDhjZDk4ZjAwYjIwNA==, skip-cert-verify: true}
+  - {name: 香港中转 04, server: chiyu.myfczy169.top, port: 11618, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 法国IPV6-09, server: fr09.sulian.life, port: 40149, type: hysteria2, password: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, sni: fr09.sulian.life, skip-cert-verify: true}
+  - {name: 联通 日本 58, server: cucc.abyssvpn.com, port: 31158, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港-CN2-1-1B, server: hkone.z342jdahhdc.cfd, port: 6231, type: hysteria2, password: c733ef01-f9e3-4ccf-a9a3-bd6091edc3f6, obfs: salamander, obfs-password: ZDQxZDhjZDk4ZjAwYjIwNA==, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-HY-015-1A, server: 195.58.49.42, port: 28153, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 联通 圣何塞 26, server: cucc.abyssvpn.com, port: 31126, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 瑞士-日内瓦-001-1A, server: 194.87.18.248, port: 55899, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-016-1A, server: 194.87.69.50, port: 45751, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 台湾2SS中转|3x, server: pro.sulink.one, port: 48884, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MGM0ZTIzY2MtZDhkNi00YjYzLTkwNzktNWFjZDNlYTc=, udp: true}
+  - {name: 香港5高速中转5x, server: gsgs.hy2.one, port: 53345, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 美国BGP 中转 01 1.5x, server: d7ef799f336644d9d1bcffec20c72778.node.tro.node-is.green, port: 40067, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: api.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 移动 圣何塞 29, server: cmcc.abyssvpn.com, port: 31129, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日本SS中转1, server: pro.sulink.one, port: 48889, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MGM0ZTIzY2MtZDhkNi00YjYzLTkwNzktNWFjZDNlYTc=, udp: true}
+  - {name: 移动 纽约 23, server: cmcc.abyssvpn.com, port: 31123, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 泰国中转, server: chiyu.myfczy169.top, port: 20289, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 联通 阿姆斯特丹 19, server: cucc.abyssvpn.com, port: 31119, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 印度 54, server: cmcc.abyssvpn.com, port: 31154, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 台湾 01, server: cmcc.abyssvpn.com, port: 31101, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 电信 纽约 23, server: bgp.abyssvpn.com, port: 31123, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 新加坡BGP 中转 02 1.5x, server: 91f4869ed3c3ba367496bedd8c57cc6e.node.tro.node-is.green, port: 43143, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: www.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-009-1A, server: 194.87.69.56, port: 13180, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 英国SS-13, server: gsgs.hy2.one, port: 60194, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 香港BGP 中转 04 1.5x, server: 097864f277068a93abbc6494c2f0b31b.node.tro.node-is.green, port: 40652, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: console.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-007-1B, server: 176.32.39.181, port: 13180, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 香港BGP 中转 02 1.5x, server: 57c7efcdfc38c962b270168ebe666e11.node.tro.node-is.green, port: 47385, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: console.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 联通 加利福尼亚 05, server: cucc.abyssvpn.com, port: 31105, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 中国-香港-HY-002-1B, server: 212.192.15.239, port: 37676, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, skip-cert-verify: true}
+  - {name: 越南高速中转, server: gsgs.hy2.one, port: 63326, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 联通 芝加哥 17, server: cucc.abyssvpn.com, port: 31117, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, sni: apple.com, skip-cert-verify: true}
+  - {name: 美国-芝加哥-HY-001-1B, server: 166.88.159.225, port: 21919, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: MzU2MTQ1ZGUyYmNjNWEyOA==, skip-cert-verify: true}
+  - {name: 新加坡2高速中转3x, server: gsgs.hy2.one, port: 53341, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 联通 越南 03, server: cucc.abyssvpn.com, port: 31103, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 法国 CM 隧道NO1, server: qd.needss.top, port: 52108, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: JP 香草星冰乐, server: jpzl2.stardad.lol, port: 48512, type: hysteria2, password: 63234556-24c8-48e8-acf0-4415bde3cbc9, sni: https://bing.com, skip-cert-verify: true}
+  - {name: 中国-香港-HY-002-1A, server: 212.192.15.239, port: 37676, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, skip-cert-verify: true}
+  - {name: 移动 加利福尼亚 05, server: cmcc.abyssvpn.com, port: 31105, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 导航页, server: 8.8.8.8, port: 80, type: ss, cipher: chacha20-ietf-poly1305, password: 63234556-24c8-48e8-acf0-4415bde3cbc9, udp: true}
+  - {name: 俄罗斯-圣彼得堡-011-1A, server: 194.87.68.115, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 哈萨克斯坦中转, server: chiyu.myfczy169.top, port: 21081, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 电信 香港 14, server: bgp.abyssvpn.com, port: 31114, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 新加坡1高速中转3x, server: gsgs.hy2.one, port: 53342, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-011-1A, server: 194.87.68.115, port: 13180, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 德国 IEPL专线NO1, server: i.needss.top, port: 54787, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 移动 香港 14, server: cmcc.abyssvpn.com, port: 31114, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 美国-CN2-3-1B, server: usthree.z342jdahhdc.cfd, port: 3314, type: vmess, uuid: c733ef01-f9e3-4ccf-a9a3-bd6091edc3f6, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 电信 洛杉矶 28, server: bgp.abyssvpn.com, port: 31128, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 弗吉尼亚 07, server: cmcc.abyssvpn.com, port: 31107, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 联通 洛杉矶 16, server: cucc.abyssvpn.com, port: 31116, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 三网中转香港|5x, server: ahkt.sulink.one, port: 21064, type: hysteria2, password: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, sni: www.bing.com, skip-cert-verify: true}
+  - {name: 法国2, server: xdd.dashuai.cyou, port: 45071, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 电信 圣何塞 26, server: bgp.abyssvpn.com, port: 31126, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港4高速中转5x, server: gsgs.hy2.one, port: 53346, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 日本NO.1, server: haa.dashuai.cyou, port: 45056, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 俄罗斯 IEPL专线NO1, server: i.needss.top, port: 21111, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 日本中转 04, server: chiyu.myfczy169.top, port: 20678, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 联通 香港 12, server: cucc.abyssvpn.com, port: 31112, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港3SS中转, server: pro.sulink.one, port: 48875, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MGM0ZTIzY2MtZDhkNi00YjYzLTkwNzktNWFjZDNlYTc=, udp: true}
+  - {name: 西班牙IPV6, server: sp01.sulink.one, port: 20649, type: hysteria2, password: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, sni: sp01.sulink.one, skip-cert-verify: true}
+  - {name: 香港BGP 中转 01 1.5x, server: 634ca9c0b75ed13512b0d47795221d0e.node.tro.node-is.green, port: 41851, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: console.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-CN2-1-1B, server: sgone.z342jdahhdc.cfd, port: 5552, type: hysteria2, password: c733ef01-f9e3-4ccf-a9a3-bd6091edc3f6, obfs: salamander, obfs-password: ZDQxZDhjZDk4ZjAwYjIwNA==, skip-cert-verify: true}
+  - {name: 土耳其中转, server: chiyu.myfczy169.top, port: 21048, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 新加坡03奈非-5x, server: sg03v6.sulink.one, port: 22052, type: hysteria2, password: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, sni: www.bing.com, skip-cert-verify: true}
+  - {name: 台湾中转 02, server: chiyu.myfczy169.top, port: 22297, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 日本-CN2-3-1A, server: jpthree.z342jdahhdc.cfd, port: 6211, type: vmess, uuid: 9c7fd899-2080-47c1-911e-5b108e8fc037, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 加拿大-多伦多-HY-001-1A, server: 141.195.112.167, port: 47743, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: OWVjYWI5MTVlMDJjYWZkNQ==, skip-cert-verify: true}
+  - {name: 日本01, server: gy.666666222.shop, port: 20002, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 移动 香港 15, server: cmcc.abyssvpn.com, port: 31115, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 加拿大2, server: xdd.dashuai.cyou, port: 45065, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-012-1A, server: 195.58.49.86, port: 28153, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 荷兰 IEPL专线NO1, server: qd.needss.top, port: 20014, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 阿联酋中转, server: chiyu.myfczy169.top, port: 21059, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 俄罗斯-圣彼得堡-014-1A, server: 195.58.49.50, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 俄罗斯-圣彼得堡-009-1A, server: 194.87.69.56, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 台湾中转 03, server: chiyu.myfczy169.top, port: 32525, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 中国-香港-005-1A, server: 212.192.12.70, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 美国BGP 中转 04 1.5x, server: a0f2bfab412f77ea928f2bef68685650.node.tro.node-is.green, port: 49201, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: api.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 联通 香港 11, server: cucc.abyssvpn.com, port: 31111, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 新加坡-CN2-1-1A, server: sgone.z342jdahhdc.cfd, port: 5552, type: hysteria2, password: 9c7fd899-2080-47c1-911e-5b108e8fc037, obfs: salamander, obfs-password: ZDQxZDhjZDk4ZjAwYjIwNA==, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-006-1B, server: 195.58.49.152, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 联通 香港 15, server: cucc.abyssvpn.com, port: 31115, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港02, server: gy.666666222.shop, port: 20035, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 日本03, server: gy.666666222.shop, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 移动 丹佛 18, server: cmcc.abyssvpn.com, port: 31118, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日本SS中转4, server: pro.sulink.one, port: 48886, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MGM0ZTIzY2MtZDhkNi00YjYzLTkwNzktNWFjZDNlYTc=, udp: true}
+  - {name: 俄罗斯-圣彼得堡-011-1B, server: 194.87.68.115, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 新加坡-CN2-3-1B, server: sgthree.z342jdahhdc.cfd, port: 2144, type: vmess, uuid: c733ef01-f9e3-4ccf-a9a3-bd6091edc3f6, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国1SS中转, server: pro.sulink.one, port: 48881, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MGM0ZTIzY2MtZDhkNi00YjYzLTkwNzktNWFjZDNlYTc=, udp: true}
+  - {name: 移动 西雅图 25, server: cmcc.abyssvpn.com, port: 31125, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 电信 日本 59, server: bgp.abyssvpn.com, port: 31159, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港中转 02, server: chiyu.myfczy169.top, port: 36858, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 韩国高速中转3, server: gsgs.hy2.one, port: 63321, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 美国3SS中转, server: pro.sulink.one, port: 48879, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MGM0ZTIzY2MtZDhkNi00YjYzLTkwNzktNWFjZDNlYTc=, udp: true}
+  - {name: 印度 IEPL专线NO1, server: i.needss.top, port: 15442, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 电信 印度 54, server: bgp.abyssvpn.com, port: 31154, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 洛杉矶 16, server: cmcc.abyssvpn.com, port: 31116, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日本BGP 中转 02 1.5x, server: 700eb9e2301db67a59b68eb83da3e5f1.node.tro.node-is.green, port: 40116, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: passport.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-CN2-3-1A, server: sgthree.z342jdahhdc.cfd, port: 2144, type: vmess, uuid: 9c7fd899-2080-47c1-911e-5b108e8fc037, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 联通 凤凰城 52, server: cucc.abyssvpn.com, port: 31152, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港BGP 三网直连1x, server: 3b1fce414486b08ec256a25cb6928bfc.node.tro.node-is.green, port: 44800, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: live.douyin.com, skip-cert-verify: true, udp: true}
+  - {name: 非洲 IEPL专线 NO1, server: i.needss.top, port: 44410, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 巴西中转, server: chiyu.myfczy169.top, port: 20936, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 移动 阿姆斯特丹 19, server: cmcc.abyssvpn.com, port: 31119, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 芝加哥 21, server: cmcc.abyssvpn.com, port: 31121, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港6高速中转, server: gsgs.hy2.one, port: 53344, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 美国05, server: us05.sulink.one, port: 42052, type: hysteria2, password: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, sni: us05.sulink.one, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-015-1B, server: 195.58.49.42, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 美国NO.2, server: xdd.dashuai.cyou, port: 45053, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 电信 加拿大 61, server: bgp.abyssvpn.com, port: 31161, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 新加坡3高速中转3x, server: gsgs.hy2.one, port: 53340, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 英国中转 03, server: chiyu.myfczy169.top, port: 22771, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 新加坡中转 01, server: chiyu.myfczy169.top, port: 14362, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 电信 拉齐奥 27, server: bgp.abyssvpn.com, port: 31127, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 印度中转, server: chiyu.myfczy169.top, port: 21061, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 新加坡02-V4-流媒体, server: cf.hy2.one, port: 2052, type: vmess, uuid: 6e523f90-209e-482c-b610-af8581f489fd, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /0, headers: {Host: sg0002.hy-2.top}}, udp: true}
+  - {name: 香港中转 03, server: chiyu.myfczy169.top, port: 14407, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 下方为备用节点, server: 666.com, port: 777, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 瑞典中转, server: chiyu.myfczy169.top, port: 22539, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 移动 华盛顿 06, server: cmcc.abyssvpn.com, port: 31106, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 新加坡NO.1, server: haa.dashuai.cyou, port: 45054, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 电信 香港 100, server: bgp.abyssvpn.com, port: 31200, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-HY-014-1A, server: 195.58.49.50, port: 28153, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 联通 印度 53, server: cucc.abyssvpn.com, port: 31153, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 韩国 IEPL专线NO1, server: i.needss.top, port: 20021, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: XC-WXY, server: hk.kfsldflk.xyz, port: 1200, type: ss, cipher: aes-256-gcm, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 联通 凤凰城 51, server: cucc.abyssvpn.com, port: 31151, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 新加坡BGP 中转 01 1.5x, server: f4abdf20f005feca334fc4c3f111d208.node.tro.node-is.green, port: 49204, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: www.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 移动 香港 12, server: cmcc.abyssvpn.com, port: 31112, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-012-1A, server: 195.58.49.86, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 联通 日本 57, server: cucc.abyssvpn.com, port: 31157, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 印度2, server: xdd.dashuai.cyou, port: 45073, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 联通 芝加哥 21, server: cucc.abyssvpn.com, port: 31121, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日本02, server: gy.666666222.shop, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 瑞士-日内瓦-HY-001-1A, server: 194.87.18.248, port: 33465, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: MWJiMzA1N2IwY2ZiN2M0MQ==, skip-cert-verify: true}
+  - {name: 英国中转 01, server: chiyu.myfczy169.top, port: 59863, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 美国-芝加哥-001-1B, server: 166.88.159.225, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 日本中转 05, server: chiyu.myfczy169.top, port: 51578, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 日本-CN2-1-1A, server: jpone.z342jdahhdc.cfd, port: 6588, type: hysteria2, password: 9c7fd899-2080-47c1-911e-5b108e8fc037, obfs: salamander, obfs-password: ZDQxZDhjZDk4ZjAwYjIwNA==, skip-cert-verify: true}
+  - {name: 移动 韩国 55, server: cmcc.abyssvpn.com, port: 31155, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-007-1B, server: 176.32.39.181, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 电信 凤凰城 52, server: bgp.abyssvpn.com, port: 31152, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 台湾高速中转, server: gsgs.hy2.one, port: 53332, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 香港中转 01, server: chiyu.myfczy169.top, port: 43641, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 电信 纽约 04, server: bgp.abyssvpn.com, port: 31104, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 联通 韩国 55, server: cucc.abyssvpn.com, port: 31155, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 美国-CN2-1-1B, server: usone.z342jdahhdc.cfd, port: 5113, type: hysteria2, password: c733ef01-f9e3-4ccf-a9a3-bd6091edc3f6, obfs: salamander, obfs-password: ZDQxZDhjZDk4ZjAwYjIwNA==, skip-cert-verify: false}
+  - {name: 中国-香港-HY-005-1B, server: 212.192.12.70, port: 32902, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: YzcwOTNlODc4NDIzMWMyMg==, skip-cert-verify: true}
+  - {name: 泰国ISP高速中转3x, server: gsgs.hy2.one, port: 63329, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 建议有事没事都更新订阅, server: cainiao212.top, port: 666, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 电信 越南 03, server: bgp.abyssvpn.com, port: 31103, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-HY-016-1B, server: 194.87.69.50, port: 45751, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-015-1A, server: 195.58.49.42, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 台湾BGP 中转 01 1.5x, server: afce156c8b7ba72324e9c09bb6f1ab99.node.tro.node-is.green, port: 45023, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: www.ahu.edu.cn, skip-cert-verify: true, udp: true}
+  - {name: 联通 洛杉矶 28, server: cucc.abyssvpn.com, port: 31128, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 电信 纽约 10, server: bgp.abyssvpn.com, port: 31110, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 美国高速中转4, server: gsgs.hy2.one, port: 63324, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 联通 台湾 01, server: cucc.abyssvpn.com, port: 31101, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 联通 亚特兰大 22, server: cucc.abyssvpn.com, port: 31122, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 纽约 04, server: cmcc.abyssvpn.com, port: 31104, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 日本 59, server: cmcc.abyssvpn.com, port: 31159, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-010-1A, server: 194.87.68.228, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 新加坡 IEPL专线NO1, server: i.needss.top, port: 20015, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 德国中转, server: chiyu.myfczy169.top, port: 21098, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 法国1, server: haa.dashuai.cyou, port: 45072, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台湾1, server: haa.dashuai.cyou, port: 45078, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 加拿大 IEPL专线 NO1, server: i.needss.top, port: 45112, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-008-1A, server: 194.87.69.244, port: 13180, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 台湾2, server: xdd.dashuai.cyou, port: 45077, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: BR 燕麦拿铁, server: br.taipeicity.news, port: 25888, type: hysteria2, password: 63234556-24c8-48e8-acf0-4415bde3cbc9, sni: https://bing.com, skip-cert-verify: true}
+  - {name: 联通 日本 59, server: cucc.abyssvpn.com, port: 31159, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-008-1A, server: 194.87.69.244, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 土耳其高速中转, server: gsgs.hy2.one, port: 63327, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 德国-法兰克福-HY-001-1A, server: 5.39.252.204, port: 3942, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: M2UyNTc5OWUwYjkyM2Q2OQ==, skip-cert-verify: true}
+  - {name: 移动 纽约 10, server: cmcc.abyssvpn.com, port: 31110, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 澳大利亚 IEPL专线NO1, server: i.needss.top, port: 20011, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台湾中转 01, server: chiyu.myfczy169.top, port: 18841, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 美国2SS中转, server: pro.sulink.one, port: 48880, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MGM0ZTIzY2MtZDhkNi00YjYzLTkwNzktNWFjZDNlYTc=, udp: true}
+  - {name: 葡萄牙 IEPL专线NO1, server: qd.needss.top, port: 31001, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 电信 香港 13, server: bgp.abyssvpn.com, port: 31113, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 联通 香港 100, server: cucc.abyssvpn.com, port: 31200, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 联通 新加坡 02, server: cucc.abyssvpn.com, port: 31102, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 电信 达拉斯 24, server: bgp.abyssvpn.com, port: 31124, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日本中转 01, server: chiyu.myfczy169.top, port: 34701, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 美国 IEPL专线NO1, server: i.needss.top, port: 54770, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 加拿大-多伦多-HY-001-1B, server: 141.195.112.167, port: 47743, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: OWVjYWI5MTVlMDJjYWZkNQ==, skip-cert-verify: true}
+  - {name: 日本2高速中转, server: gsgs.hy2.one, port: 53338, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 联通 弗吉尼亚 07, server: cucc.abyssvpn.com, port: 31107, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 日本 58, server: cmcc.abyssvpn.com, port: 31158, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港1高速中转2x, server: gsgs.hy2.one, port: 53349, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 移动 日本 57, server: cmcc.abyssvpn.com, port: 31157, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日本 IEPL专线NO1, server: i.needss.top, port: 20017, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国2高速中转, server: gsgs.hy2.one, port: 53333, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 泰国 IEPL专线 NO1, server: i.needss.top, port: 30028, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国BGP 中转 02 1.5x, server: 66cb483fa95242791d0a6326880614e6.node.tro.node-is.green, port: 48269, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: api.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 马来西亚中转, server: chiyu.myfczy169.top, port: 20119, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 联通 纽约 04, server: cucc.abyssvpn.com, port: 31104, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 公益路线-香港HK 限速50MBPS-1A, server: jehw72eh.97kb.com, port: 49709, type: ss, cipher: aes-256-gcm, password: 2fd9a5bc-a501-49ef-b6a6-48d3e6b6508e, udp: true}
+  - {name: 俄罗斯-圣彼得堡-014-1B, server: 195.58.49.50, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 电信 韩国 55, server: bgp.abyssvpn.com, port: 31155, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港-CN2-3-1B, server: hkthree.z342jdahhdc.cfd, port: 5745, type: vmess, uuid: c733ef01-f9e3-4ccf-a9a3-bd6091edc3f6, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港 IEPL专线NO3, server: i.needss.top, port: 65533, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-013-1B, server: 194.87.69.52, port: 28153, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 电信 加利福尼亚 05, server: bgp.abyssvpn.com, port: 31105, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日-本SS中转25x, server: g2.hy2.one, port: 13107, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 英国中转 02, server: chiyu.myfczy169.top, port: 30518, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 台湾 1, server: gy.666666222.shop, port: 20032, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 俄罗斯-圣彼得堡-016-1A, server: 194.87.69.50, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 联通 丹佛 18, server: cucc.abyssvpn.com, port: 31118, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 加拿大-多伦多-001-1B, server: 141.195.112.167, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 瑞士-日内瓦-HY-001-1B, server: 194.87.18.248, port: 33465, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: MWJiMzA1N2IwY2ZiN2M0MQ==, skip-cert-verify: true}
+  - {name: 日本中转 02, server: chiyu.myfczy169.top, port: 38180, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 新加坡中转 02, server: chiyu.myfczy169.top, port: 21296, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 美国 纽约2, server: gy.666666222.shop, port: 20016, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-013-1A, server: 194.87.69.52, port: 28153, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 移动 洛杉矶 28, server: cmcc.abyssvpn.com, port: 31128, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日本2SS中转15x, server: g.hy2.one, port: 20546, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 日本中转 03, server: chiyu.myfczy169.top, port: 14087, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 美国-芝加哥-001-1A, server: 166.88.159.225, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 波兰IPV6-01, server: bl01.sulink.one, port: 40148, type: hysteria2, password: 0c4e23cc-d8d6-4b63-9079-5acd3ea76915, sni: bl01.sulink.one, skip-cert-verify: true}
+  - {name: SG 冷萃冰咖啡, server: sgzl1.stardad.lol, port: 35781, type: hysteria2, password: 63234556-24c8-48e8-acf0-4415bde3cbc9, sni: https://bing.com, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-013-1B, server: 194.87.69.52, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 香港-LELE测试-1.5x-HY-1B, server: wjb5ekt8wf.fcbjw.com, port: 50673, type: ss, cipher: chacha20-ietf-poly1305, password: 84e02ac5-61fb-47a6-91a7-bc43d00e459c, udp: true}
+  - {name: 澳大利亚原生2, server: xdd.dashuai.cyou, port: 45063, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国BGP 中转 03 1.5x, server: bdcbdd94ecb0b5a9ef8b920a43931d02.node.tro.node-is.green, port: 41254, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: api.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 台湾中转 04, server: chiyu.myfczy169.top, port: 34915, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 电信 丹佛 18, server: bgp.abyssvpn.com, port: 31118, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港-CN2-3-1A, server: hkthree.z342jdahhdc.cfd, port: 5745, type: vmess, uuid: 9c7fd899-2080-47c1-911e-5b108e8fc037, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 电信 台湾 01, server: bgp.abyssvpn.com, port: 31101, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 联通 西雅图 25, server: cucc.abyssvpn.com, port: 31125, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 加拿大 61, server: cmcc.abyssvpn.com, port: 31161, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-010-1B, server: 194.87.68.228, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 电信 芝加哥 17, server: bgp.abyssvpn.com, port: 31117, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港03, server: gy.666666222.shop, port: 20052, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 移动 洛杉矶 20, server: cmcc.abyssvpn.com, port: 31120, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日本-CN2-3-1B, server: jpthree.z342jdahhdc.cfd, port: 6211, type: vmess, uuid: c733ef01-f9e3-4ccf-a9a3-bd6091edc3f6, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 电信 印度 53, server: bgp.abyssvpn.com, port: 31153, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 香港2高速中转2x, server: gsgs.hy2.one, port: 53348, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 联通 印度 54, server: cucc.abyssvpn.com, port: 31154, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-008-1B, server: 194.87.69.244, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 美国-芝加哥-HY-001-1A, server: 166.88.159.225, port: 21919, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: MzU2MTQ1ZGUyYmNjNWEyOA==, skip-cert-verify: true}
+  - {name: 日本NO.2, server: xdd.dashuai.cyou, port: 45057, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 加拿大-多伦多-001-1A, server: 141.195.112.167, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-011-1B, server: 194.87.68.115, port: 13180, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 移动 芝加哥 17, server: cmcc.abyssvpn.com, port: 31117, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-007-1A, server: 176.32.39.181, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 香港BGP 中转 03 1.5x, server: 40f4df13c1d5f501f2b85842454363f9.node.tro.node-is.green, port: 43326, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: console.ucloud.cn, skip-cert-verify: true, udp: true}
+  - {name: 电信 香港 12, server: bgp.abyssvpn.com, port: 31112, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 达拉斯 24, server: cmcc.abyssvpn.com, port: 31124, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 新加坡 IEPL专线NO3, server: i.needss.top, port: 44412, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-010-1A, server: 194.87.68.228, port: 41713, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 电信 日本 58, server: bgp.abyssvpn.com, port: 31158, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 日本3SS中转25x, server: g3.hy2.one, port: 22063, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 联通 纽约 10, server: cucc.abyssvpn.com, port: 31110, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 移动 凤凰城 52, server: cmcc.abyssvpn.com, port: 31152, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 台湾 IEPL专线NO1, server: i.needss.top, port: 52103, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台湾1SS中转|3x, server: pro.sulink.one, port: 48885, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MGM0ZTIzY2MtZDhkNi00YjYzLTkwNzktNWFjZDNlYTc=, udp: true}
+  - {name: 新加坡NO.2, server: xdd.dashuai.cyou, port: 45055, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 日本1高速中转, server: gsgs.hy2.one, port: 53339, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:NmU1MjNmOTAtMjA5ZS00ODJjLWI2MTAtYWY4NTgxZjQ=, udp: true}
+  - {name: 美国-CN2-1-1A, server: usone.z342jdahhdc.cfd, port: 5113, type: hysteria2, password: 9c7fd899-2080-47c1-911e-5b108e8fc037, obfs: salamander, obfs-password: ZDQxZDhjZDk4ZjAwYjIwNA==, skip-cert-verify: false}
+  - {name: 香港, server: xg.dashuai.cyou, port: 19901, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-010-1B, server: 194.87.68.228, port: 41713, type: hysteria2, password: 867471e0-1729-4b06-8b7f-31084b1d8069, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 联通 纽约 23, server: cucc.abyssvpn.com, port: 31123, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 电信 防丢 02, server: bgp.abyssvpn.com, port: 31102, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-012-1B, server: 195.58.49.86, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 联通 圣何塞 29, server: cucc.abyssvpn.com, port: 31129, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 阿根廷 IEPL专线NO1, server: i.needss.top, port: 20014, type: vmess, uuid: e198912a-3912-441c-b8af-f0ddac953cbd, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 新加坡中转 03, server: chiyu.myfczy169.top, port: 50691, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 美国中转 01, server: chiyu.myfczy169.top, port: 53473, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 美国NO.1, server: haa.dashuai.cyou, port: 45052, type: vmess, uuid: 7a96b8b6-f068-4aa9-9561-a0ab73937159, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国 纽约01, server: gy.666666222.shop, port: 20013, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 移动 拉齐奥 27, server: cmcc.abyssvpn.com, port: 31127, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 台湾中转 05, server: chiyu.myfczy169.top, port: 44454, type: ss, cipher: chacha20-ietf-poly1305, password: b2d12493-baa7-4f2d-ae4d-f92a484d420e, udp: true}
+  - {name: 俄罗斯-圣彼得堡-HY-006-1A, server: 195.58.49.152, port: 41713, type: hysteria2, password: 3e95dd30-d06b-4683-9271-d38b308ee59a, obfs: salamander, obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==, skip-cert-verify: true}
+  - {name: 电信 亚特兰大 22, server: bgp.abyssvpn.com, port: 31122, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 俄罗斯-圣彼得堡-006-1A, server: 195.58.49.152, port: 61291, type: vmess, uuid: 3e95dd30-d06b-4683-9271-d38b308ee59a, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 电信 圣何塞 29, server: bgp.abyssvpn.com, port: 31129, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
+  - {name: 台湾BGP 中转 02 1.5x, server: b9c0528e081f3101ab053c283b2f5b8d.node.tro.node-is.green, port: 45506, type: trojan, password: 0dcf3a85-e186-43f2-991b-efb71ac29481, sni: www.ahu.edu.cn, skip-cert-verify: true, udp: true}
+  - {name: 中国-香港-005-1B, server: 212.192.12.70, port: 61291, type: vmess, uuid: 867471e0-1729-4b06-8b7f-31084b1d8069, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 日本04, server: gy.666666222.shop, port: 20008, type: ss, cipher: chacha20-ietf-poly1305, password: 165480ca-75a2-40d4-b5ef-5dc0726dc545, udp: true}
+  - {name: 电信 洛杉矶 16, server: bgp.abyssvpn.com, port: 31116, type: hysteria2, password: f31c9381-a60c-4b3e-b1b5-902ba1e28b18, skip-cert-verify: true}
 proxy-groups:
   - name: 手动切换
     type: select
     proxies:
-      - Youtube顺丰资源  香港 2
-      - Youtube顺丰资源  香港 7
-      - Youtube顺丰资源  香港 11
-      - Youtube顺丰资源香港12
-      - Youtube顺丰资源  香港 14
-      - Youtube顺丰资源香港15
-      - Youtube顺丰资源  香港 16
-      - Youtube顺丰资源  香港 17
-      - Youtube顺丰资源  香港 18
-      - Youtube顺丰资源  日本 21
-      - Youtube顺丰资源  日本 22
-      - Youtube顺丰资源香港23
-      - Youtube顺丰资源  韩国 25
-      - Youtube顺丰资源  香港 27
-      - Youtube顺丰资源美国28
-      - Youtube顺丰资源  香港 29
-      - Youtube顺丰资源香港30
-      - Youtube顺丰资源  香港 31
-      - Youtube顺丰资源  香港 32
-      - Youtube顺丰资源香港33
-      - Youtube顺丰资源  韩国 37
-      - Youtube顺丰资源  香港 38
-      - Youtube顺丰资源  香港 39
-      - Youtube顺丰资源  香港 46
-      - Youtube顺丰资源  美国 50
-      - Youtube顺丰资源  日本 52
-      - Youtube顺丰资源  亚美尼亚 53
-      - Youtube顺丰资源  斯洛文尼亚 56
-      - Youtube顺丰资源  香港 61
-      - Youtube顺丰资源  韩国 64
-      - Youtube顺丰资源  美国 66
-      - Youtube顺丰资源  香港 67
-      - Youtube顺丰资源  新加坡 69
-      - Youtube顺丰资源  新加坡 70
-      - Youtube顺丰资源  美国 88
-      - Youtube顺丰资源  美国 97
-      - Youtube顺丰资源  爱尔兰 131
-      - Youtube顺丰资源  爱尔兰 133
-      - Youtube顺丰资源  爱尔兰 138
-      - Youtube顺丰资源  法国 140
-      - Youtube顺丰资源香港156
-      - Youtube顺丰资源  越南 158
-      - Youtube顺丰资源  香港 165
-      - Youtube顺丰资源  爱沙尼亚 166
-      - Youtube顺丰资源  越南 169
-      - Youtube顺丰资源  俄罗斯 170
-      - Youtube顺丰资源  香港 173
-      - Youtube顺丰资源  香港 174
-      - Youtube顺丰资源  香港 175
-      - Youtube顺丰资源  香港 177
-      - Youtube顺丰资源  香港 178
-      - Youtube顺丰资源  香港 181
-      - Youtube顺丰资源  香港 182
-      - Youtube顺丰资源  香港 184
-      - Youtube顺丰资源  香港 185
-      - Youtube顺丰资源美国189
-      - Youtube顺丰资源  香港 190
-      - Youtube顺丰资源  香港 195
-      - Youtube顺丰资源  香港 197
-      - Youtube顺丰资源  香港 198
-      - Youtube顺丰资源  香港 200
-      - Youtube顺丰资源  香港 201
-      - Youtube顺丰资源  香港 218
-      - Youtube顺丰资源  香港 219
-      - Youtube顺丰资源美国232
-      - Youtube顺丰资源美国239
-      - Youtube顺丰资源美国240
-      - Youtube顺丰资源  香港 242
-      - Youtube顺丰资源  香港 243
-      - Youtube顺丰资源伊朗244
+      - 香港01
+      - 台湾2全天极速优先使用|X3
+      - 俄罗斯-圣彼得堡-009-1B
+      - 俄罗斯-圣彼得堡-HY-015-1B
+      - 香港-LELE测试-1.5x-HY-1A
+      - 移动 凤凰城 51
+      - 电信 西雅图 25
+      - 新加坡07奈非-5x
+      - 联通 香港 13
+      - 电信 香港 15
+      - 香港-CN2-1-1A
+      - 台湾SS中转25x
+      - 电信 阿姆斯特丹 19
+      - 美国中转 02
+      - 联通 洛杉矶 20
+      - 日本SS中转25x
+      - 瑞士-日内瓦-001-1B
+      - 德国-法兰克福-HY-001-1B
+      - 移动 亚特兰大 22
+      - 移动 印度 53
+      - 移动 香港 13
+      - 台湾02-3x-流媒体
+      - 美国02
+      - 香港中转 05
+      - 电信 香港 11
+      - 台湾01
+      - 电信 华盛顿 06
+      - 电信 凤凰城 51
+      - 移动 圣何塞 26
+      - 移动 香港 100
+      - 俄罗斯-圣彼得堡-013-1A
+      - 澳大利亚原生1
+      - 联通 香港 14
+      - 俄罗斯-圣彼得堡-HY-012-1B
+      - 电信 弗吉尼亚 07
+      - 电信 洛杉矶 20
+      - 俄罗斯-圣彼得堡-HY-007-1A
+      - 俄罗斯-圣彼得堡-HY-008-1B
+      - 日本BGP 中转 01 1.5x
+      - 联通 华盛顿 06
+      - 联通 达拉斯 24
+      - 联通 加拿大 61
+      - 移动 新加坡 02
+      - KR 冰摇桃桃乌龙茶
+      - 电信 日本 57
+      - 移动 香港 11
+      - 移动 越南 03
+      - 美国5
+      - 俄罗斯-圣彼得堡-HY-009-1B
+      - 中国-香港-HY-005-1A
+      - 加拿大1
+      - 美国-CN2-3-1A
+      - 台湾-02-奈非-3x
+      - 俄罗斯-圣彼得堡-HY-014-1B
+      - 澳门NO.2
+      - 电信 芝加哥 21
+      - 香港2SS中转
+      - 联通 洛杉矶 27
+      - 越南中转
+      - 俄罗斯-圣彼得堡-016-1B
+      - 印度1
+      - 俄罗斯-圣彼得堡-HY-006-1B
+      - 公益路线-香港HK 限速50MBPS-1B
+      - 日本-CN2-1-1B
+      - 香港中转 04
+      - 法国IPV6-09
+      - 联通 日本 58
+      - 香港-CN2-1-1B
+      - 俄罗斯-圣彼得堡-HY-015-1A
+      - 联通 圣何塞 26
+      - 瑞士-日内瓦-001-1A
+      - 俄罗斯-圣彼得堡-HY-016-1A
+      - 台湾2SS中转|3x
+      - 香港5高速中转5x
+      - 美国BGP 中转 01 1.5x
+      - 移动 圣何塞 29
+      - 日本SS中转1
+      - 移动 纽约 23
+      - 泰国中转
+      - 联通 阿姆斯特丹 19
+      - 移动 印度 54
+      - 移动 台湾 01
+      - 电信 纽约 23
+      - 新加坡BGP 中转 02 1.5x
+      - 俄罗斯-圣彼得堡-HY-009-1A
+      - 英国SS-13
+      - 香港BGP 中转 04 1.5x
+      - 俄罗斯-圣彼得堡-HY-007-1B
+      - 香港BGP 中转 02 1.5x
+      - 联通 加利福尼亚 05
+      - 中国-香港-HY-002-1B
+      - 越南高速中转
+      - 联通 芝加哥 17
+      - 美国-芝加哥-HY-001-1B
+      - 新加坡2高速中转3x
+      - 联通 越南 03
+      - 法国 CM 隧道NO1
+      - JP 香草星冰乐
+      - 中国-香港-HY-002-1A
+      - 移动 加利福尼亚 05
+      - 导航页
+      - 俄罗斯-圣彼得堡-011-1A
+      - 哈萨克斯坦中转
+      - 电信 香港 14
+      - 新加坡1高速中转3x
+      - 俄罗斯-圣彼得堡-HY-011-1A
+      - 德国 IEPL专线NO1
+      - 移动 香港 14
+      - 美国-CN2-3-1B
+      - 电信 洛杉矶 28
+      - 移动 弗吉尼亚 07
+      - 联通 洛杉矶 16
+      - 三网中转香港|5x
+      - 法国2
+      - 电信 圣何塞 26
+      - 香港4高速中转5x
+      - 日本NO.1
+      - 俄罗斯 IEPL专线NO1
+      - 日本中转 04
+      - 联通 香港 12
+      - 香港3SS中转
+      - 西班牙IPV6
+      - 香港BGP 中转 01 1.5x
+      - 新加坡-CN2-1-1B
+      - 土耳其中转
+      - 新加坡03奈非-5x
+      - 台湾中转 02
+      - 日本-CN2-3-1A
+      - 加拿大-多伦多-HY-001-1A
+      - 日本01
+      - 移动 香港 15
+      - 加拿大2
+      - 俄罗斯-圣彼得堡-HY-012-1A
+      - 荷兰 IEPL专线NO1
+      - 阿联酋中转
+      - 俄罗斯-圣彼得堡-014-1A
+      - 俄罗斯-圣彼得堡-009-1A
+      - 台湾中转 03
+      - 中国-香港-005-1A
+      - 美国BGP 中转 04 1.5x
+      - 联通 香港 11
+      - 新加坡-CN2-1-1A
+      - 俄罗斯-圣彼得堡-006-1B
+      - 联通 香港 15
+      - 香港02
+      - 日本03
+      - 移动 丹佛 18
+      - 日本SS中转4
+      - 俄罗斯-圣彼得堡-011-1B
+      - 新加坡-CN2-3-1B
+      - 美国1SS中转
+      - 移动 西雅图 25
+      - 电信 日本 59
+      - 香港中转 02
+      - 韩国高速中转3
+      - 美国3SS中转
+      - 印度 IEPL专线NO1
+      - 电信 印度 54
+      - 移动 洛杉矶 16
+      - 日本BGP 中转 02 1.5x
+      - 新加坡-CN2-3-1A
+      - 联通 凤凰城 52
+      - 香港BGP 三网直连1x
+      - 非洲 IEPL专线 NO1
+      - 巴西中转
+      - 移动 阿姆斯特丹 19
+      - 移动 芝加哥 21
+      - 香港6高速中转
+      - 美国05
+      - 俄罗斯-圣彼得堡-015-1B
+      - 美国NO.2
+      - 电信 加拿大 61
+      - 新加坡3高速中转3x
+      - 英国中转 03
+      - 新加坡中转 01
+      - 电信 拉齐奥 27
+      - 印度中转
+      - 新加坡02-V4-流媒体
+      - 香港中转 03
+      - 下方为备用节点
+      - 瑞典中转
+      - 移动 华盛顿 06
+      - 新加坡NO.1
+      - 电信 香港 100
+      - 俄罗斯-圣彼得堡-HY-014-1A
+      - 联通 印度 53
+      - 韩国 IEPL专线NO1
+      - XC-WXY
+      - 联通 凤凰城 51
+      - 新加坡BGP 中转 01 1.5x
+      - 移动 香港 12
+      - 俄罗斯-圣彼得堡-012-1A
+      - 联通 日本 57
+      - 印度2
+      - 联通 芝加哥 21
+      - 日本02
+      - 瑞士-日内瓦-HY-001-1A
+      - 英国中转 01
+      - 美国-芝加哥-001-1B
+      - 日本中转 05
+      - 日本-CN2-1-1A
+      - 移动 韩国 55
+      - 俄罗斯-圣彼得堡-007-1B
+      - 电信 凤凰城 52
+      - 台湾高速中转
+      - 香港中转 01
+      - 电信 纽约 04
+      - 联通 韩国 55
+      - 美国-CN2-1-1B
+      - 中国-香港-HY-005-1B
+      - 泰国ISP高速中转3x
+      - 建议有事没事都更新订阅
+      - 电信 越南 03
+      - 俄罗斯-圣彼得堡-HY-016-1B
+      - 俄罗斯-圣彼得堡-015-1A
+      - 台湾BGP 中转 01 1.5x
+      - 联通 洛杉矶 28
+      - 电信 纽约 10
+      - 美国高速中转4
+      - 联通 台湾 01
+      - 联通 亚特兰大 22
+      - 移动 纽约 04
+      - 移动 日本 59
+      - 俄罗斯-圣彼得堡-010-1A
+      - 新加坡 IEPL专线NO1
+      - 德国中转
+      - 法国1
+      - 台湾1
+      - 加拿大 IEPL专线 NO1
+      - 俄罗斯-圣彼得堡-HY-008-1A
+      - 台湾2
+      - BR 燕麦拿铁
+      - 联通 日本 59
+      - 俄罗斯-圣彼得堡-008-1A
+      - 土耳其高速中转
+      - 德国-法兰克福-HY-001-1A
+      - 移动 纽约 10
+      - 澳大利亚 IEPL专线NO1
+      - 台湾中转 01
+      - 美国2SS中转
+      - 葡萄牙 IEPL专线NO1
+      - 电信 香港 13
+      - 联通 香港 100
+      - 联通 新加坡 02
+      - 电信 达拉斯 24
+      - 日本中转 01
+      - 美国 IEPL专线NO1
+      - 加拿大-多伦多-HY-001-1B
+      - 日本2高速中转
+      - 联通 弗吉尼亚 07
+      - 移动 日本 58
+      - 香港1高速中转2x
+      - 移动 日本 57
+      - 日本 IEPL专线NO1
+      - 美国2高速中转
+      - 泰国 IEPL专线 NO1
+      - 美国BGP 中转 02 1.5x
+      - 马来西亚中转
+      - 联通 纽约 04
+      - 公益路线-香港HK 限速50MBPS-1A
+      - 俄罗斯-圣彼得堡-014-1B
+      - 电信 韩国 55
+      - 香港-CN2-3-1B
+      - 香港 IEPL专线NO3
+      - 俄罗斯-圣彼得堡-HY-013-1B
+      - 电信 加利福尼亚 05
+      - 日-本SS中转25x
+      - 英国中转 02
+      - 台湾 1
+      - 俄罗斯-圣彼得堡-016-1A
+      - 联通 丹佛 18
+      - 加拿大-多伦多-001-1B
+      - 瑞士-日内瓦-HY-001-1B
+      - 日本中转 02
+      - 新加坡中转 02
+      - 美国 纽约2
+      - 俄罗斯-圣彼得堡-HY-013-1A
+      - 移动 洛杉矶 28
+      - 日本2SS中转15x
+      - 日本中转 03
+      - 美国-芝加哥-001-1A
+      - 波兰IPV6-01
+      - SG 冷萃冰咖啡
+      - 俄罗斯-圣彼得堡-013-1B
+      - 香港-LELE测试-1.5x-HY-1B
+      - 澳大利亚原生2
+      - 美国BGP 中转 03 1.5x
+      - 台湾中转 04
+      - 电信 丹佛 18
+      - 香港-CN2-3-1A
+      - 电信 台湾 01
+      - 联通 西雅图 25
+      - 移动 加拿大 61
+      - 俄罗斯-圣彼得堡-010-1B
+      - 电信 芝加哥 17
+      - 香港03
+      - 移动 洛杉矶 20
+      - 日本-CN2-3-1B
+      - 电信 印度 53
+      - 香港2高速中转2x
+      - 联通 印度 54
+      - 俄罗斯-圣彼得堡-008-1B
+      - 美国-芝加哥-HY-001-1A
+      - 日本NO.2
+      - 加拿大-多伦多-001-1A
+      - 俄罗斯-圣彼得堡-HY-011-1B
+      - 移动 芝加哥 17
+      - 俄罗斯-圣彼得堡-007-1A
+      - 香港BGP 中转 03 1.5x
+      - 电信 香港 12
+      - 移动 达拉斯 24
+      - 新加坡 IEPL专线NO3
+      - 俄罗斯-圣彼得堡-HY-010-1A
+      - 电信 日本 58
+      - 日本3SS中转25x
+      - 联通 纽约 10
+      - 移动 凤凰城 52
+      - 台湾 IEPL专线NO1
+      - 台湾1SS中转|3x
+      - 新加坡NO.2
+      - 日本1高速中转
+      - 美国-CN2-1-1A
+      - 香港
+      - 俄罗斯-圣彼得堡-HY-010-1B
+      - 联通 纽约 23
+      - 电信 防丢 02
+      - 俄罗斯-圣彼得堡-012-1B
+      - 联通 圣何塞 29
+      - 阿根廷 IEPL专线NO1
+      - 新加坡中转 03
+      - 美国中转 01
+      - 美国NO.1
+      - 美国 纽约01
+      - 移动 拉齐奥 27
+      - 台湾中转 05
+      - 俄罗斯-圣彼得堡-HY-006-1A
+      - 电信 亚特兰大 22
+      - 俄罗斯-圣彼得堡-006-1A
+      - 电信 圣何塞 29
+      - 台湾BGP 中转 02 1.5x
+      - 中国-香港-005-1B
+      - 日本04
+      - 电信 洛杉矶 16
   - name: 自动选择
     type: url-test
     url: https://www.google.com/favicon.ico
     interval: 300
     tolerance: 50
     proxies:
-      - Youtube顺丰资源  香港 2
-      - Youtube顺丰资源  香港 7
-      - Youtube顺丰资源  香港 11
-      - Youtube顺丰资源香港12
-      - Youtube顺丰资源  香港 14
-      - Youtube顺丰资源香港15
-      - Youtube顺丰资源  香港 16
-      - Youtube顺丰资源  香港 17
-      - Youtube顺丰资源  香港 18
-      - Youtube顺丰资源  日本 21
-      - Youtube顺丰资源  日本 22
-      - Youtube顺丰资源香港23
-      - Youtube顺丰资源  韩国 25
-      - Youtube顺丰资源  香港 27
-      - Youtube顺丰资源美国28
-      - Youtube顺丰资源  香港 29
-      - Youtube顺丰资源香港30
-      - Youtube顺丰资源  香港 31
-      - Youtube顺丰资源  香港 32
-      - Youtube顺丰资源香港33
-      - Youtube顺丰资源  韩国 37
-      - Youtube顺丰资源  香港 38
-      - Youtube顺丰资源  香港 39
-      - Youtube顺丰资源  香港 46
-      - Youtube顺丰资源  美国 50
-      - Youtube顺丰资源  日本 52
-      - Youtube顺丰资源  亚美尼亚 53
-      - Youtube顺丰资源  斯洛文尼亚 56
-      - Youtube顺丰资源  香港 61
-      - Youtube顺丰资源  韩国 64
-      - Youtube顺丰资源  美国 66
-      - Youtube顺丰资源  香港 67
-      - Youtube顺丰资源  新加坡 69
-      - Youtube顺丰资源  新加坡 70
-      - Youtube顺丰资源  美国 88
-      - Youtube顺丰资源  美国 97
-      - Youtube顺丰资源  爱尔兰 131
-      - Youtube顺丰资源  爱尔兰 133
-      - Youtube顺丰资源  爱尔兰 138
-      - Youtube顺丰资源  法国 140
-      - Youtube顺丰资源香港156
-      - Youtube顺丰资源  越南 158
-      - Youtube顺丰资源  香港 165
-      - Youtube顺丰资源  爱沙尼亚 166
-      - Youtube顺丰资源  越南 169
-      - Youtube顺丰资源  俄罗斯 170
-      - Youtube顺丰资源  香港 173
-      - Youtube顺丰资源  香港 174
-      - Youtube顺丰资源  香港 175
-      - Youtube顺丰资源  香港 177
-      - Youtube顺丰资源  香港 178
-      - Youtube顺丰资源  香港 181
-      - Youtube顺丰资源  香港 182
-      - Youtube顺丰资源  香港 184
-      - Youtube顺丰资源  香港 185
-      - Youtube顺丰资源美国189
-      - Youtube顺丰资源  香港 190
-      - Youtube顺丰资源  香港 195
-      - Youtube顺丰资源  香港 197
-      - Youtube顺丰资源  香港 198
-      - Youtube顺丰资源  香港 200
-      - Youtube顺丰资源  香港 201
-      - Youtube顺丰资源  香港 218
-      - Youtube顺丰资源  香港 219
-      - Youtube顺丰资源美国232
-      - Youtube顺丰资源美国239
-      - Youtube顺丰资源美国240
-      - Youtube顺丰资源  香港 242
-      - Youtube顺丰资源  香港 243
-      - Youtube顺丰资源伊朗244
+      - 香港01
+      - 台湾2全天极速优先使用|X3
+      - 俄罗斯-圣彼得堡-009-1B
+      - 俄罗斯-圣彼得堡-HY-015-1B
+      - 香港-LELE测试-1.5x-HY-1A
+      - 移动 凤凰城 51
+      - 电信 西雅图 25
+      - 新加坡07奈非-5x
+      - 联通 香港 13
+      - 电信 香港 15
+      - 香港-CN2-1-1A
+      - 台湾SS中转25x
+      - 电信 阿姆斯特丹 19
+      - 美国中转 02
+      - 联通 洛杉矶 20
+      - 日本SS中转25x
+      - 瑞士-日内瓦-001-1B
+      - 德国-法兰克福-HY-001-1B
+      - 移动 亚特兰大 22
+      - 移动 印度 53
+      - 移动 香港 13
+      - 台湾02-3x-流媒体
+      - 美国02
+      - 香港中转 05
+      - 电信 香港 11
+      - 台湾01
+      - 电信 华盛顿 06
+      - 电信 凤凰城 51
+      - 移动 圣何塞 26
+      - 移动 香港 100
+      - 俄罗斯-圣彼得堡-013-1A
+      - 澳大利亚原生1
+      - 联通 香港 14
+      - 俄罗斯-圣彼得堡-HY-012-1B
+      - 电信 弗吉尼亚 07
+      - 电信 洛杉矶 20
+      - 俄罗斯-圣彼得堡-HY-007-1A
+      - 俄罗斯-圣彼得堡-HY-008-1B
+      - 日本BGP 中转 01 1.5x
+      - 联通 华盛顿 06
+      - 联通 达拉斯 24
+      - 联通 加拿大 61
+      - 移动 新加坡 02
+      - KR 冰摇桃桃乌龙茶
+      - 电信 日本 57
+      - 移动 香港 11
+      - 移动 越南 03
+      - 美国5
+      - 俄罗斯-圣彼得堡-HY-009-1B
+      - 中国-香港-HY-005-1A
+      - 加拿大1
+      - 美国-CN2-3-1A
+      - 台湾-02-奈非-3x
+      - 俄罗斯-圣彼得堡-HY-014-1B
+      - 澳门NO.2
+      - 电信 芝加哥 21
+      - 香港2SS中转
+      - 联通 洛杉矶 27
+      - 越南中转
+      - 俄罗斯-圣彼得堡-016-1B
+      - 印度1
+      - 俄罗斯-圣彼得堡-HY-006-1B
+      - 公益路线-香港HK 限速50MBPS-1B
+      - 日本-CN2-1-1B
+      - 香港中转 04
+      - 法国IPV6-09
+      - 联通 日本 58
+      - 香港-CN2-1-1B
+      - 俄罗斯-圣彼得堡-HY-015-1A
+      - 联通 圣何塞 26
+      - 瑞士-日内瓦-001-1A
+      - 俄罗斯-圣彼得堡-HY-016-1A
+      - 台湾2SS中转|3x
+      - 香港5高速中转5x
+      - 美国BGP 中转 01 1.5x
+      - 移动 圣何塞 29
+      - 日本SS中转1
+      - 移动 纽约 23
+      - 泰国中转
+      - 联通 阿姆斯特丹 19
+      - 移动 印度 54
+      - 移动 台湾 01
+      - 电信 纽约 23
+      - 新加坡BGP 中转 02 1.5x
+      - 俄罗斯-圣彼得堡-HY-009-1A
+      - 英国SS-13
+      - 香港BGP 中转 04 1.5x
+      - 俄罗斯-圣彼得堡-HY-007-1B
+      - 香港BGP 中转 02 1.5x
+      - 联通 加利福尼亚 05
+      - 中国-香港-HY-002-1B
+      - 越南高速中转
+      - 联通 芝加哥 17
+      - 美国-芝加哥-HY-001-1B
+      - 新加坡2高速中转3x
+      - 联通 越南 03
+      - 法国 CM 隧道NO1
+      - JP 香草星冰乐
+      - 中国-香港-HY-002-1A
+      - 移动 加利福尼亚 05
+      - 导航页
+      - 俄罗斯-圣彼得堡-011-1A
+      - 哈萨克斯坦中转
+      - 电信 香港 14
+      - 新加坡1高速中转3x
+      - 俄罗斯-圣彼得堡-HY-011-1A
+      - 德国 IEPL专线NO1
+      - 移动 香港 14
+      - 美国-CN2-3-1B
+      - 电信 洛杉矶 28
+      - 移动 弗吉尼亚 07
+      - 联通 洛杉矶 16
+      - 三网中转香港|5x
+      - 法国2
+      - 电信 圣何塞 26
+      - 香港4高速中转5x
+      - 日本NO.1
+      - 俄罗斯 IEPL专线NO1
+      - 日本中转 04
+      - 联通 香港 12
+      - 香港3SS中转
+      - 西班牙IPV6
+      - 香港BGP 中转 01 1.5x
+      - 新加坡-CN2-1-1B
+      - 土耳其中转
+      - 新加坡03奈非-5x
+      - 台湾中转 02
+      - 日本-CN2-3-1A
+      - 加拿大-多伦多-HY-001-1A
+      - 日本01
+      - 移动 香港 15
+      - 加拿大2
+      - 俄罗斯-圣彼得堡-HY-012-1A
+      - 荷兰 IEPL专线NO1
+      - 阿联酋中转
+      - 俄罗斯-圣彼得堡-014-1A
+      - 俄罗斯-圣彼得堡-009-1A
+      - 台湾中转 03
+      - 中国-香港-005-1A
+      - 美国BGP 中转 04 1.5x
+      - 联通 香港 11
+      - 新加坡-CN2-1-1A
+      - 俄罗斯-圣彼得堡-006-1B
+      - 联通 香港 15
+      - 香港02
+      - 日本03
+      - 移动 丹佛 18
+      - 日本SS中转4
+      - 俄罗斯-圣彼得堡-011-1B
+      - 新加坡-CN2-3-1B
+      - 美国1SS中转
+      - 移动 西雅图 25
+      - 电信 日本 59
+      - 香港中转 02
+      - 韩国高速中转3
+      - 美国3SS中转
+      - 印度 IEPL专线NO1
+      - 电信 印度 54
+      - 移动 洛杉矶 16
+      - 日本BGP 中转 02 1.5x
+      - 新加坡-CN2-3-1A
+      - 联通 凤凰城 52
+      - 香港BGP 三网直连1x
+      - 非洲 IEPL专线 NO1
+      - 巴西中转
+      - 移动 阿姆斯特丹 19
+      - 移动 芝加哥 21
+      - 香港6高速中转
+      - 美国05
+      - 俄罗斯-圣彼得堡-015-1B
+      - 美国NO.2
+      - 电信 加拿大 61
+      - 新加坡3高速中转3x
+      - 英国中转 03
+      - 新加坡中转 01
+      - 电信 拉齐奥 27
+      - 印度中转
+      - 新加坡02-V4-流媒体
+      - 香港中转 03
+      - 下方为备用节点
+      - 瑞典中转
+      - 移动 华盛顿 06
+      - 新加坡NO.1
+      - 电信 香港 100
+      - 俄罗斯-圣彼得堡-HY-014-1A
+      - 联通 印度 53
+      - 韩国 IEPL专线NO1
+      - XC-WXY
+      - 联通 凤凰城 51
+      - 新加坡BGP 中转 01 1.5x
+      - 移动 香港 12
+      - 俄罗斯-圣彼得堡-012-1A
+      - 联通 日本 57
+      - 印度2
+      - 联通 芝加哥 21
+      - 日本02
+      - 瑞士-日内瓦-HY-001-1A
+      - 英国中转 01
+      - 美国-芝加哥-001-1B
+      - 日本中转 05
+      - 日本-CN2-1-1A
+      - 移动 韩国 55
+      - 俄罗斯-圣彼得堡-007-1B
+      - 电信 凤凰城 52
+      - 台湾高速中转
+      - 香港中转 01
+      - 电信 纽约 04
+      - 联通 韩国 55
+      - 美国-CN2-1-1B
+      - 中国-香港-HY-005-1B
+      - 泰国ISP高速中转3x
+      - 建议有事没事都更新订阅
+      - 电信 越南 03
+      - 俄罗斯-圣彼得堡-HY-016-1B
+      - 俄罗斯-圣彼得堡-015-1A
+      - 台湾BGP 中转 01 1.5x
+      - 联通 洛杉矶 28
+      - 电信 纽约 10
+      - 美国高速中转4
+      - 联通 台湾 01
+      - 联通 亚特兰大 22
+      - 移动 纽约 04
+      - 移动 日本 59
+      - 俄罗斯-圣彼得堡-010-1A
+      - 新加坡 IEPL专线NO1
+      - 德国中转
+      - 法国1
+      - 台湾1
+      - 加拿大 IEPL专线 NO1
+      - 俄罗斯-圣彼得堡-HY-008-1A
+      - 台湾2
+      - BR 燕麦拿铁
+      - 联通 日本 59
+      - 俄罗斯-圣彼得堡-008-1A
+      - 土耳其高速中转
+      - 德国-法兰克福-HY-001-1A
+      - 移动 纽约 10
+      - 澳大利亚 IEPL专线NO1
+      - 台湾中转 01
+      - 美国2SS中转
+      - 葡萄牙 IEPL专线NO1
+      - 电信 香港 13
+      - 联通 香港 100
+      - 联通 新加坡 02
+      - 电信 达拉斯 24
+      - 日本中转 01
+      - 美国 IEPL专线NO1
+      - 加拿大-多伦多-HY-001-1B
+      - 日本2高速中转
+      - 联通 弗吉尼亚 07
+      - 移动 日本 58
+      - 香港1高速中转2x
+      - 移动 日本 57
+      - 日本 IEPL专线NO1
+      - 美国2高速中转
+      - 泰国 IEPL专线 NO1
+      - 美国BGP 中转 02 1.5x
+      - 马来西亚中转
+      - 联通 纽约 04
+      - 公益路线-香港HK 限速50MBPS-1A
+      - 俄罗斯-圣彼得堡-014-1B
+      - 电信 韩国 55
+      - 香港-CN2-3-1B
+      - 香港 IEPL专线NO3
+      - 俄罗斯-圣彼得堡-HY-013-1B
+      - 电信 加利福尼亚 05
+      - 日-本SS中转25x
+      - 英国中转 02
+      - 台湾 1
+      - 俄罗斯-圣彼得堡-016-1A
+      - 联通 丹佛 18
+      - 加拿大-多伦多-001-1B
+      - 瑞士-日内瓦-HY-001-1B
+      - 日本中转 02
+      - 新加坡中转 02
+      - 美国 纽约2
+      - 俄罗斯-圣彼得堡-HY-013-1A
+      - 移动 洛杉矶 28
+      - 日本2SS中转15x
+      - 日本中转 03
+      - 美国-芝加哥-001-1A
+      - 波兰IPV6-01
+      - SG 冷萃冰咖啡
+      - 俄罗斯-圣彼得堡-013-1B
+      - 香港-LELE测试-1.5x-HY-1B
+      - 澳大利亚原生2
+      - 美国BGP 中转 03 1.5x
+      - 台湾中转 04
+      - 电信 丹佛 18
+      - 香港-CN2-3-1A
+      - 电信 台湾 01
+      - 联通 西雅图 25
+      - 移动 加拿大 61
+      - 俄罗斯-圣彼得堡-010-1B
+      - 电信 芝加哥 17
+      - 香港03
+      - 移动 洛杉矶 20
+      - 日本-CN2-3-1B
+      - 电信 印度 53
+      - 香港2高速中转2x
+      - 联通 印度 54
+      - 俄罗斯-圣彼得堡-008-1B
+      - 美国-芝加哥-HY-001-1A
+      - 日本NO.2
+      - 加拿大-多伦多-001-1A
+      - 俄罗斯-圣彼得堡-HY-011-1B
+      - 移动 芝加哥 17
+      - 俄罗斯-圣彼得堡-007-1A
+      - 香港BGP 中转 03 1.5x
+      - 电信 香港 12
+      - 移动 达拉斯 24
+      - 新加坡 IEPL专线NO3
+      - 俄罗斯-圣彼得堡-HY-010-1A
+      - 电信 日本 58
+      - 日本3SS中转25x
+      - 联通 纽约 10
+      - 移动 凤凰城 52
+      - 台湾 IEPL专线NO1
+      - 台湾1SS中转|3x
+      - 新加坡NO.2
+      - 日本1高速中转
+      - 美国-CN2-1-1A
+      - 香港
+      - 俄罗斯-圣彼得堡-HY-010-1B
+      - 联通 纽约 23
+      - 电信 防丢 02
+      - 俄罗斯-圣彼得堡-012-1B
+      - 联通 圣何塞 29
+      - 阿根廷 IEPL专线NO1
+      - 新加坡中转 03
+      - 美国中转 01
+      - 美国NO.1
+      - 美国 纽约01
+      - 移动 拉齐奥 27
+      - 台湾中转 05
+      - 俄罗斯-圣彼得堡-HY-006-1A
+      - 电信 亚特兰大 22
+      - 俄罗斯-圣彼得堡-006-1A
+      - 电信 圣何塞 29
+      - 台湾BGP 中转 02 1.5x
+      - 中国-香港-005-1B
+      - 日本04
+      - 电信 洛杉矶 16
   - name: 负载均衡
     type: load-balance
     strategy: consistent-hashing
@@ -232,216 +1051,879 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - Youtube顺丰资源  香港 2
-      - Youtube顺丰资源  香港 7
-      - Youtube顺丰资源  香港 11
-      - Youtube顺丰资源香港12
-      - Youtube顺丰资源  香港 14
-      - Youtube顺丰资源香港15
-      - Youtube顺丰资源  香港 16
-      - Youtube顺丰资源  香港 17
-      - Youtube顺丰资源  香港 18
-      - Youtube顺丰资源  日本 21
-      - Youtube顺丰资源  日本 22
-      - Youtube顺丰资源香港23
-      - Youtube顺丰资源  韩国 25
-      - Youtube顺丰资源  香港 27
-      - Youtube顺丰资源美国28
-      - Youtube顺丰资源  香港 29
-      - Youtube顺丰资源香港30
-      - Youtube顺丰资源  香港 31
-      - Youtube顺丰资源  香港 32
-      - Youtube顺丰资源香港33
-      - Youtube顺丰资源  韩国 37
-      - Youtube顺丰资源  香港 38
-      - Youtube顺丰资源  香港 39
-      - Youtube顺丰资源  香港 46
-      - Youtube顺丰资源  美国 50
-      - Youtube顺丰资源  日本 52
-      - Youtube顺丰资源  亚美尼亚 53
-      - Youtube顺丰资源  斯洛文尼亚 56
-      - Youtube顺丰资源  香港 61
-      - Youtube顺丰资源  韩国 64
-      - Youtube顺丰资源  美国 66
-      - Youtube顺丰资源  香港 67
-      - Youtube顺丰资源  新加坡 69
-      - Youtube顺丰资源  新加坡 70
-      - Youtube顺丰资源  美国 88
-      - Youtube顺丰资源  美国 97
-      - Youtube顺丰资源  爱尔兰 131
-      - Youtube顺丰资源  爱尔兰 133
-      - Youtube顺丰资源  爱尔兰 138
-      - Youtube顺丰资源  法国 140
-      - Youtube顺丰资源香港156
-      - Youtube顺丰资源  越南 158
-      - Youtube顺丰资源  香港 165
-      - Youtube顺丰资源  爱沙尼亚 166
-      - Youtube顺丰资源  越南 169
-      - Youtube顺丰资源  俄罗斯 170
-      - Youtube顺丰资源  香港 173
-      - Youtube顺丰资源  香港 174
-      - Youtube顺丰资源  香港 175
-      - Youtube顺丰资源  香港 177
-      - Youtube顺丰资源  香港 178
-      - Youtube顺丰资源  香港 181
-      - Youtube顺丰资源  香港 182
-      - Youtube顺丰资源  香港 184
-      - Youtube顺丰资源  香港 185
-      - Youtube顺丰资源美国189
-      - Youtube顺丰资源  香港 190
-      - Youtube顺丰资源  香港 195
-      - Youtube顺丰资源  香港 197
-      - Youtube顺丰资源  香港 198
-      - Youtube顺丰资源  香港 200
-      - Youtube顺丰资源  香港 201
-      - Youtube顺丰资源  香港 218
-      - Youtube顺丰资源  香港 219
-      - Youtube顺丰资源美国232
-      - Youtube顺丰资源美国239
-      - Youtube顺丰资源美国240
-      - Youtube顺丰资源  香港 242
-      - Youtube顺丰资源  香港 243
-      - Youtube顺丰资源伊朗244
+      - 香港01
+      - 台湾2全天极速优先使用|X3
+      - 俄罗斯-圣彼得堡-009-1B
+      - 俄罗斯-圣彼得堡-HY-015-1B
+      - 香港-LELE测试-1.5x-HY-1A
+      - 移动 凤凰城 51
+      - 电信 西雅图 25
+      - 新加坡07奈非-5x
+      - 联通 香港 13
+      - 电信 香港 15
+      - 香港-CN2-1-1A
+      - 台湾SS中转25x
+      - 电信 阿姆斯特丹 19
+      - 美国中转 02
+      - 联通 洛杉矶 20
+      - 日本SS中转25x
+      - 瑞士-日内瓦-001-1B
+      - 德国-法兰克福-HY-001-1B
+      - 移动 亚特兰大 22
+      - 移动 印度 53
+      - 移动 香港 13
+      - 台湾02-3x-流媒体
+      - 美国02
+      - 香港中转 05
+      - 电信 香港 11
+      - 台湾01
+      - 电信 华盛顿 06
+      - 电信 凤凰城 51
+      - 移动 圣何塞 26
+      - 移动 香港 100
+      - 俄罗斯-圣彼得堡-013-1A
+      - 澳大利亚原生1
+      - 联通 香港 14
+      - 俄罗斯-圣彼得堡-HY-012-1B
+      - 电信 弗吉尼亚 07
+      - 电信 洛杉矶 20
+      - 俄罗斯-圣彼得堡-HY-007-1A
+      - 俄罗斯-圣彼得堡-HY-008-1B
+      - 日本BGP 中转 01 1.5x
+      - 联通 华盛顿 06
+      - 联通 达拉斯 24
+      - 联通 加拿大 61
+      - 移动 新加坡 02
+      - KR 冰摇桃桃乌龙茶
+      - 电信 日本 57
+      - 移动 香港 11
+      - 移动 越南 03
+      - 美国5
+      - 俄罗斯-圣彼得堡-HY-009-1B
+      - 中国-香港-HY-005-1A
+      - 加拿大1
+      - 美国-CN2-3-1A
+      - 台湾-02-奈非-3x
+      - 俄罗斯-圣彼得堡-HY-014-1B
+      - 澳门NO.2
+      - 电信 芝加哥 21
+      - 香港2SS中转
+      - 联通 洛杉矶 27
+      - 越南中转
+      - 俄罗斯-圣彼得堡-016-1B
+      - 印度1
+      - 俄罗斯-圣彼得堡-HY-006-1B
+      - 公益路线-香港HK 限速50MBPS-1B
+      - 日本-CN2-1-1B
+      - 香港中转 04
+      - 法国IPV6-09
+      - 联通 日本 58
+      - 香港-CN2-1-1B
+      - 俄罗斯-圣彼得堡-HY-015-1A
+      - 联通 圣何塞 26
+      - 瑞士-日内瓦-001-1A
+      - 俄罗斯-圣彼得堡-HY-016-1A
+      - 台湾2SS中转|3x
+      - 香港5高速中转5x
+      - 美国BGP 中转 01 1.5x
+      - 移动 圣何塞 29
+      - 日本SS中转1
+      - 移动 纽约 23
+      - 泰国中转
+      - 联通 阿姆斯特丹 19
+      - 移动 印度 54
+      - 移动 台湾 01
+      - 电信 纽约 23
+      - 新加坡BGP 中转 02 1.5x
+      - 俄罗斯-圣彼得堡-HY-009-1A
+      - 英国SS-13
+      - 香港BGP 中转 04 1.5x
+      - 俄罗斯-圣彼得堡-HY-007-1B
+      - 香港BGP 中转 02 1.5x
+      - 联通 加利福尼亚 05
+      - 中国-香港-HY-002-1B
+      - 越南高速中转
+      - 联通 芝加哥 17
+      - 美国-芝加哥-HY-001-1B
+      - 新加坡2高速中转3x
+      - 联通 越南 03
+      - 法国 CM 隧道NO1
+      - JP 香草星冰乐
+      - 中国-香港-HY-002-1A
+      - 移动 加利福尼亚 05
+      - 导航页
+      - 俄罗斯-圣彼得堡-011-1A
+      - 哈萨克斯坦中转
+      - 电信 香港 14
+      - 新加坡1高速中转3x
+      - 俄罗斯-圣彼得堡-HY-011-1A
+      - 德国 IEPL专线NO1
+      - 移动 香港 14
+      - 美国-CN2-3-1B
+      - 电信 洛杉矶 28
+      - 移动 弗吉尼亚 07
+      - 联通 洛杉矶 16
+      - 三网中转香港|5x
+      - 法国2
+      - 电信 圣何塞 26
+      - 香港4高速中转5x
+      - 日本NO.1
+      - 俄罗斯 IEPL专线NO1
+      - 日本中转 04
+      - 联通 香港 12
+      - 香港3SS中转
+      - 西班牙IPV6
+      - 香港BGP 中转 01 1.5x
+      - 新加坡-CN2-1-1B
+      - 土耳其中转
+      - 新加坡03奈非-5x
+      - 台湾中转 02
+      - 日本-CN2-3-1A
+      - 加拿大-多伦多-HY-001-1A
+      - 日本01
+      - 移动 香港 15
+      - 加拿大2
+      - 俄罗斯-圣彼得堡-HY-012-1A
+      - 荷兰 IEPL专线NO1
+      - 阿联酋中转
+      - 俄罗斯-圣彼得堡-014-1A
+      - 俄罗斯-圣彼得堡-009-1A
+      - 台湾中转 03
+      - 中国-香港-005-1A
+      - 美国BGP 中转 04 1.5x
+      - 联通 香港 11
+      - 新加坡-CN2-1-1A
+      - 俄罗斯-圣彼得堡-006-1B
+      - 联通 香港 15
+      - 香港02
+      - 日本03
+      - 移动 丹佛 18
+      - 日本SS中转4
+      - 俄罗斯-圣彼得堡-011-1B
+      - 新加坡-CN2-3-1B
+      - 美国1SS中转
+      - 移动 西雅图 25
+      - 电信 日本 59
+      - 香港中转 02
+      - 韩国高速中转3
+      - 美国3SS中转
+      - 印度 IEPL专线NO1
+      - 电信 印度 54
+      - 移动 洛杉矶 16
+      - 日本BGP 中转 02 1.5x
+      - 新加坡-CN2-3-1A
+      - 联通 凤凰城 52
+      - 香港BGP 三网直连1x
+      - 非洲 IEPL专线 NO1
+      - 巴西中转
+      - 移动 阿姆斯特丹 19
+      - 移动 芝加哥 21
+      - 香港6高速中转
+      - 美国05
+      - 俄罗斯-圣彼得堡-015-1B
+      - 美国NO.2
+      - 电信 加拿大 61
+      - 新加坡3高速中转3x
+      - 英国中转 03
+      - 新加坡中转 01
+      - 电信 拉齐奥 27
+      - 印度中转
+      - 新加坡02-V4-流媒体
+      - 香港中转 03
+      - 下方为备用节点
+      - 瑞典中转
+      - 移动 华盛顿 06
+      - 新加坡NO.1
+      - 电信 香港 100
+      - 俄罗斯-圣彼得堡-HY-014-1A
+      - 联通 印度 53
+      - 韩国 IEPL专线NO1
+      - XC-WXY
+      - 联通 凤凰城 51
+      - 新加坡BGP 中转 01 1.5x
+      - 移动 香港 12
+      - 俄罗斯-圣彼得堡-012-1A
+      - 联通 日本 57
+      - 印度2
+      - 联通 芝加哥 21
+      - 日本02
+      - 瑞士-日内瓦-HY-001-1A
+      - 英国中转 01
+      - 美国-芝加哥-001-1B
+      - 日本中转 05
+      - 日本-CN2-1-1A
+      - 移动 韩国 55
+      - 俄罗斯-圣彼得堡-007-1B
+      - 电信 凤凰城 52
+      - 台湾高速中转
+      - 香港中转 01
+      - 电信 纽约 04
+      - 联通 韩国 55
+      - 美国-CN2-1-1B
+      - 中国-香港-HY-005-1B
+      - 泰国ISP高速中转3x
+      - 建议有事没事都更新订阅
+      - 电信 越南 03
+      - 俄罗斯-圣彼得堡-HY-016-1B
+      - 俄罗斯-圣彼得堡-015-1A
+      - 台湾BGP 中转 01 1.5x
+      - 联通 洛杉矶 28
+      - 电信 纽约 10
+      - 美国高速中转4
+      - 联通 台湾 01
+      - 联通 亚特兰大 22
+      - 移动 纽约 04
+      - 移动 日本 59
+      - 俄罗斯-圣彼得堡-010-1A
+      - 新加坡 IEPL专线NO1
+      - 德国中转
+      - 法国1
+      - 台湾1
+      - 加拿大 IEPL专线 NO1
+      - 俄罗斯-圣彼得堡-HY-008-1A
+      - 台湾2
+      - BR 燕麦拿铁
+      - 联通 日本 59
+      - 俄罗斯-圣彼得堡-008-1A
+      - 土耳其高速中转
+      - 德国-法兰克福-HY-001-1A
+      - 移动 纽约 10
+      - 澳大利亚 IEPL专线NO1
+      - 台湾中转 01
+      - 美国2SS中转
+      - 葡萄牙 IEPL专线NO1
+      - 电信 香港 13
+      - 联通 香港 100
+      - 联通 新加坡 02
+      - 电信 达拉斯 24
+      - 日本中转 01
+      - 美国 IEPL专线NO1
+      - 加拿大-多伦多-HY-001-1B
+      - 日本2高速中转
+      - 联通 弗吉尼亚 07
+      - 移动 日本 58
+      - 香港1高速中转2x
+      - 移动 日本 57
+      - 日本 IEPL专线NO1
+      - 美国2高速中转
+      - 泰国 IEPL专线 NO1
+      - 美国BGP 中转 02 1.5x
+      - 马来西亚中转
+      - 联通 纽约 04
+      - 公益路线-香港HK 限速50MBPS-1A
+      - 俄罗斯-圣彼得堡-014-1B
+      - 电信 韩国 55
+      - 香港-CN2-3-1B
+      - 香港 IEPL专线NO3
+      - 俄罗斯-圣彼得堡-HY-013-1B
+      - 电信 加利福尼亚 05
+      - 日-本SS中转25x
+      - 英国中转 02
+      - 台湾 1
+      - 俄罗斯-圣彼得堡-016-1A
+      - 联通 丹佛 18
+      - 加拿大-多伦多-001-1B
+      - 瑞士-日内瓦-HY-001-1B
+      - 日本中转 02
+      - 新加坡中转 02
+      - 美国 纽约2
+      - 俄罗斯-圣彼得堡-HY-013-1A
+      - 移动 洛杉矶 28
+      - 日本2SS中转15x
+      - 日本中转 03
+      - 美国-芝加哥-001-1A
+      - 波兰IPV6-01
+      - SG 冷萃冰咖啡
+      - 俄罗斯-圣彼得堡-013-1B
+      - 香港-LELE测试-1.5x-HY-1B
+      - 澳大利亚原生2
+      - 美国BGP 中转 03 1.5x
+      - 台湾中转 04
+      - 电信 丹佛 18
+      - 香港-CN2-3-1A
+      - 电信 台湾 01
+      - 联通 西雅图 25
+      - 移动 加拿大 61
+      - 俄罗斯-圣彼得堡-010-1B
+      - 电信 芝加哥 17
+      - 香港03
+      - 移动 洛杉矶 20
+      - 日本-CN2-3-1B
+      - 电信 印度 53
+      - 香港2高速中转2x
+      - 联通 印度 54
+      - 俄罗斯-圣彼得堡-008-1B
+      - 美国-芝加哥-HY-001-1A
+      - 日本NO.2
+      - 加拿大-多伦多-001-1A
+      - 俄罗斯-圣彼得堡-HY-011-1B
+      - 移动 芝加哥 17
+      - 俄罗斯-圣彼得堡-007-1A
+      - 香港BGP 中转 03 1.5x
+      - 电信 香港 12
+      - 移动 达拉斯 24
+      - 新加坡 IEPL专线NO3
+      - 俄罗斯-圣彼得堡-HY-010-1A
+      - 电信 日本 58
+      - 日本3SS中转25x
+      - 联通 纽约 10
+      - 移动 凤凰城 52
+      - 台湾 IEPL专线NO1
+      - 台湾1SS中转|3x
+      - 新加坡NO.2
+      - 日本1高速中转
+      - 美国-CN2-1-1A
+      - 香港
+      - 俄罗斯-圣彼得堡-HY-010-1B
+      - 联通 纽约 23
+      - 电信 防丢 02
+      - 俄罗斯-圣彼得堡-012-1B
+      - 联通 圣何塞 29
+      - 阿根廷 IEPL专线NO1
+      - 新加坡中转 03
+      - 美国中转 01
+      - 美国NO.1
+      - 美国 纽约01
+      - 移动 拉齐奥 27
+      - 台湾中转 05
+      - 俄罗斯-圣彼得堡-HY-006-1A
+      - 电信 亚特兰大 22
+      - 俄罗斯-圣彼得堡-006-1A
+      - 电信 圣何塞 29
+      - 台湾BGP 中转 02 1.5x
+      - 中国-香港-005-1B
+      - 日本04
+      - 电信 洛杉矶 16
   - name: 中国节点
     type: select
     proxies:
-      - Youtube顺丰资源  香港 2
-      - Youtube顺丰资源  香港 7
-      - Youtube顺丰资源  香港 11
-      - Youtube顺丰资源香港12
-      - Youtube顺丰资源  香港 14
-      - Youtube顺丰资源香港15
-      - Youtube顺丰资源  香港 16
-      - Youtube顺丰资源  香港 17
-      - Youtube顺丰资源  香港 18
-      - Youtube顺丰资源香港23
-      - Youtube顺丰资源  香港 27
-      - Youtube顺丰资源  香港 29
-      - Youtube顺丰资源香港30
-      - Youtube顺丰资源  香港 31
-      - Youtube顺丰资源  香港 32
-      - Youtube顺丰资源香港33
-      - Youtube顺丰资源  香港 38
-      - Youtube顺丰资源  香港 39
-      - Youtube顺丰资源  香港 46
-      - Youtube顺丰资源  香港 61
-      - Youtube顺丰资源  香港 67
-      - Youtube顺丰资源香港156
-      - Youtube顺丰资源  香港 165
-      - Youtube顺丰资源  香港 173
-      - Youtube顺丰资源  香港 174
-      - Youtube顺丰资源  香港 175
-      - Youtube顺丰资源  香港 177
-      - Youtube顺丰资源  香港 178
-      - Youtube顺丰资源  香港 181
-      - Youtube顺丰资源  香港 182
-      - Youtube顺丰资源  香港 184
-      - Youtube顺丰资源  香港 185
-      - Youtube顺丰资源  香港 190
-      - Youtube顺丰资源  香港 195
-      - Youtube顺丰资源  香港 197
-      - Youtube顺丰资源  香港 198
-      - Youtube顺丰资源  香港 200
-      - Youtube顺丰资源  香港 201
-      - Youtube顺丰资源  香港 218
-      - Youtube顺丰资源  香港 219
-      - Youtube顺丰资源  香港 242
-      - Youtube顺丰资源  香港 243
+      - 香港01
+      - 台湾2全天极速优先使用|X3
+      - 香港-LELE测试-1.5x-HY-1A
+      - 联通 香港 13
+      - 电信 香港 15
+      - 香港-CN2-1-1A
+      - 台湾SS中转25x
+      - 移动 香港 13
+      - 台湾02-3x-流媒体
+      - 香港中转 05
+      - 电信 香港 11
+      - 台湾01
+      - 移动 香港 100
+      - 联通 香港 14
+      - 移动 香港 11
+      - 中国-香港-HY-005-1A
+      - 美国-CN2-3-1A
+      - 台湾-02-奈非-3x
+      - 香港2SS中转
+      - 公益路线-香港HK 限速50MBPS-1B
+      - 日本-CN2-1-1B
+      - 香港中转 04
+      - 香港-CN2-1-1B
+      - 台湾2SS中转|3x
+      - 香港5高速中转5x
+      - 移动 台湾 01
+      - 香港BGP 中转 04 1.5x
+      - 香港BGP 中转 02 1.5x
+      - 中国-香港-HY-002-1B
+      - 中国-香港-HY-002-1A
+      - 电信 香港 14
+      - 移动 香港 14
+      - 美国-CN2-3-1B
+      - 三网中转香港|5x
+      - 香港4高速中转5x
+      - 联通 香港 12
+      - 香港3SS中转
+      - 香港BGP 中转 01 1.5x
+      - 新加坡-CN2-1-1B
+      - 台湾中转 02
+      - 日本-CN2-3-1A
+      - 移动 香港 15
+      - 台湾中转 03
+      - 中国-香港-005-1A
+      - 联通 香港 11
+      - 新加坡-CN2-1-1A
+      - 联通 香港 15
+      - 香港02
+      - 新加坡-CN2-3-1B
+      - 香港中转 02
+      - 新加坡-CN2-3-1A
+      - 香港BGP 三网直连1x
+      - 香港6高速中转
+      - 香港中转 03
+      - 电信 香港 100
+      - 移动 香港 12
+      - 日本-CN2-1-1A
+      - 台湾高速中转
+      - 香港中转 01
+      - 美国-CN2-1-1B
+      - 中国-香港-HY-005-1B
+      - 台湾BGP 中转 01 1.5x
+      - 联通 台湾 01
+      - 台湾1
+      - 台湾2
+      - 台湾中转 01
+      - 电信 香港 13
+      - 联通 香港 100
+      - 香港1高速中转2x
+      - 公益路线-香港HK 限速50MBPS-1A
+      - 香港-CN2-3-1B
+      - 香港 IEPL专线NO3
+      - 台湾 1
+      - 香港-LELE测试-1.5x-HY-1B
+      - 台湾中转 04
+      - 香港-CN2-3-1A
+      - 电信 台湾 01
+      - 香港03
+      - 日本-CN2-3-1B
+      - 香港2高速中转2x
+      - 香港BGP 中转 03 1.5x
+      - 电信 香港 12
+      - 台湾 IEPL专线NO1
+      - 台湾1SS中转|3x
+      - 美国-CN2-1-1A
+      - 香港
+      - 台湾中转 05
+      - 台湾BGP 中转 02 1.5x
+      - 中国-香港-005-1B
   - name: 日本节点
     type: select
     proxies:
-      - Youtube顺丰资源  日本 21
-      - Youtube顺丰资源  日本 22
-      - Youtube顺丰资源  日本 52
+      - 日本SS中转25x
+      - 日本BGP 中转 01 1.5x
+      - 电信 日本 57
+      - 日本-CN2-1-1B
+      - 联通 日本 58
+      - 日本SS中转1
+      - JP 香草星冰乐
+      - 日本NO.1
+      - 日本中转 04
+      - 日本-CN2-3-1A
+      - 日本01
+      - 日本03
+      - 日本SS中转4
+      - 电信 日本 59
+      - 日本BGP 中转 02 1.5x
+      - 联通 日本 57
+      - 日本02
+      - 日本中转 05
+      - 日本-CN2-1-1A
+      - 移动 日本 59
+      - 联通 日本 59
+      - 日本中转 01
+      - 日本2高速中转
+      - 移动 日本 58
+      - 移动 日本 57
+      - 日本 IEPL专线NO1
+      - 日本中转 02
+      - 日本2SS中转15x
+      - 日本中转 03
+      - 日本-CN2-3-1B
+      - 日本NO.2
+      - 电信 日本 58
+      - 日本3SS中转25x
+      - 日本1高速中转
+      - 日本04
   - name: 新加坡节点
     type: select
     proxies:
-      - Youtube顺丰资源  新加坡 69
-      - Youtube顺丰资源  新加坡 70
+      - 新加坡07奈非-5x
+      - 移动 新加坡 02
+      - 新加坡BGP 中转 02 1.5x
+      - 新加坡2高速中转3x
+      - 新加坡1高速中转3x
+      - 新加坡-CN2-1-1B
+      - 新加坡03奈非-5x
+      - 新加坡-CN2-1-1A
+      - 新加坡-CN2-3-1B
+      - 新加坡-CN2-3-1A
+      - 新加坡3高速中转3x
+      - 新加坡中转 01
+      - 新加坡02-V4-流媒体
+      - 新加坡NO.1
+      - 新加坡BGP 中转 01 1.5x
+      - 新加坡 IEPL专线NO1
+      - 联通 新加坡 02
+      - 新加坡中转 02
+      - SG 冷萃冰咖啡
+      - 新加坡 IEPL专线NO3
+      - 新加坡NO.2
+      - 新加坡中转 03
   - name: 美国节点
     type: url-test
     url: https://www.google.com/favicon.ico
     interval: 300
     tolerance: 150
     proxies:
-      - Youtube顺丰资源美国28
-      - Youtube顺丰资源  美国 50
-      - Youtube顺丰资源  美国 66
-      - Youtube顺丰资源  美国 88
-      - Youtube顺丰资源  美国 97
-      - Youtube顺丰资源美国189
-      - Youtube顺丰资源美国232
-      - Youtube顺丰资源美国239
-      - Youtube顺丰资源美国240
+      - 美国中转 02
+      - 美国02
+      - 美国5
+      - 美国-CN2-3-1A
+      - 美国BGP 中转 01 1.5x
+      - 美国-芝加哥-HY-001-1B
+      - 美国-CN2-3-1B
+      - 美国BGP 中转 04 1.5x
+      - 美国1SS中转
+      - 美国3SS中转
+      - 美国05
+      - 美国NO.2
+      - 美国-芝加哥-001-1B
+      - 美国-CN2-1-1B
+      - 美国高速中转4
+      - 美国2SS中转
+      - 美国 IEPL专线NO1
+      - 美国2高速中转
+      - 美国BGP 中转 02 1.5x
+      - 美国 纽约2
+      - 美国-芝加哥-001-1A
+      - 美国BGP 中转 03 1.5x
+      - 美国-芝加哥-HY-001-1A
+      - 美国-CN2-1-1A
+      - 美国中转 01
+      - 美国NO.1
+      - 美国 纽约01
 rules:
-  - IP-CIDR,219.135.231.205/32,DIRECT,no-resolve
-  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
-  - IP-CIDR,223.113.54.145/32,DIRECT,no-resolve
-  - DOMAIN,sd3.jiehuaa.xyz,DIRECT
-  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
-  - DOMAIN,sd3.jiehuaa.xyz,DIRECT
-  - IP-CIDR,36.150.215.196/32,DIRECT,no-resolve
-  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
-  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
-  - IP-CIDR,18.182.63.216/32,DIRECT,no-resolve
-  - IP-CIDR,18.183.233.62/32,DIRECT,no-resolve
-  - DOMAIN,sd1.jiehuaa.xyz,DIRECT
-  - IP-CIDR,3.35.20.163/32,DIRECT,no-resolve
-  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
-  - DOMAIN,kr4g.jeiaz.ink,DIRECT
-  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
-  - DOMAIN,sd1.jiehuaa.xyz,DIRECT
-  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
-  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
-  - DOMAIN,sd3.jiehuaa.xyz,DIRECT
-  - IP-CIDR,52.231.97.210/32,DIRECT,no-resolve
-  - IP-CIDR,120.232.217.96/32,DIRECT,no-resolve
-  - IP-CIDR,120.232.217.96/32,DIRECT,no-resolve
-  - IP-CIDR,154.197.64.67/32,DIRECT,no-resolve
-  - IP-CIDR,108.165.152.80/32,DIRECT,no-resolve
-  - IP-CIDR,103.116.7.103/32,DIRECT,no-resolve
-  - IP-CIDR,188.164.159.91/32,DIRECT,no-resolve
-  - IP-CIDR,92.53.190.161/32,DIRECT,no-resolve
-  - DOMAIN,hzhz1.sssyun.xyz,DIRECT
-  - IP-CIDR,106.240.1.52/32,DIRECT,no-resolve
-  - IP-CIDR,198.62.62.192/32,DIRECT,no-resolve
-  - IP-CIDR,154.197.64.166/32,DIRECT,no-resolve
-  - IP-CIDR,27.50.48.189/32,DIRECT,no-resolve
-  - IP-CIDR,27.50.49.207/32,DIRECT,no-resolve
-  - IP-CIDR,206.238.236.134/32,DIRECT,no-resolve
-  - IP-CIDR,209.94.90.87/32,DIRECT,no-resolve
-  - IP-CIDR,63.35.150.236/32,DIRECT,no-resolve
-  - IP-CIDR,52.49.63.178/32,DIRECT,no-resolve
-  - IP-CIDR,63.34.150.70/32,DIRECT,no-resolve
-  - IP-CIDR,35.181.14.160/32,DIRECT,no-resolve
-  - DOMAIN,sd1.jiehuaa.xyz,DIRECT
-  - IP-CIDR,103.152.164.39/32,DIRECT,no-resolve
-  - DOMAIN,cu1.guguyun.xyz,DIRECT
-  - IP-CIDR,45.136.199.132/32,DIRECT,no-resolve
-  - DOMAIN,cmc6.5gsieuvip.vn,DIRECT
-  - IP-CIDR,212.41.15.119/32,DIRECT,no-resolve
-  - DOMAIN,mmt-shyd.iwe.la,DIRECT
-  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
-  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
-  - DOMAIN,bj.xissyun.com,DIRECT
-  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
-  - IP-CIDR,171.111.216.155/32,DIRECT,no-resolve
-  - DOMAIN,ctmm.gscloud.bond,DIRECT
-  - DOMAIN,ru0195.alibabaokz.com,DIRECT
-  - DOMAIN,ru0195.alibabaokz.com,DIRECT
-  - DOMAIN,yaml777.133010.xyz,DIRECT
-  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
-  - DOMAIN,ti3hyra4.slashdevslashnetslashtun.net,DIRECT
-  - DOMAIN,8tv68qhq.slashdevslashnetslashtun.net,DIRECT
-  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
-  - DOMAIN,8tv68qhq.slashdevslashnetslashtun.net,DIRECT
-  - DOMAIN,8tv68qhq.slashdevslashnetslashtun.net,DIRECT
-  - IP-CIDR,221.131.165.206/32,DIRECT,no-resolve
-  - IP-CIDR,221.131.165.207/32,DIRECT,no-resolve
-  - IP-CIDR,151.101.2.216/32,DIRECT,no-resolve
-  - DOMAIN,s1.db-link02.top,DIRECT
-  - DOMAIN,s1.db-link02.top,DIRECT
-  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
-  - IP-CIDR,223.113.53.141/32,DIRECT,no-resolve
-  - IP-CIDR,92.242.220.22/32,DIRECT,no-resolve
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - DOMAIN,yx.sulink.one,DIRECT
+  - IP-CIDR,194.87.69.56/32,DIRECT,no-resolve
+  - IP-CIDR,195.58.49.42/32,DIRECT,no-resolve
+  - DOMAIN,wjb5ekt8wf.fcbjw.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,sg07v6.sulink.one,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,hkone.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,g2.hy2.one,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,g2.hy2.one,DIRECT
+  - IP-CIDR,194.87.18.248/32,DIRECT,no-resolve
+  - IP-CIDR,5.39.252.204/32,DIRECT,no-resolve
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,cf.hy2.one,DIRECT
+  - DOMAIN,us02.sulink.one,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - IP-CIDR,194.87.69.52/32,DIRECT,no-resolve
+  - DOMAIN,haa.dashuai.cyou,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - IP-CIDR,195.58.49.86/32,DIRECT,no-resolve
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - IP-CIDR,176.32.39.181/32,DIRECT,no-resolve
+  - IP-CIDR,194.87.69.244/32,DIRECT,no-resolve
+  - DOMAIN,bb6d78e050a098dda5abbb47f0cc7fcd.node.tro.node-is.green,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,kr.stardad.lol,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,yx.sulink.one,DIRECT
+  - IP-CIDR,194.87.69.56/32,DIRECT,no-resolve
+  - IP-CIDR,212.192.12.70/32,DIRECT,no-resolve
+  - DOMAIN,haa.dashuai.cyou,DIRECT
+  - DOMAIN,usthree.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,tw02v6.sulian.life,DIRECT
+  - IP-CIDR,195.58.49.50/32,DIRECT,no-resolve
+  - DOMAIN,xdd.dashuai.cyou,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,pro.sulink.one,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - IP-CIDR,194.87.69.50/32,DIRECT,no-resolve
+  - DOMAIN,haa.dashuai.cyou,DIRECT
+  - IP-CIDR,195.58.49.152/32,DIRECT,no-resolve
+  - DOMAIN,jehw72eh.97kb.com,DIRECT
+  - DOMAIN,jpone.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,fr09.sulian.life,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,hkone.z342jdahhdc.cfd,DIRECT
+  - IP-CIDR,195.58.49.42/32,DIRECT,no-resolve
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - IP-CIDR,194.87.18.248/32,DIRECT,no-resolve
+  - IP-CIDR,194.87.69.50/32,DIRECT,no-resolve
+  - DOMAIN,pro.sulink.one,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,d7ef799f336644d9d1bcffec20c72778.node.tro.node-is.green,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,pro.sulink.one,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,91f4869ed3c3ba367496bedd8c57cc6e.node.tro.node-is.green,DIRECT
+  - IP-CIDR,194.87.69.56/32,DIRECT,no-resolve
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,097864f277068a93abbc6494c2f0b31b.node.tro.node-is.green,DIRECT
+  - IP-CIDR,176.32.39.181/32,DIRECT,no-resolve
+  - DOMAIN,57c7efcdfc38c962b270168ebe666e11.node.tro.node-is.green,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - IP-CIDR,212.192.15.239/32,DIRECT,no-resolve
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - IP-CIDR,166.88.159.225/32,DIRECT,no-resolve
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,qd.needss.top,DIRECT
+  - DOMAIN,jpzl2.stardad.lol,DIRECT
+  - IP-CIDR,212.192.15.239/32,DIRECT,no-resolve
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - IP-CIDR,8.8.8.8/32,DIRECT,no-resolve
+  - IP-CIDR,194.87.68.115/32,DIRECT,no-resolve
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - IP-CIDR,194.87.68.115/32,DIRECT,no-resolve
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,usthree.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,ahkt.sulink.one,DIRECT
+  - DOMAIN,xdd.dashuai.cyou,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,haa.dashuai.cyou,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,pro.sulink.one,DIRECT
+  - DOMAIN,sp01.sulink.one,DIRECT
+  - DOMAIN,634ca9c0b75ed13512b0d47795221d0e.node.tro.node-is.green,DIRECT
+  - DOMAIN,sgone.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,sg03v6.sulink.one,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,jpthree.z342jdahhdc.cfd,DIRECT
+  - IP-CIDR,141.195.112.167/32,DIRECT,no-resolve
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,xdd.dashuai.cyou,DIRECT
+  - IP-CIDR,195.58.49.86/32,DIRECT,no-resolve
+  - DOMAIN,qd.needss.top,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - IP-CIDR,195.58.49.50/32,DIRECT,no-resolve
+  - IP-CIDR,194.87.69.56/32,DIRECT,no-resolve
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - IP-CIDR,212.192.12.70/32,DIRECT,no-resolve
+  - DOMAIN,a0f2bfab412f77ea928f2bef68685650.node.tro.node-is.green,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,sgone.z342jdahhdc.cfd,DIRECT
+  - IP-CIDR,195.58.49.152/32,DIRECT,no-resolve
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,pro.sulink.one,DIRECT
+  - IP-CIDR,194.87.68.115/32,DIRECT,no-resolve
+  - DOMAIN,sgthree.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,pro.sulink.one,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,pro.sulink.one,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,700eb9e2301db67a59b68eb83da3e5f1.node.tro.node-is.green,DIRECT
+  - DOMAIN,sgthree.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,3b1fce414486b08ec256a25cb6928bfc.node.tro.node-is.green,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,us05.sulink.one,DIRECT
+  - IP-CIDR,195.58.49.42/32,DIRECT,no-resolve
+  - DOMAIN,xdd.dashuai.cyou,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,cf.hy2.one,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,666.com,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,haa.dashuai.cyou,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - IP-CIDR,195.58.49.50/32,DIRECT,no-resolve
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,hk.kfsldflk.xyz,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,f4abdf20f005feca334fc4c3f111d208.node.tro.node-is.green,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - IP-CIDR,195.58.49.86/32,DIRECT,no-resolve
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,xdd.dashuai.cyou,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - IP-CIDR,194.87.18.248/32,DIRECT,no-resolve
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - IP-CIDR,166.88.159.225/32,DIRECT,no-resolve
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,jpone.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - IP-CIDR,176.32.39.181/32,DIRECT,no-resolve
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,usone.z342jdahhdc.cfd,DIRECT
+  - IP-CIDR,212.192.12.70/32,DIRECT,no-resolve
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,cainiao212.top,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - IP-CIDR,194.87.69.50/32,DIRECT,no-resolve
+  - IP-CIDR,195.58.49.42/32,DIRECT,no-resolve
+  - DOMAIN,afce156c8b7ba72324e9c09bb6f1ab99.node.tro.node-is.green,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - IP-CIDR,194.87.68.228/32,DIRECT,no-resolve
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,haa.dashuai.cyou,DIRECT
+  - DOMAIN,haa.dashuai.cyou,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - IP-CIDR,194.87.69.244/32,DIRECT,no-resolve
+  - DOMAIN,xdd.dashuai.cyou,DIRECT
+  - DOMAIN,br.taipeicity.news,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - IP-CIDR,194.87.69.244/32,DIRECT,no-resolve
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - IP-CIDR,5.39.252.204/32,DIRECT,no-resolve
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,pro.sulink.one,DIRECT
+  - DOMAIN,qd.needss.top,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - IP-CIDR,141.195.112.167/32,DIRECT,no-resolve
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,66cb483fa95242791d0a6326880614e6.node.tro.node-is.green,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,jehw72eh.97kb.com,DIRECT
+  - IP-CIDR,195.58.49.50/32,DIRECT,no-resolve
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,hkthree.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - IP-CIDR,194.87.69.52/32,DIRECT,no-resolve
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,g2.hy2.one,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - IP-CIDR,194.87.69.50/32,DIRECT,no-resolve
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - IP-CIDR,141.195.112.167/32,DIRECT,no-resolve
+  - IP-CIDR,194.87.18.248/32,DIRECT,no-resolve
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - IP-CIDR,194.87.69.52/32,DIRECT,no-resolve
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,g.hy2.one,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - IP-CIDR,166.88.159.225/32,DIRECT,no-resolve
+  - DOMAIN,bl01.sulink.one,DIRECT
+  - DOMAIN,sgzl1.stardad.lol,DIRECT
+  - IP-CIDR,194.87.69.52/32,DIRECT,no-resolve
+  - DOMAIN,wjb5ekt8wf.fcbjw.com,DIRECT
+  - DOMAIN,xdd.dashuai.cyou,DIRECT
+  - DOMAIN,bdcbdd94ecb0b5a9ef8b920a43931d02.node.tro.node-is.green,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,hkthree.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - IP-CIDR,194.87.68.228/32,DIRECT,no-resolve
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,jpthree.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - IP-CIDR,194.87.69.244/32,DIRECT,no-resolve
+  - IP-CIDR,166.88.159.225/32,DIRECT,no-resolve
+  - DOMAIN,xdd.dashuai.cyou,DIRECT
+  - IP-CIDR,141.195.112.167/32,DIRECT,no-resolve
+  - IP-CIDR,194.87.68.115/32,DIRECT,no-resolve
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - IP-CIDR,176.32.39.181/32,DIRECT,no-resolve
+  - DOMAIN,40f4df13c1d5f501f2b85842454363f9.node.tro.node-is.green,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - IP-CIDR,194.87.68.228/32,DIRECT,no-resolve
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,g3.hy2.one,DIRECT
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,pro.sulink.one,DIRECT
+  - DOMAIN,xdd.dashuai.cyou,DIRECT
+  - DOMAIN,gsgs.hy2.one,DIRECT
+  - DOMAIN,usone.z342jdahhdc.cfd,DIRECT
+  - DOMAIN,xg.dashuai.cyou,DIRECT
+  - IP-CIDR,194.87.68.228/32,DIRECT,no-resolve
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - IP-CIDR,195.58.49.86/32,DIRECT,no-resolve
+  - DOMAIN,cucc.abyssvpn.com,DIRECT
+  - DOMAIN,i.needss.top,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - DOMAIN,haa.dashuai.cyou,DIRECT
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - DOMAIN,cmcc.abyssvpn.com,DIRECT
+  - DOMAIN,chiyu.myfczy169.top,DIRECT
+  - IP-CIDR,195.58.49.152/32,DIRECT,no-resolve
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - IP-CIDR,195.58.49.152/32,DIRECT,no-resolve
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
+  - DOMAIN,b9c0528e081f3101ab053c283b2f5b8d.node.tro.node-is.green,DIRECT
+  - IP-CIDR,212.192.12.70/32,DIRECT,no-resolve
+  - DOMAIN,gy.666666222.shop,DIRECT
+  - DOMAIN,bgp.abyssvpn.com,DIRECT
   - MATCH,手动切换
