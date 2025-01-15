@@ -76,7 +76,7 @@ def fileToFile(source,output_type,output):
     print(f'[{time}]: subconvert [{output_type}]- [{source}] to [{output}]')
     #获取文件绝对路径
     source_path = os.path.abspath(source)
-    temp = convert_remote(source_path,'clash')
+    temp = convert_remote(source_path,output_type)
     with open(output, 'w') as f:
         f.write(temp)
 
