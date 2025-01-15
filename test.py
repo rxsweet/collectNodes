@@ -18,7 +18,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
     sever_host = 'http://127.0.0.1:25500'
     url = urllib.parse.quote(url, safe='') # https://docs.python.org/zh-cn/3/library/urllib.parse.html
     if output_type == 'clash':
-        converted_url = sever_host+'/sub?target=clash&url='+url+'&insert=false&config='+configUrl+'&emoji=false'
+        converted_url = sever_host+'/sub?target=clash&url='+url+'&insert=false&config='+configUrl+'&emoji=false&append_info=true'
         try:
             resp = requests.get(converted_url)
             #print(resp)
