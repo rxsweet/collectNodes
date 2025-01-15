@@ -105,7 +105,7 @@ if __name__=='__main__':
     #print(args)
     #下载安装subconverter
     subconverter_install()
-    #time.sleep(3)
+    time.sleep(3)
     if args:
         #args[0]是py文件名
         source = args[1]
