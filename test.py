@@ -42,6 +42,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             print('Url 解析错误: No nodes were found! -->' + url + '\n')
         else:
             sub_content = resp.text
+            print('base64 = \n' + resp.text)
     elif output_type == 'url':
         converted_url = sever_host+'/sub?target=mixed&url='+url+'&insert=false&emoji=false&list=true'
         try:
