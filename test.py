@@ -21,7 +21,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
         converted_url = sever_host+'/sub?target=clash&url='+url+'&insert=false&config='+configUrl+'&emoji=false&append_info=true'
         try:
             resp = requests.get(converted_url)
-            #print(resp)
+            print(resp)
         except Exception as err:
             print(err)
             return 'Url 解析错误'
@@ -54,6 +54,18 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             print('Url 解析错误: No nodes were found! -->' + url + '\n')
         else:
             sub_content = resp.text
+    elif output_type == 'YAML':
+        converted_url = sever_host+'/sub?target=clash&url='+url+'&insert=false&emoji=false&list=true'
+        try:
+            resp = requests.get(converted_url)
+        except Exception as err:
+            print(err)
+            return 'Url 解析错误'
+        if resp.text == 'No nodes were found!':
+            sub_content = 'Url 解析错误'
+            print('Url 解析错误: No nodes were found! -->' + url + '\n')
+        else:
+            sub_content = resp.text
     return sub_content
 
 
@@ -69,3 +81,9 @@ if __name__=='__main__':
     v2ray = convert_remote(f_path,'base64')
     with open('./subs/1.txt', 'w') as f:
         f.write(v2ray)
+    url = convert_remote(f_path,'base64')
+    with open('./subs/2.txt', 'w') as f:
+        f.write(url)
+    yaml = convert_remote(f_path,'base64')
+    with open('./subs/3.txt', 'w') as f:
+        f.write(yaml)
