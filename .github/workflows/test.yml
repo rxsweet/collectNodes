@@ -21,7 +21,7 @@ jobs:
     - name: work
       run: |
         #subconvert type: clash base64 url YAML
-        python subconvert.py './subs/staticAll.yaml' 'rm'
+        python subconvert.py './subs/staticAll.yaml' 'base64' './subs/staticAll.txt'
 # 提交           
     - name: 提交更改
       run: |                 
