@@ -45,7 +45,4 @@ sources:
         - https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/trojan
         - https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/shadowsocks
         - https://raw.githubusercontent.com/WilliamStar007/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml
-        - https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml
-        - https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
-        - https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
   output: ./sub/static.yaml
