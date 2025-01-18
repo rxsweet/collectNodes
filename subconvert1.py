@@ -226,7 +226,7 @@ def subconverter_install():
     try:
         #os.system()
         if not os.path.exists('./subconverter.tar.gz'):
-            os.system("wget -O -q subconverter.tar.gz https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.tar.gz")  #-q安静模式(没有输出)
+            os.system("wget -q -O subconverter.tar.gz https://github.com/tindy2013/subconverter/releases/latest/download/subconverter_linux64.tar.gz")  #-q安静模式(没有输出)
             #os.system("wget -O subconverter.tar.gz https://github.com/lonelam/subconverter/releases/latest/download/subconverter_linux64.tar.gz")    #支持hy2
             os.system("tar -zxf subconverter.tar.gz -C ./")
             os.system("chmod +x ./subconverter/subconverter && nohup ./subconverter/subconverter >./subconverter.log 2>&1 &")
