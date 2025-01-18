@@ -4,4 +4,4 @@ sources:
   options:
     urls: 
         - https://tt.vg/freev2
-  output: sub/static.yaml
+  output: ./sub/static.yaml
