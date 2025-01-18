@@ -107,7 +107,7 @@ def proxies_rm(proxies_list):
         if proxies_list[begin]['type'] == 'ss' or proxies_list[begin]['type'] == 'trojan' or proxies_list[begin]['type'] == 'ssr':  
             try:
                 if proxies_list[begin]['password'] == None or proxies_list[begin]['password'] == '':    #空密码
-                    print(f"{proxies_list[begin]['name']}的password为空！")
+                    #print(f"{proxies_list[begin]['name']}的password为空！")
                     #print(proxies_list[begin])
                     proxies_list.pop(begin)
                     length -= 1
