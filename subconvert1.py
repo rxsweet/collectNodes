@@ -168,7 +168,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             print('Url 解析错误: No nodes were found! -->' + url + '\n')
         else:
             sub_content = resp.text
-            #sub_content = re.sub(r'!<str>','',sub_content)#https://blog.csdn.net/Dontla/article/details/134602233
+            sub_content = re.sub(r'!<str>','',sub_content)#https://blog.csdn.net/Dontla/article/details/134602233
     return sub_content
 
 #源文件转到目标文件，类型为output_type，共4个类型：clash,base64,url,YAML
@@ -222,6 +222,7 @@ def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
         except yaml.YAMLError as exc:
             print(exc)
             print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR_PATH}')
+            #记录错误,保存错误文件
             log_err(str(exc))
             with open(ERR_PATH, 'w') as f:
                 f.write(temp)
