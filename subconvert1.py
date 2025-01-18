@@ -203,6 +203,10 @@ def collect_sub(source):
         #转成subconverter可识别的字符串
         urllist = '|'.join(config['sources'][0]['options']['urls']) 
         temp = convert_remote(urllist,'YAML')
+        file_path = './' + config['sources'][0]['output']
+        with open(file_path, 'w') as f:
+        f.write(temp)
+        """
         yaml_list = yaml.safe_load(temp)
         yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
         #写入
@@ -210,7 +214,7 @@ def collect_sub(source):
         with open(config['sources'][0]['output'], 'w',encoding = 'utf-8') as file:
             #file = yaml.dump(proxyconfig, file,default_flow_style=False, sort_keys=False, allow_unicode=True, width=750, indent=2)
             file = yaml.dump(yaml_list, file, allow_unicode=True, indent=2)
-
+        """
 if __name__=='__main__':
     #获取参数携带的参数
 
