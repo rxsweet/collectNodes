@@ -89,15 +89,19 @@ def YAML_rm(source):
         except Exception as err:
             print(f"读取{source}文件失败")
     #去重
-    proxyconfig['proxies'] = proxies_rm(proxyconfig['proxies'])
-    #写入
-    with open(source, 'w',encoding = 'utf-8') as file:
-        #file = yaml.dump(proxyconfig, file,default_flow_style=False, sort_keys=False, allow_unicode=True, width=750, indent=2)
-        file = yaml.dump(proxyconfig, file, allow_unicode=True, indent=2)
-    #下载安装subconverter
-    subconverter_install()
-    time.sleep(3)
-    sub_convert(source,'YAML',source)
+    if proxyconfig:
+        print('读取成功！')
+        proxyconfig['proxies'] = proxies_rm(proxyconfig['proxies'])
+        #写入
+        with open(source, 'w',encoding = 'utf-8') as file:
+            #file = yaml.dump(proxyconfig, file,default_flow_style=False, sort_keys=False, allow_unicode=True, width=750, indent=2)
+            file = yaml.dump(proxyconfig, file, allow_unicode=True, indent=2)
+        #下载安装subconverter
+        subconverter_install()
+        time.sleep(3)
+        sub_convert(source,'YAML',source)
+    else:
+        print(f"读取{source}文件失败")
     
 # 注意 订阅地址必须是base64,或者yaml，(直接是url节点内容的话，会解析错误)
 def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
