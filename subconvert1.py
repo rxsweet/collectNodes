@@ -1,6 +1,9 @@
-#使用方法：python subconvert.py './subs/11.yaml' 'clash' './subs/22.yaml'
-#转换 type: clash base64 url YAML
-#
+#subconvert.py
+#功能:[获取cofig列表节点，去重，转换]
+#1.获取cofig列表节点：python subconvert.py './config.yaml' 'config'
+#2.去重：python subconvert.py './sources.yaml' 'rm'
+#3.转换：python subconvert.py './subs/11.yaml' 'clash' './subs/22.yaml'    ##type: clash base64 url YAML
+
 import os
 import re
 import requests
@@ -228,9 +231,9 @@ def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
                 f.write(temp)
             return
         yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
-        #写入
+        
+        #写入,配置文件的写入地址config['sources'][0]['output']
         with open(config['sources'][0]['output'], 'w',encoding = 'utf-8') as file:
-            #file = yaml.dump(proxyconfig, file,default_flow_style=False, sort_keys=False, allow_unicode=True, width=750, indent=2)
             file = yaml.dump(yaml_list, file, allow_unicode=True, indent=2)
         #调整显示方式
         sub_convert(config['sources'][0]['output'],'YAML',config['sources'][0]['output'])
