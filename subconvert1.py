@@ -1,6 +1,6 @@
 #subconvert.py
 #功能:[获取cofig列表节点，去重，转换]
-#1.获取cofig列表节点：python subconvert.py './config.yaml' 'config'
+#1.获取cofig.yaml列表节点：python subconvert.py './config.yaml' 'config'
 #2.去重：python subconvert.py './sources.yaml' 'rm'
 #3.转换：python subconvert.py './subs/11.yaml' 'clash' './subs/22.yaml'    ##type: clash base64 url YAML
 
@@ -16,7 +16,7 @@ import yaml
 #默认转clash配置文件.ini地址
 INI_CONFIG = 'https://raw.githubusercontent.com/rxsweet/all/main/githubTools/clashConfig.ini'
 
-#记录错误,
+#记录错误,出错时，错误文件有默认地址
 def log_err(msg,log_path = './sub/log.txt'):
     time = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
     filetime = '[' + time + ']: ' + msg + '\n'
@@ -26,6 +26,41 @@ def log_err(msg,log_path = './sub/log.txt'):
     file.write(filetime)
     file.close()
 
+#获取cofig.yaml列表节点,出错时，错误文件有默认地址
+def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
+    #读取yaml文件
+    with open(source, 'r',encoding = 'utf-8') as f:
+        try:
+            config = yaml.load(f.read(), Loader=yaml.FullLoader)
+        except Exception as err:
+            print(f"读取{source}文件失败")
+    #获取订阅转成yaml
+    if config['sources'][0]['options']['urls']:
+        #下载安装subconverter
+        subconverter_install()
+        time.sleep(3)
+        #转成subconverter可识别的字符串
+        urllist = '|'.join(config['sources'][0]['options']['urls']) 
+        temp = convert_remote(urllist,'YAML')
+        try:
+            yaml_list = yaml.safe_load(temp)
+        except yaml.YAMLError as exc:
+            print(exc)
+            print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR_PATH}')
+            #记录错误,保存错误文件
+            log_err(str(exc))
+            with open(ERR_PATH, 'w') as f:
+                f.write(temp)
+            return
+        yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
+        
+        #写入,配置文件的写入地址config['sources'][0]['output']
+        with open(config['sources'][0]['output'], 'w',encoding = 'utf-8') as file:
+            file = yaml.dump(yaml_list, file, allow_unicode=True, indent=2)
+        #调整显示方式
+        sub_convert(config['sources'][0]['output'],'YAML',config['sources'][0]['output'])
+
+#dict列表去重
 def proxies_rm(proxies_list):
     # 去重复，重名，空名，float型password
     raw_length = len(proxies_list)
@@ -93,7 +128,8 @@ def proxies_rm(proxies_list):
         begin += 1 
     print(f'去重后剩余总数:{len(proxies_list)}')
     return proxies_list
-    
+
+#去重
 def YAML_rm(source):
     #读取yaml文件
     with open(source, 'r',encoding = 'utf-8') as f:
@@ -102,7 +138,7 @@ def YAML_rm(source):
         except Exception as err:
             print(f"读取{source}文件失败")
             return
-    #去重
+    #列表去重
     proxyconfig['proxies'] = proxies_rm(proxyconfig['proxies'])
     #写入
     with open(source, 'w',encoding = 'utf-8') as file:
@@ -204,48 +240,15 @@ def subconverter_install():
         print(err)
         print('subconverter安装失败')
         
-def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
-
-    #读取yaml文件
-    with open(source, 'r',encoding = 'utf-8') as f:
-        try:
-            config = yaml.load(f.read(), Loader=yaml.FullLoader)
-        except Exception as err:
-            print(f"读取{source}文件失败")
-    #获取订阅转成yaml
-    if config['sources'][0]['options']['urls']:
-        #下载安装subconverter
-        subconverter_install()
-        time.sleep(3)
-        #转成subconverter可识别的字符串
-        urllist = '|'.join(config['sources'][0]['options']['urls']) 
-        temp = convert_remote(urllist,'YAML')
-        try:
-            yaml_list = yaml.safe_load(temp)
-        except yaml.YAMLError as exc:
-            print(exc)
-            print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR_PATH}')
-            #记录错误,保存错误文件
-            log_err(str(exc))
-            with open(ERR_PATH, 'w') as f:
-                f.write(temp)
-            return
-        yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
-        
-        #写入,配置文件的写入地址config['sources'][0]['output']
-        with open(config['sources'][0]['output'], 'w',encoding = 'utf-8') as file:
-            file = yaml.dump(yaml_list, file, allow_unicode=True, indent=2)
-        #调整显示方式
-        sub_convert(config['sources'][0]['output'],'YAML',config['sources'][0]['output'])
 
 if __name__=='__main__':
     #获取参数携带的参数
-
     import sys
     args = sys.argv
     #print(args)
-
-    if len(args) == 4:
+    
+    #匹配参数
+    if len(args) == 4:  #3个参数
         #下载安装subconverter
         subconverter_install()
         time.sleep(3)
@@ -254,11 +257,11 @@ if __name__=='__main__':
         output_type = args[2]
         output = args[3]
         sub_convert(source,output_type,output)
-    if len(args) == 3:
+    if len(args) == 3:  #2个参数
         source = args[1]
         act = args[2]
-        if act == 'rm':
+        if act == 'rm': #匹配去重
             YAML_rm(source)
-        elif act == 'config':
+        elif act == 'config':   #匹配config文件
             print('collect config.yaml')
             collect_sub(source)
