@@ -159,7 +159,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             print('Url 解析错误: No nodes were found! -->' + url + '\n')
         else:
             sub_content = resp.text
-            sub_content = re.sub(r'!<str>','',sub_content)#https://blog.csdn.net/Dontla/article/details/134602233
+            #sub_content = re.sub(r'!<str>','',sub_content)#https://blog.csdn.net/Dontla/article/details/134602233
     return sub_content
 
 #源文件转到目标文件，类型为output_type，共4个类型：clash,base64,url,YAML
@@ -193,6 +193,7 @@ def subconverter_install():
         print('subconverter安装失败')
         
 def collect_sub(source):
+    ERR = './subs/err.yaml'
     #读取yaml文件
     with open(source, 'r',encoding = 'utf-8') as f:
         try:
@@ -207,7 +208,13 @@ def collect_sub(source):
         #转成subconverter可识别的字符串
         urllist = '|'.join(config['sources'][0]['options']['urls']) 
         temp = convert_remote(urllist,'YAML')
-        yaml_list = yaml.safe_load(temp)
+            yaml_list = yaml.safe_load(temp)
+        except yaml.YAMLError as exc:
+            print(exc)
+            print(f'collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR}')
+            with open(ERR, 'w') as f:
+                f.write(temp)
+            return
         yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
         #写入
         file_path = './' + config['sources'][0]['output']
