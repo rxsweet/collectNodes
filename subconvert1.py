@@ -222,7 +222,7 @@ def collect_sub(source,ERR_PATH = './subs/err.yaml'):
         except yaml.YAMLError as exc:
             print(exc)
             print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR_PATH}')
-            log_err(exc)
+            log_err(str(exc))
             with open(ERR_PATH, 'w') as f:
                 f.write(temp)
             return
