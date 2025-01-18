@@ -13,8 +13,8 @@ import yaml
 #默认转clash配置文件.ini地址
 INI_CONFIG = 'https://raw.githubusercontent.com/rxsweet/all/main/githubTools/clashConfig.ini'
 
-#记录错误
-def log_err(msg,log_path = './subs/log.txt'):
+#记录错误,
+def log_err(msg,log_path = './sub/log.txt'):
     time = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
     filetime = '[' + time + ']: ' + msg + '\n'
     # r只读，w可写，a追加
@@ -201,7 +201,7 @@ def subconverter_install():
         print(err)
         print('subconverter安装失败')
         
-def collect_sub(source,ERR_PATH = './subs/err.yaml'):
+def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
 
     #读取yaml文件
     with open(source, 'r',encoding = 'utf-8') as f:
@@ -229,8 +229,7 @@ def collect_sub(source,ERR_PATH = './subs/err.yaml'):
         yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
         #写入
         file_path = './' + config['sources'][0]['output']
-        #with open(config['sources'][0]['output'], 'w',encoding = 'utf-8') as file:
-        with open('./subs/test.yaml', 'w',encoding = 'utf-8') as file:
+        with open(config['sources'][0]['output'], 'w',encoding = 'utf-8') as file:
             #file = yaml.dump(proxyconfig, file,default_flow_style=False, sort_keys=False, allow_unicode=True, width=750, indent=2)
             file = yaml.dump(yaml_list, file, allow_unicode=True, indent=2)
 
@@ -256,5 +255,5 @@ if __name__=='__main__':
         if act == 'rm':
             YAML_rm(source)
         elif act == 'config':
-            print('collect config')
+            print('collect config.yaml')
             collect_sub(source)
