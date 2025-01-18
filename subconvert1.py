@@ -2,6 +2,7 @@
 #转换 type: clash base64 url YAML
 #
 import os
+import re
 import requests
 import urllib.parse
 from datetime import datetime
@@ -88,20 +89,17 @@ def YAML_rm(source):
             proxyconfig = yaml.load(f.read(), Loader=yaml.FullLoader)
         except Exception as err:
             print(f"读取{source}文件失败")
+            return
     #去重
-    if proxyconfig:
-        print(proxyconfig)
-        proxyconfig['proxies'] = proxies_rm(proxyconfig['proxies'])
-        #写入
-        with open(source, 'w',encoding = 'utf-8') as file:
-            #file = yaml.dump(proxyconfig, file,default_flow_style=False, sort_keys=False, allow_unicode=True, width=750, indent=2)
-            file = yaml.dump(proxyconfig, file, allow_unicode=True, indent=2)
-        #下载安装subconverter
-        subconverter_install()
-        time.sleep(3)
-        sub_convert(source,'YAML',source)
-    else:
-        print(f"读取{source}文件失败")
+    proxyconfig['proxies'] = proxies_rm(proxyconfig['proxies'])
+    #写入
+    with open(source, 'w',encoding = 'utf-8') as file:
+        #file = yaml.dump(proxyconfig, file,default_flow_style=False, sort_keys=False, allow_unicode=True, width=750, indent=2)
+        file = yaml.dump(proxyconfig, file, allow_unicode=True, indent=2)
+    #下载安装subconverter
+    subconverter_install()
+    time.sleep(3)
+    sub_convert(source,'YAML',source)
     
 # 注意 订阅地址必须是base64,或者yaml，(直接是url节点内容的话，会解析错误)
 def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
@@ -124,6 +122,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             print('Url 解析错误: No nodes were found! -->' + url + '\n')
         else:
             sub_content = resp.text
+            sub_content = re.sub(r'!<str>','',sub_content)#https://blog.csdn.net/Dontla/article/details/134602233
     elif output_type == 'base64':
         converted_url = sever_host+'/sub?target=mixed&url='+url+'&insert=false&emoji=false'
         try:
@@ -160,6 +159,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             print('Url 解析错误: No nodes were found! -->' + url + '\n')
         else:
             sub_content = resp.text
+            sub_content = re.sub(r'!<str>','',sub_content)#https://blog.csdn.net/Dontla/article/details/134602233
     return sub_content
 
 #源文件转到目标文件，类型为output_type，共4个类型：clash,base64,url,YAML
