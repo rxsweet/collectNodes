@@ -4,5 +4,4 @@ sources:
   options:
     urls: 
         - https://tt.vg/freeclash
-        - https://rxsub.eu.org/sub/free.yaml
   output: ./sub/static.yaml
