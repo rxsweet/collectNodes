@@ -31,7 +31,7 @@ jobs:
       - name: Update subscription files
         uses: EndBug/add-and-commit@v9
         with:
-          add: subs
+          add: sub
           author_name: subscription-fetcher
           author_email: subscription-fetcher@users.noreply.github.com
           message: fetch done
