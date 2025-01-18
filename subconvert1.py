@@ -209,8 +209,8 @@ def collect_sub(source):
         urllist = '|'.join(config['sources'][0]['options']['urls']) 
         temp = convert_remote(urllist,'YAML')
             yaml_list = yaml.safe_load(temp)
-        except yaml.YAMLError as exc:
-            print(exc)
+        except Exception as err:
+            print(err)
             print(f'collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR}')
             with open(ERR, 'w') as f:
                 f.write(temp)
