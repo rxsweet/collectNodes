@@ -233,7 +233,7 @@ def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
             #file = yaml.dump(proxyconfig, file,default_flow_style=False, sort_keys=False, allow_unicode=True, width=750, indent=2)
             file = yaml.dump(yaml_list, file, allow_unicode=True, indent=2)
         #调整显示方式
-        sub_convert(source,'YAML',source)
+        sub_convert(config['sources'][0]['output'],'YAML',config['sources'][0]['output'])
 
 if __name__=='__main__':
     #获取参数携带的参数
