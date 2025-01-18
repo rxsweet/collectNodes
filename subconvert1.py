@@ -13,6 +13,15 @@ import yaml
 #默认转clash配置文件.ini地址
 INI_CONFIG = 'https://raw.githubusercontent.com/rxsweet/all/main/githubTools/clashConfig.ini'
 
+#记录错误
+def log_err(msg,log_path = './subs/log.txt'):
+    time = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+    filetime = '[' + time + ']: ' + msg + '\n'
+    # r只读，w可写，a追加
+
+    file = open(log_path, 'a', encoding= 'utf-8')
+    file.write(filetime)
+    file.close()
 
 def proxies_rm(proxies_list):
     # 去重复，重名，空名，float型password
@@ -192,8 +201,8 @@ def subconverter_install():
         print(err)
         print('subconverter安装失败')
         
-def collect_sub(source):
-    ERR = './subs/err.yaml'
+def collect_sub(source,ERR_PATH = './subs/err.yaml'):
+
     #读取yaml文件
     with open(source, 'r',encoding = 'utf-8') as f:
         try:
@@ -212,8 +221,9 @@ def collect_sub(source):
             yaml_list = yaml.safe_load(temp)
         except yaml.YAMLError as exc:
             print(exc)
-            print(f'collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR}')
-            with open(ERR, 'w') as f:
+            print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR_PATH}')
+            log_err(exc)
+            with open(ERR_PATH, 'w') as f:
                 f.write(temp)
             return
         yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
