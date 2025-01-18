@@ -203,8 +203,9 @@ def collect_sub(source):
         #转成subconverter可识别的字符串
         urllist = '|'.join(config['sources'][0]['options']['urls']) 
         temp = convert_remote(urllist,'YAML')
-        #yaml_list = yaml.load(temp, Loader=yaml.FullLoader)
-        yaml_list = temp
+        print(type(temp))
+        yaml_list = yaml.load(temp, Loader=yaml.FullLoader)
+        #yaml_list = temp
         yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
         #写入
         file_path = './' + config['sources'][0]['output']
