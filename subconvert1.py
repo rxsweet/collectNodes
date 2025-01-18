@@ -228,7 +228,6 @@ def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
             return
         yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
         #写入
-        file_path = './' + config['sources'][0]['output']
         with open(config['sources'][0]['output'], 'w',encoding = 'utf-8') as file:
             #file = yaml.dump(proxyconfig, file,default_flow_style=False, sort_keys=False, allow_unicode=True, width=750, indent=2)
             file = yaml.dump(yaml_list, file, allow_unicode=True, indent=2)
