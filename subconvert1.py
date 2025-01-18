@@ -205,7 +205,7 @@ def collect_sub(source):
         temp = convert_remote(urllist,'YAML')
         file_path = './' + config['sources'][0]['output']
         with open(file_path, 'w') as f:
-        f.write(temp)
+            f.write(temp)
         """
         yaml_list = yaml.safe_load(temp)
         yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
