@@ -90,7 +90,7 @@ def YAML_rm(source):
             print(f"读取{source}文件失败")
     #去重
     if proxyconfig:
-        print('读取成功！')
+        print(proxyconfig)
         proxyconfig['proxies'] = proxies_rm(proxyconfig['proxies'])
         #写入
         with open(source, 'w',encoding = 'utf-8') as file:
