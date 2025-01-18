@@ -1,8 +1,0 @@
-[2025-01-18 02:46:06]: could not determine a constructor for the tag 'str'
-  in "<unicode string>", line 50, column 98:
-     ... t: 443, type: trojan, password: !<str> 3648425794742788096, sni: ... 
-                                         ^
-[2025-01-18 02:47:28]: could not determine a constructor for the tag 'str'
-  in "<unicode string>", line 50, column 98:
-     ... t: 443, type: trojan, password: !<str> 3648425794742788096, sni: ... 
-                                         ^
