@@ -5,3 +5,15 @@ sources:
     urls: 
         - https://tt.vg/freeclash
   output: ./sub/static.yaml
+- fetcher: url
+  name: 1
+  options:
+    urls: 
+        - https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash
+  output: ./sub/1.yaml
+  - name: SFZY666
+    fetcher: url
+    output: sub/SFZY666.yaml
+    options:
+      urls:
+        - https://raw.githubusercontent.com/dongchengjie/proxy-crawler/main/subscriptions/SFZY666.yaml
