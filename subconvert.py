@@ -27,7 +27,8 @@ def log_err(msg,log_path = './sub/err.txt'):
     file.close()
 
 #获取cofig.yaml列表节点,出错时，错误文件有默认地址
-def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
+#def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):#暂时不需要将错误内容写入文件,只记录错误信息
+def collect_sub(source):
     #读取yaml文件
     with open(source, 'r',encoding = 'utf-8') as f:
         try:
@@ -48,7 +49,9 @@ def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
                 try:
                     yaml_list = yaml.safe_load(temp)
                 except yaml.YAMLError as exc:
+                    print('出现错误,下面是错误提示：\n')
                     print(exc)
+                    print('上面是错误提示内容!\n')
                     print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！尝试重新单url解析！')
                     yaml_list = {'proxies':[]}
                     for url in config['sources'][i]['options']['urls']:
@@ -194,7 +197,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             return 'Url 解析错误'
         if resp.text == 'No nodes were found!':
             sub_content = 'Url 解析错误'
-            print('Url 解析错误: No nodes were found! -->' + url + '\n')
+            print('Url 解析错误: No nodes were found! -->' + url)
         else:
             sub_content = resp.text
             sub_content = re.sub(r'!<str>','',sub_content)#https://blog.csdn.net/Dontla/article/details/134602233
@@ -207,7 +210,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             return 'Url 解析错误'
         if resp.text == 'No nodes were found!':
             sub_content = 'Url 解析错误'
-            print('Url 解析错误: No nodes were found! -->' + url + '\n')
+            print('Url 解析错误: No nodes were found! -->' + url)
         else:
             sub_content = resp.text
     elif output_type == 'url':
@@ -219,7 +222,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             return 'Url 解析错误'
         if resp.text == 'No nodes were found!':
             sub_content = 'Url 解析错误'
-            print('Url 解析错误: No nodes were found! -->' + url + '\n')
+            print('Url 解析错误: No nodes were found! -->' + url)
         else:
             sub_content = resp.text
     elif output_type == 'YAML':
@@ -231,7 +234,7 @@ def convert_remote(url='', output_type='clash',configUrl = INI_CONFIG):
             return 'Url 解析错误'
         if resp.text == 'No nodes were found!':
             sub_content = 'Url 解析错误'
-            print('Url 解析错误: No nodes were found! -->' + url + '\n')
+            print('Url 解析错误: No nodes were found! -->' + url)
         else:
             sub_content = resp.text
             sub_content = re.sub(r'!<str>','',sub_content)#https://blog.csdn.net/Dontla/article/details/134602233
