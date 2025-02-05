@@ -50,7 +50,7 @@ def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
                 except yaml.YAMLError as exc:
                     print(exc)
                     print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！尝试重新单url解析！')
-                    yaml_list = {}
+                    yaml_list = {'proxies':[]}
                     for url in config['sources'][i]['options']['urls']:
                         try:
                             temp = convert_remote(url,'YAML')
@@ -62,7 +62,7 @@ def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
                             log_err(str(exc))
                             with open(ERR_PATH, 'w') as f:
                                 f.write(temp)
-                if 'proxies' not in yaml_list:
+                if 'proxies' not in yaml_list and len(yaml_list['proxies']) > 0:
                     continue
                 yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
                 
