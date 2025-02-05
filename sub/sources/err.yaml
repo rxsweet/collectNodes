@@ -1,4 +1,0 @@
-Internal server error while processing request '/sub?target=clash&url=https%3A%2F%2Fclash-meta.github.io%2Fuploads%2F2025%2F01%2F3-20250121.yaml&insert=false&emoji=false&list=true'!
-
-  exception: YAML::ParserException
-  what(): yaml-cpp: error at line 3344, column 8: unknown escape character: 
