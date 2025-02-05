@@ -1,0 +1,12 @@
+[2025-02-05 09:07:54]: mapping values are not allowed here
+  in "<unicode string>", line 3, column 12:
+      exception: YAML::ParserException
+               ^
+[2025-02-05 09:07:55]: mapping values are not allowed here
+  in "<unicode string>", line 3, column 12:
+      exception: YAML::ParserException
+               ^
+[2025-02-05 09:07:55]: mapping values are not allowed here
+  in "<unicode string>", line 3, column 12:
+      exception: YAML::ParserException
+               ^
