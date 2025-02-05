@@ -56,7 +56,8 @@ def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
                             temp = convert_remote(url,'YAML')
                             url_yaml_list = yaml.safe_load(temp)
                             yaml_list['proxies'].extend(url_yaml_list['proxies'])
-                        except yaml.YAMLError as exc:
+                        except:
+                            print(f"{url} 解析出错！")
                             print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR_PATH}')
                             #记录错误,保存错误文件
                             log_err(str(exc))
