@@ -17,7 +17,7 @@ import yaml
 INI_CONFIG = 'https://raw.githubusercontent.com/rxsweet/all/main/githubTools/clashConfig.ini'
 
 #记录错误,出错时，错误文件有默认地址
-def log_err(msg,log_path = './sub/log.txt'):
+def log_err(msg,log_path = './sub/err.txt'):
     time = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
     filetime = '[' + time + ']: ' + msg + '\n'
     # r只读，w可写，a追加
@@ -49,12 +49,21 @@ def collect_sub(source,ERR_PATH = './sub/sources/err.yaml'):
                     yaml_list = yaml.safe_load(temp)
                 except yaml.YAMLError as exc:
                     print(exc)
-                    print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR_PATH}')
-                    #记录错误,保存错误文件
-                    log_err(str(exc))
-                    with open(ERR_PATH, 'w') as f:
-                        f.write(temp)
-                    return
+                    print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！尝试重新单url解析！')
+                    yaml_list = {}
+                    for url in config['sources'][i]['options']['urls']:
+                        try:
+                            temp = convert_remote(url,'YAML')
+                            url_yaml_list = yaml.safe_load(temp)
+                            yaml_list['proxies'].extend(url_yaml_list['proxies'])
+                        except yaml.YAMLError as exc:
+                            print(f'sweetrx: subconvert.py  collect_sub中yaml.safe_load解析返回的tamp值时，出错了！错误文件保存至{ERR_PATH}')
+                            #记录错误,保存错误文件
+                            log_err(str(exc))
+                            with open(ERR_PATH, 'w') as f:
+                                f.write(temp)
+                if 'proxies' not in yaml_list:
+                    continue
                 yaml_list['proxies'] = proxies_rm(yaml_list['proxies'])
                 
                 #写入,配置文件的写入地址config['sources'][i]['output']
