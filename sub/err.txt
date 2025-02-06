@@ -14,3 +14,23 @@ mapping values are not allowed here
   in "<unicode string>", line 3, column 12:
       exception: YAML::ParserException
                ^
+[2025-02-06 01:21:16]:  源文件./config.yaml中，https://fs.v2rayse.com/share/20250121/6kjliui7i9.yaml
+mapping values are not allowed here
+  in "<unicode string>", line 3, column 12:
+      exception: YAML::ParserException
+               ^
+[2025-02-06 01:21:23]:  源文件./config.yaml中，https://clashgithub.com/wp-content/uploads/rss/20250121.txt
+mapping values are not allowed here
+  in "<unicode string>", line 3, column 12:
+      exception: YAML::ParserException
+               ^
+[2025-02-06 01:21:24]:  源文件./config.yaml中，https://www.naidounode.com/node/20250121-clash.yaml
+mapping values are not allowed here
+  in "<unicode string>", line 3, column 12:
+      exception: YAML::ParserException
+               ^
+[2025-02-06 01:21:24]:  源文件./config.yaml中，https://clash-meta.github.io/uploads/2025/01/3-20250121.yaml
+mapping values are not allowed here
+  in "<unicode string>", line 3, column 12:
+      exception: YAML::ParserException
+               ^

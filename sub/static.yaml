@@ -22,9 +22,6 @@ proxies:
   - {name: 俄罗斯【付费推荐：https://socks.news】23, server: south.sf0jm.xyz, port: 49227, type: ss, cipher: aes-128-gcm, password: c7841092-737e-41a5-afe4-91db3c6f43b4}
   - {name: 中国【付费推荐：https://socks.news】24, server: southvip1.pkyun.xyz, port: 58825, type: ss, cipher: chacha20-ietf-poly1305, password: 60852176-3e78-4a03-ba06-39c92b046ee6}
   - {name: 美国【付费推荐：https://socks.news】25, server: 172.67.71.217, port: 443, type: vmess, uuid: 9072d339-3885-4fe1-b0bc-29fa7505410e, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /fixedfloati.cfd/linkwsd, headers: {Host: 1t3chx0.zed23.web1337.net}}}
-  - {name: _CH_瑞士->🇨🇳_CN_中国, server: 84.17.53.160, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
-  - {name: _AT_奥地利->🇺🇸_US_美国, server: 192.36.61.59, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3}
-  - {name: _US_美国, server: 190.93.245.230, port: 2086, type: vmess, uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
   - {name: RU俄罗斯(mibei77.com 米贝节点分享), server: 195.58.49.42, port: 17926, type: vmess, uuid: ad2f4fa1-f290-456e-b66b-b8111dcea4f2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 195.58.49.42}}, udp: true}
   - {name: 俄罗斯(mibei77.com 米贝节点分享), server: 195.58.49.86, port: 17926, type: vmess, uuid: 84551ec3-0575-4ea0-9db6-fae0f442c4fe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 195.58.49.86}}, udp: true}
   - {name: RU俄罗斯(mibei77.com 米贝节点分享) 2, server: 194.87.69.52, port: 17926, type: vmess, uuid: 131d1070-3626-4978-93bd-0b3568bc6da0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 194.87.69.52}}, udp: true}
@@ -981,6 +978,7 @@ proxies:
   - {name: _中国+>+美国_11, server: 223.111.144.12, port: 21673, type: trojan, password: phXKwfrd, skip-cert-verify: true, udp: true}
   - {name: _中国 > 美国_12, server: 120.234.102.229, port: 52908, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: _RU_俄罗斯_1+1, server: 185.231.233.173, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: _CH_瑞士, server: 84.17.53.160, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
   - {name: _US_美国->🇯🇵_JP_日本, server: 54.212.56.181, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: 0|--1, server: 54.179.54.70, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
   - {name: 0|--3, server: 27.255.82.135, port: 61891, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@}
